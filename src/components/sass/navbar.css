@@ -1,0 +1,24 @@
+.navbar-comp {
+  background-color: var(--main-color);
+}
+.navbar-comp .container ul * {
+  color: white;
+}
+.navbar-comp .container ul .logo {
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-family: "Agbalumo", sans-serif;
+}
+.navbar-comp .container ul > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+.navbar-comp .container ul > div button {
+  color: var(--main-color);
+  border: none;
+  padding: 8px 4px;
+  border-radius: 4px;
+}/*# sourceMappingURL=navbar.css.map */

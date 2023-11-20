@@ -1,0 +1,28 @@
+.navbar-comp {
+  background-color: var(--main-color);
+  .container {
+    ul {
+      * {
+        color: white;
+      }
+      .logo {
+        font-size: 30px;
+        font-weight: bold;
+        text-transform: capitalize;
+        font-family: "Agbalumo", sans-serif;
+      }
+      > div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        gap: 20px;
+        button {
+          color: var(--main-color);
+          border: none;
+          padding: 8px 4px;
+          border-radius: 4px;
+        }
+      }
+    }
+  }
+}
