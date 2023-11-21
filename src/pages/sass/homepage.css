@@ -1,12 +1,16 @@
 .combined-squares .flex-2 {
   height: 350px;
-  background-color: red;
 }
 .combined-squares .flex-2:nth-child(2) {
   flex-direction: row-reverse;
 }
+.combined-squares .flex-2 h2 {
+  color: var(--main-color);
+  font-size: 50px;
+}
 .combined-squares .flex-2 article {
   width: 50%;
+  padding: 20px;
 }
 .combined-squares .flex-2 div {
   height: 100%;
@@ -17,4 +21,23 @@
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.cards {
+  margin: 50px 0px;
+}
+.cards .container {
+  justify-content: center;
+  gap: 50px;
+}
+
+.why-us .container .flex-2 article {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+.why-us .container .flex-2 article > p {
+  text-align: center;
+  grid-column-start: 1;
+  grid-column-end: 3;
 }/*# sourceMappingURL=homepage.css.map */

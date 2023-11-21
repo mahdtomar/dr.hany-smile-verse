@@ -5,7 +5,9 @@
 font-family: 'Source Sans 3', sans-serif;
 color: rgba(0, 0, 0, 0.9);
 }
-
+p{
+font-size: 20px;
+}
 :root{
   --main-color: #2C3E50;
   --secondary-color:#3498DB;

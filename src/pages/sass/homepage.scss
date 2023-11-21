@@ -1,12 +1,17 @@
 .combined-squares {
   .flex-2 {
     height: 350px;
-    background-color: red;
+
     &:nth-child(2) {
       flex-direction: row-reverse;
     }
+    h2 {
+      color: var(--main-color);
+      font-size: 50px;
+    }
     article {
       width: 50%;
+      padding: 20px;
     }
     div {
       height: 100%;
@@ -15,6 +20,29 @@
         height: 100%;
         width: 100%;
         object-fit: cover;
+      }
+    }
+  }
+}
+.cards {
+  margin: 50px 0px;
+  .container {
+    justify-content: center;
+    gap: 50px;
+  }
+}
+.why-us {
+  .container {
+    .flex-2 {
+      article {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+        > p {
+          text-align: center;
+          grid-column-start: 1;
+          grid-column-end: 3;
+        }
       }
     }
   }

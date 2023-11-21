@@ -7,10 +7,7 @@ const Header = () => {
       <div className="container">
         <h1>Smile Verse</h1>
         <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius impedit
-          nulla non nostrum sit! Nulla recusandae quos, minima, autem fugiat
-          alias, molestiae animi eaque repudiandae sed quaerat praesentium a
-          delectus!
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit.
         </p>
         <button>Schedule Now</button>
       </div>

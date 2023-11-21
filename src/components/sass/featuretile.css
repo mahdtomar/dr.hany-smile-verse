@@ -1,0 +1,20 @@
+.FeatureTile-comp {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+.FeatureTile-comp .image {
+  padding: 20px;
+}
+.FeatureTile-comp .description {
+  border-left: 1px solid rgba(0, 0, 0, 0.3);
+  padding: 5px;
+}
+.FeatureTile-comp .description span {
+  font-weight: bold;
+  font-size: large;
+}
+.FeatureTile-comp .description p {
+  font-size: medium;
+}/*# sourceMappingURL=featuretile.css.map */

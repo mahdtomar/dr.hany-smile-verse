@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./sass/featuretile.css";
 const FeatureTile = (props) => {
   return (
     <div className="FeatureTile-comp">

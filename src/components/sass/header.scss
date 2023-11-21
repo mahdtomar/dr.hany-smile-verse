@@ -10,7 +10,6 @@
       var(--secondary-color)
     ),
     url("../../images//dentalCare1.jpg");
-  //   background-position: center, top left;
   background-size: cover;
   background-repeat: no-repeat;
   .container {
@@ -21,14 +20,20 @@
     align-content: center;
     align-items: center;
     justify-items: start;
+    h1 {
+      font-size: 75px;
+    }
     p {
       margin: 20px 0px;
-      width: 40%;
+      width: 55%;
+      font-size: 40px;
     }
     button {
       background-color: var(--secondary-color);
       padding: 12px 6px;
       transition: color 0.3s;
+      font-size: 25px;
+      font-weight: 100;
       &:hover {
         color: var(--main-color);
       }

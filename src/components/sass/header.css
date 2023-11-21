@@ -16,14 +16,20 @@
   align-items: center;
   justify-items: start;
 }
+.header .container h1 {
+  font-size: 75px;
+}
 .header .container p {
   margin: 20px 0px;
-  width: 40%;
+  width: 55%;
+  font-size: 40px;
 }
 .header .container button {
   background-color: var(--secondary-color);
   padding: 12px 6px;
   transition: color 0.3s;
+  font-size: 25px;
+  font-weight: 100;
 }
 .header .container button:hover {
   color: var(--main-color);
