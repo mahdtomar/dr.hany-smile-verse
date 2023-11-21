@@ -19,9 +19,12 @@ body{
   @import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Roboto:wght@100;400;900&family=Source+Sans+3:wght@200;400;600&display=swap');
 
 h1,h2,h3,h4,h5,h6{
-  font-family: 'Roboto', sans-serif;
-}
+  font-family: "Agbalumo", sans-serif;
 
+}
+button{
+  font-family: 'roboto';
+}
 .container{
   max-width: 1440px;
   margin: 0px auto;

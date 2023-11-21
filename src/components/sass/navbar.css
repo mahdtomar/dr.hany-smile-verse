@@ -1,5 +1,8 @@
 .navbar-comp {
   background-color: var(--main-color);
+  position: fixed;
+  width: 100%;
+  top: 0px;
 }
 .navbar-comp .container ul * {
   color: white;
@@ -21,4 +24,11 @@
   border: none;
   padding: 8px 4px;
   border-radius: 4px;
+  font-weight: bold;
+}
+.navbar-comp .container ul > div .languages {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100px;
 }/*# sourceMappingURL=navbar.css.map */

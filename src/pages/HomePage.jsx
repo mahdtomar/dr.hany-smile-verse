@@ -8,24 +8,14 @@ import whyusImg from "../images/dentist-kl.jpg";
 import Card from "../components/Card";
 import FeatureTile from "../components/FeatureTile";
 import syring from "../icons/Syringe.svg";
+import Header from "../components/Header";
 const HomePage = () => {
   return (
     <>
       <Navbar />
       <WorkingHours />
       <MainNav />
-      <div className="header">
-        <div className="container">
-          <h1>Smile Verse</h1>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius
-            impedit nulla non nostrum sit! Nulla recusandae quos, minima, autem
-            fugiat alias, molestiae animi eaque repudiandae sed quaerat
-            praesentium a delectus!
-          </p>
-          <button>Schedule Now</button>
-        </div>
-      </div>
+      <Header />
       <div className="combined-squares">
         <div className="flex-2">
           <div>

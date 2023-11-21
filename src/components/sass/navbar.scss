@@ -1,5 +1,8 @@
 .navbar-comp {
   background-color: var(--main-color);
+  position: fixed;
+  width: 100%;
+  top: 0px;
   .container {
     ul {
       * {
@@ -21,6 +24,13 @@
           border: none;
           padding: 8px 4px;
           border-radius: 4px;
+          font-weight: bold;
+        }
+        .languages {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 100px;
         }
       }
     }

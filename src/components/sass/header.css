@@ -1,0 +1,22 @@
+.header {
+  height: 100vh;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.52), rgba(0, 0, 0, 0.52), var(--secondary-color)), url("../../images//dentalCare1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.header * {
+  color: var(--background-color);
+}
+.header .container {
+  height: 100%;
+  display: grid;
+  place-items: center;
+  justify-content: start;
+  align-content: center;
+  align-items: center;
+  justify-items: start;
+}
+.header .container p {
+  margin: 20px 0px;
+  width: 40%;
+}/*# sourceMappingURL=header.css.map */
