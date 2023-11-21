@@ -1,0 +1,20 @@
+.combined-squares .flex-2 {
+  height: 350px;
+  background-color: red;
+}
+.combined-squares .flex-2:nth-child(2) {
+  flex-direction: row-reverse;
+}
+.combined-squares .flex-2 article {
+  width: 50%;
+}
+.combined-squares .flex-2 div {
+  height: 100%;
+  width: 50%;
+}
+.combined-squares .flex-2 div img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}/*# sourceMappingURL=homepage.css.map */

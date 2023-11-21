@@ -1,4 +1,5 @@
 import React from "react";
+import "./sass/homepage.css";
 import Navbar from "../components/Navbar";
 import WorkingHours from "../components/WorkingHours";
 import MainNav from "../components/MainNav";
