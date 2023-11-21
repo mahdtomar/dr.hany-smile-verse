@@ -13,6 +13,28 @@
   text-transform: capitalize;
   font-family: "Agbalumo", sans-serif;
 }
+.navbar-comp .container ul ul {
+  gap: 20px;
+}
+.navbar-comp .container ul ul a {
+  text-transform: capitalize;
+  padding: 2px;
+  text-decoration: none;
+  position: relative;
+}
+.navbar-comp .container ul ul a::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  bottom: 0px;
+  left: 0px;
+  height: 2px;
+  background-color: var(--background-color);
+  transition: width 0.4s ease-in;
+}
+.navbar-comp .container ul ul a:hover::before {
+  width: 100%;
+}
 .navbar-comp .container ul > div {
   display: flex;
   flex-direction: row;

@@ -19,4 +19,12 @@
 .header .container p {
   margin: 20px 0px;
   width: 40%;
+}
+.header .container button {
+  background-color: var(--secondary-color);
+  padding: 12px 6px;
+  transition: color 0.3s;
+}
+.header .container button:hover {
+  color: var(--main-color);
 }/*# sourceMappingURL=header.css.map */

@@ -25,5 +25,13 @@
       margin: 20px 0px;
       width: 40%;
     }
+    button {
+      background-color: var(--secondary-color);
+      padding: 12px 6px;
+      transition: color 0.3s;
+      &:hover {
+        color: var(--main-color);
+      }
+    }
   }
 }
