@@ -1,0 +1,40 @@
+.footer-comp {
+  padding: 30px;
+  background-color: var(--main-color);
+}
+.footer-comp * {
+  color: var(--background-color);
+}
+.footer-comp .container {
+  flex-direction: row;
+  gap: 2%;
+}
+.footer-comp .container > div {
+  width: 23.5%;
+}
+.footer-comp .container .about-us {
+  display: flex;
+  flex-direction: column;
+}
+.footer-comp .container .about-us .logo {
+  font-size: 30px;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-family: "Agbalumo", sans-serif;
+}
+.footer-comp .container .other-links ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  list-style-type: none;
+}
+.footer-comp .container .other-links ul a {
+  text-decoration: none;
+}
+.footer-comp .container .our-services ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}/*# sourceMappingURL=Footer.css.map */

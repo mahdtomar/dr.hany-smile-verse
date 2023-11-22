@@ -8,6 +8,7 @@ import Card from "../components/Card";
 import FeatureTile from "../components/FeatureTile";
 import syring from "../icons/Syringe.svg";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 const HomePage = () => {
   return (
     <>
@@ -96,6 +97,7 @@ const HomePage = () => {
           </div>
         </div>
       </section>
+      <Footer></Footer>
     </>
   );
 };

@@ -31,13 +31,18 @@
   gap: 50px;
 }
 
+.why-us .container .flex-2 {
+  gap: 30px;
+}
 .why-us .container .flex-2 article {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 50px;
 }
 .why-us .container .flex-2 article > p {
+  font-family: "Agbalumo", sans-serif;
   text-align: center;
   grid-column-start: 1;
   grid-column-end: 3;
+  font-size: 30px;
 }/*# sourceMappingURL=homepage.css.map */
