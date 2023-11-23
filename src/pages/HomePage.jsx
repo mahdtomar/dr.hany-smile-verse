@@ -7,8 +7,11 @@ import whyusImg from "../images/dentist-kl.jpg";
 import Card from "../components/Card";
 import FeatureTile from "../components/FeatureTile";
 import syring from "../icons/Syringe.svg";
+import serviceImg from "../images/dentists-treating-patients-teeth-in-the-clinic-free-vector.jpg";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import TestmonialCard from "../components/TestmonialCard";
+import doctorImage3 from "../images/doctor3.jpg";
 const HomePage = () => {
   return (
     <>
@@ -57,6 +60,47 @@ const HomePage = () => {
           </article>
         </div>
       </div>
+      <section className="services">
+        <p>our services</p>
+        <p>what do we provide</p>
+        <div className="container">
+          <div>
+            <FeatureTile
+              title="Root Canal"
+              description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore dolore unde, sunt ipsa quam maiores temporibus officiis molestias!"
+              img={syring}
+            />
+            <FeatureTile
+              title="Alignment Teeth"
+              description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore dolore unde, sunt ipsa quam maiores temporibus officiis molestias!"
+              img={syring}
+            />
+            <FeatureTile
+              title="Cosmetic Teeth"
+              description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore dolore unde, sunt ipsa quam maiores temporibus officiis molestias!"
+              img={syring}
+            />
+          </div>
+          <img src={serviceImg} alt="" />
+          <div>
+            <FeatureTile
+              title="Oral Hygiene"
+              description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore dolore unde, sunt ipsa quam maiores temporibus officiis molestias!"
+              img={syring}
+            />
+            <FeatureTile
+              title="Live Advisory"
+              description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore dolore unde, sunt ipsa quam maiores temporibus officiis molestias!"
+              img={syring}
+            />
+            <FeatureTile
+              title="Cavity Inspection"
+              description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore dolore unde, sunt ipsa quam maiores temporibus officiis molestias!"
+              img={syring}
+            />
+          </div>
+        </div>
+      </section>
       <div className="cards">
         <div className="container flex-2">
           <Card />
@@ -94,6 +138,28 @@ const HomePage = () => {
             <div className="image">
               <img src={whyusImg} alt="" />
             </div>
+          </div>
+        </div>
+      </section>
+      <section className="testmonials">
+        <div className="container">
+          <header>
+            <span>TESTIMONIAL</span>
+            <p>What Our Clients Says</p>
+          </header>
+          <div className="slider">
+            <TestmonialCard
+              doctorImage={doctorImage3}
+              doctorName={"jhon walker"}
+            />
+            <TestmonialCard
+              doctorImage={doctorImage3}
+              doctorName={"jhon walker"}
+            />
+            <TestmonialCard
+              doctorImage={doctorImage3}
+              doctorName={"jhon walker"}
+            />
           </div>
         </div>
       </section>

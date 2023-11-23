@@ -3,8 +3,21 @@ import "./sass/Footer.css";
 import Logo from "./Logo";
 import FeatureTile from "./FeatureTile";
 import { Link } from "react-router-dom";
-
+import clock from "../icons/Clock.svg";
+import linkIcon from "../icons/Plus.svg";
+import serviceIcon from "../icons/Plus.svg";
+import addressIcon from "../icons/MapPinLine.svg";
+import phoneIcon from "../icons/PhoneCall.svg";
+import emailIcon from "../icons/message.svg";
 const Footer = () => {
+  const workingHours = (
+    <>
+      <div>
+        <p>Opening Hours</p>
+        <p>Mon - Fri: 8:00am - 5:00pm</p>
+      </div>
+    </>
+  );
   return (
     <footer className="footer-comp">
       <div className="container flex-2">
@@ -14,32 +27,93 @@ const Footer = () => {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
             mollitia natus at fugiat quae velit expedita, repellat architecto,
           </p>
-          <FeatureTile />
+          <FeatureTile img={clock} description={workingHours} />
         </div>
         <div className="other-links">
+          <p className="title">Other Links</p>
           <ul>
-            <Link to={""}>link </Link>
-            <Link to={""}>link </Link>
-            <Link to={""}>link </Link>
-            <Link to={""}>link </Link>
-            <Link to={""}>link </Link>
+            <Link to={""}>
+              <img src={linkIcon} alt="" />
+              link
+            </Link>
+            <Link to={""}>
+              <img src={linkIcon} alt="" />
+              link
+            </Link>
+            <Link to={""}>
+              <img src={linkIcon} alt="" />
+              link
+            </Link>
+            <Link to={""}>
+              <img src={linkIcon} alt="" />
+              link
+            </Link>
+            <Link to={""}>
+              <img src={linkIcon} alt="" />
+              link
+            </Link>
           </ul>
         </div>
         <div className="our-services">
+          <p className="title">Our Services</p>
           <ul>
-            <Link to={""}>service</Link>
-            <Link to={""}>service</Link>
-            <Link to={""}>service</Link>
-            <Link to={""}>service</Link>
-            <Link to={""}>service</Link>
-            <Link to={""}>service</Link>
-            <Link to={""}>service</Link>
+            <Link to={""}>
+              <img src={serviceIcon} alt="" />
+              service
+            </Link>
+            <Link to={""}>
+              <img src={serviceIcon} alt="" />
+              service
+            </Link>
+            <Link to={""}>
+              <img src={serviceIcon} alt="" />
+              service
+            </Link>
+            <Link to={""}>
+              <img src={serviceIcon} alt="" />
+              service
+            </Link>
+            <Link to={""}>
+              <img src={serviceIcon} alt="" />
+              service
+            </Link>
           </ul>
         </div>
         <div className="contact-us">
-          <div className="address"></div>
-          <div className="phone"></div>
-          <div className="email"></div>
+          <p className="title">Contact Us</p>
+          <div className="address">
+            <FeatureTile
+              img={addressIcon}
+              description={
+                <>
+                  <p>1247/Plot No. 39, 15th Phase,</p>
+                  <p>LHB Colony, Kanpur</p>
+                </>
+              }
+            />
+          </div>
+          <div className="phone">
+            <FeatureTile
+              img={phoneIcon}
+              description={
+                <>
+                  <p>1800-121-3637</p>
+                  <p>+91-7052-101-786</p>
+                </>
+              }
+            />
+          </div>
+          <div className="email">
+            <FeatureTile
+              img={emailIcon}
+              description={
+                <>
+                  <p>info@example.com</p>
+                  <p>help@example.com</p>
+                </>
+              }
+            />
+          </div>
         </div>
       </div>
     </footer>

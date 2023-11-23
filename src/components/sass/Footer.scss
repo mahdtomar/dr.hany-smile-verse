@@ -6,18 +6,44 @@
   }
   .container {
     flex-direction: row;
+    align-items: flex-start;
     gap: 2%;
     > div {
       width: 23.5%;
+      .title {
+        font-weight: bold;
+        font-size: 30px;
+        text-align: center;
+        margin-bottom: 30px;
+      }
     }
     .about-us {
       display: flex;
       flex-direction: column;
+      gap: 15px;
       .logo {
-        font-size: 30px;
+        font-size: 40px;
         font-weight: bold;
         text-transform: capitalize;
         font-family: "Agbalumo", sans-serif;
+      }
+      .FeatureTile-comp {
+        gap: 10px;
+        border: none;
+        .image {
+          background-color: var(--secondary-color);
+          border-radius: 50%;
+          display: grid;
+          place-items: center;
+        }
+        .description {
+          border: none;
+          p {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+          }
+        }
       }
     }
     .other-links {
@@ -29,6 +55,13 @@
         list-style-type: none;
         a {
           text-decoration: none;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 3px;
+          img {
+            width: 20px;
+          }
         }
       }
     }
@@ -38,6 +71,41 @@
         flex-direction: column;
         align-items: center;
         gap: 20px;
+        a {
+          text-decoration: none;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 8px;
+          img {
+            width: 20px;
+          }
+        }
+      }
+    }
+    .contact-us {
+      display: flex;
+      flex-direction: column;
+      > div {
+        margin-bottom: 15px;
+      }
+      .FeatureTile-comp {
+        gap: 10px;
+        border: none;
+        .image {
+          background-color: var(--secondary-color);
+          border-radius: 50%;
+          display: grid;
+          place-items: center;
+        }
+        .description {
+          border: none;
+          p {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+          }
+        }
       }
     }
   }

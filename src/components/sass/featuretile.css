@@ -2,13 +2,13 @@
   display: flex;
   align-items: center;
   justify-content: left;
-  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
 }
 .FeatureTile-comp .image {
   padding: 20px;
 }
 .FeatureTile-comp .description {
-  border-left: 1px solid rgba(0, 0, 0, 0.3);
+  border-left: 1px solid rgba(52, 152, 219, 0.5);
   padding: 5px;
 }
 .FeatureTile-comp .description span {
