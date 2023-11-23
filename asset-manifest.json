@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/dr.hany-smile-verse/static/css/main.17e331dc.css",
-    "main.js": "/dr.hany-smile-verse/static/js/main.2e595453.js",
+    "main.js": "/dr.hany-smile-verse/static/js/main.3a7f58b7.js",
     "static/js/787.ecf2124a.chunk.js": "/dr.hany-smile-verse/static/js/787.ecf2124a.chunk.js",
     "static/media/wecare-dental_dentist-looks-into-mouth-.jpg": "/dr.hany-smile-verse/static/media/wecare-dental_dentist-looks-into-mouth-.77e2edfc83d9f0bd388e.jpg",
     "static/media/smily patient.jpg": "/dr.hany-smile-verse/static/media/smily patient.c3a306406252566e2520.jpg",
@@ -19,11 +19,11 @@
     "static/media/Clock.svg": "/dr.hany-smile-verse/static/media/Clock.26c0592f0c80fc0914342afda876bae2.svg",
     "static/media/Plus.svg": "/dr.hany-smile-verse/static/media/Plus.0124a9b7189e157122eadaa761fec78a.svg",
     "main.17e331dc.css.map": "/dr.hany-smile-verse/static/css/main.17e331dc.css.map",
-    "main.2e595453.js.map": "/dr.hany-smile-verse/static/js/main.2e595453.js.map",
+    "main.3a7f58b7.js.map": "/dr.hany-smile-verse/static/js/main.3a7f58b7.js.map",
     "787.ecf2124a.chunk.js.map": "/dr.hany-smile-verse/static/js/787.ecf2124a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.17e331dc.css",
-    "static/js/main.2e595453.js"
+    "static/js/main.3a7f58b7.js"
   ]
 }
