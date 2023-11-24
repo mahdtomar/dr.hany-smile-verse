@@ -1,0 +1,111 @@
+.AlignmentTeeth-comp {
+  margin-top: 44px;
+}
+.AlignmentTeeth-comp > .container {
+  display: grid;
+  grid-template-columns: 30% 1fr;
+  gap: 20px;
+  padding: 0px 4px;
+}
+.AlignmentTeeth-comp > .container .sidebar ul {
+  list-style-type: none;
+  margin-top: 70px;
+}
+.AlignmentTeeth-comp > .container .sidebar ul li {
+  text-align: left;
+  margin: 8px 0px;
+}
+.AlignmentTeeth-comp > .container .sidebar ul li a {
+  color: var(--main-color);
+  border: 2px solid var(--main-color);
+  display: block;
+  text-decoration: none;
+  padding: 12px;
+  font-weight: 1000;
+  transition: color 0.3s linear, border 0.2s ease-in-out;
+  position: relative;
+}
+.AlignmentTeeth-comp > .container .sidebar ul li a.active {
+  background-color: var(--secondary-color);
+  color: white;
+}
+.AlignmentTeeth-comp > .container .sidebar ul li a.active:hover {
+  color: white;
+}
+.AlignmentTeeth-comp > .container .sidebar ul li a::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 0px;
+  height: 100%;
+  background-color: var(--secondary-color);
+  transition: width 0.2s;
+}
+.AlignmentTeeth-comp > .container .sidebar ul li a:hover {
+  color: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+.AlignmentTeeth-comp > .container .sidebar ul li a:hover::before {
+  width: 4px;
+}
+.AlignmentTeeth-comp > .container .header .container {
+  gap: 50px;
+}
+.AlignmentTeeth-comp > .container .header .container article span {
+  color: var(--secondary-color);
+}
+.AlignmentTeeth-comp > .container .header .container article h1 {
+  font-size: 35px;
+}
+.AlignmentTeeth-comp > .container .header .container article p {
+  color: var(--main-color);
+}
+.AlignmentTeeth-comp > .container .header .container img {
+  border-radius: 50%;
+  width: 40%;
+}
+.AlignmentTeeth-comp > .container .service-display .container .img {
+  width: 50%;
+}
+.AlignmentTeeth-comp > .container .service-display .container .img > img {
+  width: 100%;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.AlignmentTeeth-comp > .container .service-display .container .services {
+  height: 100%;
+  padding: 20px;
+  width: 50%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10%;
+}
+.AlignmentTeeth-comp > .container .service-display .container .services .service {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-bottom: 1px dashed var(--secondary-color);
+}
+.AlignmentTeeth-comp > .container .service-display .container .services .service p {
+  width: -moz-min-content;
+  width: min-content;
+  white-space: nowrap;
+}
+.AlignmentTeeth-comp > .container .further-details .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.AlignmentTeeth-comp > .container .further-details .container .forms .file a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid var(--main-color);
+  margin: 2px 0px;
+}
+.AlignmentTeeth-comp > .container .further-details .container .forms .file a img {
+  width: 20px;
+}/*# sourceMappingURL=AlignmentTeeth.css.map */

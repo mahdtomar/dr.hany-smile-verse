@@ -2,7 +2,7 @@ import React from "react";
 import "./sass/header.css";
 const Header = () => {
   return (
-    <div className="header">
+    <div className="header-comp">
       <div className="gradient"></div>
       <div className="container">
         <h1>Smile Verse</h1>

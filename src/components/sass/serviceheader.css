@@ -1,0 +1,12 @@
+.ServiceHeader-comp {
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 20px;
+  border-bottom: 2px solid var(--main-color);
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.ServiceHeader-comp * {
+  color: var(--main-color);
+}/*# sourceMappingURL=serviceheader.css.map */

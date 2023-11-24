@@ -1,13 +1,13 @@
-.header {
+.header-comp {
   height: 100vh;
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.52), rgba(0, 0, 0, 0.52), var(--secondary-color)), url("../../images//dentalCare1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
-.header * {
+.header-comp * {
   color: var(--background-color);
 }
-.header .container {
+.header-comp .container {
   height: 100%;
   display: grid;
   place-items: center;
@@ -16,21 +16,21 @@
   align-items: center;
   justify-items: start;
 }
-.header .container h1 {
+.header-comp .container h1 {
   font-size: 75px;
 }
-.header .container p {
+.header-comp .container p {
   margin: 20px 0px;
   width: 55%;
   font-size: 40px;
 }
-.header .container button {
+.header-comp .container button {
   background-color: var(--secondary-color);
   padding: 12px 6px;
   transition: color 0.3s;
   font-size: 25px;
   font-weight: 100;
 }
-.header .container button:hover {
+.header-comp .container button:hover {
   color: var(--main-color);
 }/*# sourceMappingURL=header.css.map */
