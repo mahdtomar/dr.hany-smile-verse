@@ -1,8 +1,8 @@
-import { Route, Routes } from "react-router-dom";
+import { Route,  Routes } from "react-router-dom";
 import "./App.css";
 import Logo from "./components/Logo";
-import NavLink from "./components/NavLink";
 import HomePage from "./pages/HomePage";
+import Services from "./pages/Services";
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
       <Routes>
         <Route element={<HomePage />} path="/" />
         <Route element={<Logo />} path="/logo" />
-        <Route element={<NavLink />} path="/services" />
+        <Route element={<Services />} path="/services" />
       </Routes>
     </div>
   );

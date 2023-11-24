@@ -19,48 +19,57 @@ const Navbar = () => {
         {
           id: 0,
           name: "Root Canal",
-          link: "",
+          link: `/services/root-canal`,
         },
         {
           id: 1,
           name: "Alignment Teeth",
-          link: "",
+          link: `/services/alignment-teeth`,
         },
         {
           id: 2,
           name: "Cosmetic Teeth",
-          link: "",
+          link: `/services/cosmetic-teeth`,
         },
         {
           id: 3,
           name: "Oral Hygiene",
-          link: "",
+          link: `/services/oral-hygiene`,
         },
         {
           id: 4,
           name: "Live Advisory",
-          link: "",
+          link: `/services/live-advisory`,
         },
         {
           id: 5,
           name: "Cavity Inspection",
-          link: "",
+          link: `/services/cavity-inspection`,
         },
       ],
     },
     {
       id: 2,
-      menuName: "home",
+      menuName: "comfort & technology",
+      mainlink: "/comfort-and-technology",
       dropMenu: false,
     },
     {
       id: 3,
-      menuName: "home",
+      menuName: "Appointment",
+      mainLink: "/appointment",
       dropMenu: false,
     },
     {
       id: 4,
-      menuName: "home",
+      menuName: "patients",
+      mainLink: "/patients",
+      dropMenu: false,
+    },
+    {
+      id: 5,
+      menuName: "FAQ",
+      mainLink: "/faq",
       dropMenu: false,
     },
   ];
@@ -70,15 +79,26 @@ const Navbar = () => {
         <ul className="flex-2">
           <Logo />
           <ul className="flex-2">
-            <Link to={"/"}>
-              home
-              {}
-            </Link>
-            <Link to={"/services"}>services</Link>
-            <Link to={"/comfort-and-technology"}>comfort & technology</Link>
-            <Link to={"/appointment"}>Appointment</Link>
-            <Link to={"/patients"}>patients</Link>
-            <Link to={"/faq"}>FAQ</Link>
+            {links.map((link) => {
+              return (
+                <Link key={link.id} to={link.mainlink}>
+                  {link.menuName}
+                  {link.dropMenu === false ? (
+                    ""
+                  ) : (
+                    <ul key={link.id}>
+                      {link.dropMenu.map((item) => {
+                        return (
+                          <Link key={item.id} to={item.link}>
+                            {item.name}
+                          </Link>
+                        );
+                      })}
+                    </ul>
+                  )}
+                </Link>
+              );
+            })}
           </ul>
           <div>
             <button>schedule Appointment</button>

@@ -3,7 +3,7 @@
   position: fixed;
   width: 100%;
   top: 0px;
-  padding: 10px 0px;
+  z-index: 99;
 }
 .navbar-comp .container ul * {
   color: white;
@@ -17,24 +17,51 @@
 .navbar-comp .container ul ul {
   gap: 20px;
 }
-.navbar-comp .container ul ul a {
+.navbar-comp .container ul ul > a {
   text-transform: capitalize;
   padding: 2px;
   text-decoration: none;
   position: relative;
+  padding: 10px 0px;
 }
-.navbar-comp .container ul ul a::before {
+.navbar-comp .container ul ul > a::before {
   content: "";
   position: absolute;
   width: 0%;
-  bottom: 0px;
+  bottom: 10px;
   left: 0px;
   height: 2px;
   background-color: var(--background-color);
   transition: width 0.4s ease-in;
 }
-.navbar-comp .container ul ul a:hover::before {
+.navbar-comp .container ul ul > a:hover::before {
   width: 100%;
+}
+.navbar-comp .container ul ul > a ul {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: opacity 0.3s;
+  width: -moz-max-content;
+  width: max-content;
+  background: var(--main-color);
+  padding: 8px;
+  left: 0px;
+  top: 100%;
+  padding: 8px;
+}
+.navbar-comp .container ul ul > a ul a {
+  padding: 2px;
+}
+.navbar-comp .container ul ul > a ul a::before {
+  bottom: 0px;
+}
+.navbar-comp .container ul ul > a:hover ul {
+  opacity: 1;
+  visibility: visible;
 }
 .navbar-comp .container ul > div {
   display: flex;

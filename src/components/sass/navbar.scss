@@ -3,7 +3,7 @@
   position: fixed;
   width: 100%;
   top: 0px;
-  padding: 10px 0px;
+  z-index: 99;
   .container {
     ul {
       * {
@@ -17,16 +17,17 @@
       }
       ul {
         gap: 20px;
-        a {
+        > a {
           text-transform: capitalize;
           padding: 2px;
           text-decoration: none;
           position: relative;
+          padding: 10px 0px;
           &::before {
             content: "";
             position: absolute;
             width: 0%;
-            bottom: 0px;
+            bottom: 10px;
             left: 0px;
             height: 2px;
             background-color: var(--background-color);
@@ -35,6 +36,33 @@
           &:hover {
             &::before {
               width: 100%;
+            }
+          }
+          ul {
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            transition: opacity 0.3s;
+            width: max-content;
+            background: var(--main-color);
+            padding: 8px;
+            left: 0px;
+            top: calc(100%);
+            padding: 8px;
+            a {
+              padding: 2px;
+              &::before {
+                bottom: 0px;
+              }
+            }
+          }
+          &:hover {
+            ul {
+              opacity: 1;
+              visibility: visible;
             }
           }
         }
