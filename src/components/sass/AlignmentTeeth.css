@@ -7,6 +7,9 @@
   gap: 20px;
   padding: 0px 4px;
 }
+.AlignmentTeeth-comp > .container main section {
+  margin: 50px 0px;
+}
 .AlignmentTeeth-comp > .container .sidebar ul {
   list-style-type: none;
   margin-top: 70px;
@@ -48,6 +51,34 @@
 }
 .AlignmentTeeth-comp > .container .sidebar ul li a:hover::before {
   width: 4px;
+}
+.AlignmentTeeth-comp > .container .sidebar .callus {
+  background-color: lightgray;
+  padding: 30px;
+}
+.AlignmentTeeth-comp > .container .sidebar .callus p,
+.AlignmentTeeth-comp > .container .sidebar .callus span {
+  display: block;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+.AlignmentTeeth-comp > .container .sidebar .callus span {
+  margin-top: 20px;
+  color: var(--secondary-color);
+  position: relative;
+}
+.AlignmentTeeth-comp > .container .sidebar .callus span::before {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 6px;
+  background-color: var(--secondary-color);
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 100px;
 }
 .AlignmentTeeth-comp > .container .header .container {
   gap: 50px;
@@ -98,14 +129,51 @@
 .AlignmentTeeth-comp > .container .further-details .container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+.AlignmentTeeth-comp > .container .further-details .container .forms .files {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 .AlignmentTeeth-comp > .container .further-details .container .forms .file a {
   display: flex;
   align-items: center;
   justify-content: space-between;
   border: 2px solid var(--main-color);
+  padding: 4px;
   margin: 2px 0px;
+  text-decoration: none;
+  font-weight: bold;
 }
 .AlignmentTeeth-comp > .container .further-details .container .forms .file a img {
   width: 20px;
+}
+.AlignmentTeeth-comp > .container .further-details .container .insurance-details > span,
+.AlignmentTeeth-comp > .container .further-details .container .payment-method > span,
+.AlignmentTeeth-comp > .container .further-details .container .forms > span {
+  font-size: larger;
+  color: var(--secondary-color);
+  text-transform: uppercase;
+}
+.AlignmentTeeth-comp > .container .why-us {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+}
+.AlignmentTeeth-comp > .container .why-us .title {
+  font-size: 30px;
+  font-weight: bold;
+}
+.AlignmentTeeth-comp > .container .why-us p {
+  width: 80%;
+}
+.AlignmentTeeth-comp > .container .why-us button {
+  padding: 8px 16px;
+  font-size: larger;
+  background-color: var(--secondary-color);
+  color: white;
 }/*# sourceMappingURL=AlignmentTeeth.css.map */

@@ -8,6 +8,7 @@ import downloadIcon from "../icons/ArrowLineDown.svg";
 import serviceDisplay from "../images/dentalia-demo-consultation-3-1.jpg";
 import syring from "../icons/Syringe.svg";
 import { Link } from "react-router-dom";
+import AppointmentBtn from "./AppointmentBtn";
 const AlignmentTeeth = () => {
   return (
     <div className="AlignmentTeeth-comp">
@@ -27,6 +28,10 @@ const AlignmentTeeth = () => {
               <Link>Service 4</Link>
             </li>
           </ul>
+          <div className="callus">
+            <p className="title">If You Need Any Help Contact With Us</p>
+            <span>+91 111 3216 745</span>
+          </div>
         </div>
         <main>
           <ServiceHeader servicename={"Alignment Teeth"} />
@@ -83,24 +88,27 @@ const AlignmentTeeth = () => {
           <section className="further-details">
             <div className="container">
               <div className="forms">
-                <div className="file">
-                  <a href={pdf1} download={"file.pdf"}>
-                    <span>patient welcome form</span>
-                    <img src={downloadIcon} alt="" />
-                  </a>
-                </div>
-                <div className="file">
-                  <a href={pdf1} download={"file.pdf"}>
-                    <span>Office Policy</span>
-                    <img src={downloadIcon} alt="" />
-                  </a>
-                </div>
+                <span>patients Forms</span>
+                <div className="files">
+                  <div className="file">
+                    <a href={pdf1} download={"file.pdf"}>
+                      <span>patient welcome form</span>
+                      <img src={downloadIcon} alt="" />
+                    </a>
+                  </div>
+                  <div className="file">
+                    <a href={pdf1} download={"file.pdf"}>
+                      <span>Office Policy</span>
+                      <img src={downloadIcon} alt="" />
+                    </a>
+                  </div>
 
-                <div className="file">
-                  <a href={pdf1} download={"file.pdf"}>
-                    <span>HIPPA Notice Form</span>
-                    <img src={downloadIcon} alt="" />
-                  </a>
+                  <div className="file">
+                    <a href={pdf1} download={"file.pdf"}>
+                      <span>HIPPA Notice Form</span>
+                      <img src={downloadIcon} alt="" />
+                    </a>
+                  </div>
                 </div>
               </div>
               <div className="insurance-details">
@@ -122,6 +130,18 @@ const AlignmentTeeth = () => {
                 </p>
               </div>
             </div>
+          </section>
+          <section className="why-us">
+            <span className="title">Why Opt for This Service</span>
+            <p>
+              Offering a comprehensive overview of systems and elaborating on
+              the genuine teachings of the notable truth-seeker, the skilled
+              creator of human well-being. Rejection, aversion, or avoidance of
+              pleasure doesn't stem from pleasure itself but rather from the
+              adverse consequences faced by those who lack a rational approach
+              to pursuing it.
+            </p>
+            <AppointmentBtn />
           </section>
         </main>
       </div>
