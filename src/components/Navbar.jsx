@@ -8,13 +8,13 @@ const Navbar = () => {
     {
       id: 0,
       menuName: "home",
-      mainlink: "/",
+      mainLink: "/",
       dropMenu: false,
     },
     {
       id: 1,
       menuName: "services",
-      mainlink: "/services",
+      mainLink: "/services",
       dropMenu: [
         {
           id: 0,
@@ -51,13 +51,13 @@ const Navbar = () => {
     {
       id: 2,
       menuName: "comfort & technology",
-      mainlink: "/comfort-and-technology",
+      mainLink: "/comfort-and-technology",
       dropMenu: false,
     },
     {
       id: 3,
       menuName: "Appointment",
-      mainLink: "/appointment",
+      mainLink: "/Appointment",
       dropMenu: false,
     },
     {
@@ -81,7 +81,7 @@ const Navbar = () => {
           <ul className="flex-2">
             {links.map((link) => {
               return (
-                <Link key={link.id} to={link.mainlink}>
+                <Link key={link.id} to={link.mainLink}>
                   {link.menuName}
                   {link.dropMenu === false ? (
                     ""

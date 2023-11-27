@@ -1,0 +1,45 @@
+.BookingAppointment-comp {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  > .container {
+    margin-top: 44px;
+    width: 100%;
+    max-width: 1440px;
+  }
+  .patient-type-comp {
+    .container {
+      margin-top: 40px;
+      width: 50%;
+      box-shadow: 3px 3px 10px 10px lightgray;
+      padding: 40px;
+      border-radius: 5px;
+      p {
+        font-size: 30px;
+        text-transform: capitalize;
+        font-weight: bold;
+      }
+      .flex-2 {
+        width: 50%;
+        margin: 50px auto;
+        a {
+          text-decoration: none;
+          font-weight: bold;
+          background-color: var(--secondary-color);
+          color: var(--background-color);
+          padding: 8px 16px;
+          border-radius: 4px;
+          font-size: 25px;
+          transition: 0.3s color;
+          &:hover {
+            color: var(--main-color);
+          }
+        }
+      }
+    }
+  }
+}
+
+.main-content {
+  flex: 1;
+}
