@@ -16,12 +16,13 @@
       border-radius: 5px;
       p {
         font-size: 30px;
-        text-transform: capitalize;
         font-weight: bold;
       }
       .flex-2 {
-        width: 50%;
+        // width: 50%;
         margin: 50px auto;
+        gap: 20px;
+        justify-content: center;
         a {
           text-decoration: none;
           font-weight: bold;
@@ -31,10 +32,14 @@
           border-radius: 4px;
           font-size: 25px;
           transition: 0.3s color;
+          text-align: center;
           &:hover {
             color: var(--main-color);
           }
         }
+      }
+      .new-patient {
+        display: none;
       }
     }
   }

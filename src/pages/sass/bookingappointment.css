@@ -17,12 +17,12 @@
 }
 .BookingAppointment-comp .patient-type-comp .container p {
   font-size: 30px;
-  text-transform: capitalize;
   font-weight: bold;
 }
 .BookingAppointment-comp .patient-type-comp .container .flex-2 {
-  width: 50%;
   margin: 50px auto;
+  gap: 20px;
+  justify-content: center;
 }
 .BookingAppointment-comp .patient-type-comp .container .flex-2 a {
   text-decoration: none;
@@ -33,9 +33,13 @@
   border-radius: 4px;
   font-size: 25px;
   transition: 0.3s color;
+  text-align: center;
 }
 .BookingAppointment-comp .patient-type-comp .container .flex-2 a:hover {
   color: var(--main-color);
+}
+.BookingAppointment-comp .patient-type-comp .container .new-patient {
+  display: none;
 }
 
 .main-content {

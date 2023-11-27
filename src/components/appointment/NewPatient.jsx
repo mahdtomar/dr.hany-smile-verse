@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
 
 const NewPatient = () => {
-  return (
-    <div>NewPatient</div>
-  )
-}
+  return <form>
+    
+  </form>;
+};
 
-export default NewPatient
+export default NewPatient;
