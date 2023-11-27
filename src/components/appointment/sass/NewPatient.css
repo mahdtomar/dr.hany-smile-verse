@@ -1,0 +1,66 @@
+.newpatient-comp .bg-img {
+  position: absolute;
+  width: 30%;
+  opacity: 0.3;
+  z-index: 1;
+  bottom: 5%;
+  right: 0px;
+}
+.newpatient-comp .data {
+  z-index: 5;
+  position: relative;
+  display: grid;
+  place-items: center;
+  background-color: white;
+  box-shadow: 0px 20px 40px 20px rgb(194, 194, 194);
+  margin: 0px auto 100px auto;
+  border-radius: 20px;
+}
+.newpatient-comp .data .wide {
+  grid-column: 1/4;
+}
+.newpatient-comp .data .flex-2 {
+  width: -moz-fit-content;
+  width: fit-content;
+  gap: 15px;
+  justify-content: left;
+  margin: 30px;
+}
+.newpatient-comp .data select {
+  display: block;
+  width: 100%;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 4px;
+  border: 2px solid gray;
+}
+.newpatient-comp .data select:focus {
+  outline: none;
+}
+.newpatient-comp .data label {
+  display: block;
+}
+.newpatient-comp .data label input {
+  box-shadow: 0px 0px 10px 2px rgb(233, 233, 233);
+  border-bottom: 2px solid transparent;
+  display: block;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 4px;
+  padding-left: 10px;
+  transition: border 0.3s;
+  border: 2px solid gray;
+}
+.newpatient-comp .data label input::-moz-placeholder {
+  color: gray;
+}
+.newpatient-comp .data label input::placeholder {
+  color: gray;
+}
+.newpatient-comp .data label input:focus {
+  outline: none;
+  border-color: gray;
+}/*# sourceMappingURL=NewPatient.css.map */

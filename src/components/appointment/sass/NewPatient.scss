@@ -1,0 +1,74 @@
+// body {
+//   background-image: url(../../../icons/toothbrush-svgrepo-com.svg);
+// }
+.newpatient-comp {
+  .bg-img {
+    position: absolute;
+    width: 30%;
+    opacity: 0.3;
+    z-index: 1;
+    bottom: 5%;
+    right: 0px;
+  }
+  .data {
+    z-index: 5;
+    position: relative;
+    display: grid;
+    place-items: center;
+    background-color: white;
+    box-shadow: 0px 20px 40px 20px rgb(194, 194, 194);
+    margin: 0px auto 100px auto;
+    border-radius: 20px;
+    .wide {
+      grid-column: 1 / 4;
+    }
+    .flex-2 {
+      width: fit-content;
+      gap: 15px;
+      justify-content: left;
+      margin: 30px;
+    }
+    select {
+      display: block;
+      width: 100%;
+      //   background-color: var(--secondary-color);
+      border: none;
+      font-size: 20px;
+      font-weight: bold;
+      border-radius: 5px;
+      padding: 4px;
+      border: 2px solid gray;
+      &:focus {
+        outline: none;
+      }
+    }
+    label {
+      display: block;
+      //   width: 100%;
+      input {
+        box-shadow: 0px 0px 10px 2px rgb(233, 233, 233);
+
+        // background-color: lightgray;
+        //   border: none;
+        // background-color: var(--secondary-color);
+        border-bottom: 2px solid transparent;
+        display: block;
+        font-size: 20px;
+        font-weight: bold;
+        border-radius: 5px;
+        padding: 4px;
+        padding-left: 10px;
+        transition: border 0.3s;
+        border: 2px solid gray;
+        &::placeholder {
+          color: gray;
+        }
+        &:focus {
+          outline: none;
+          border-color: gray;
+        }
+      }
+    }
+  }
+}
+

@@ -44,4 +44,9 @@
 
 .main-content {
   flex: 1;
+}
+
+footer {
+  position: relative;
+  z-index: 2;
 }/*# sourceMappingURL=bookingappointment.css.map */
