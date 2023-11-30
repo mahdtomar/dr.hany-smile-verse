@@ -13,12 +13,17 @@
   .data {
     z-index: 5;
     position: relative;
-    display: grid;
-    place-items: center;
+    display: flex;
+    flex-direction: column;
+    // place-items: center;
     background-color: white;
     box-shadow: 0px 20px 40px 20px rgb(194, 194, 194);
-    margin: 0px auto 100px auto;
+    margin: 20px auto 100px auto;
     border-radius: 20px;
+    gap: 20px;
+    width: fit-content;
+    padding: 20px;
+    justify-content: flex-start;
     .wide {
       grid-column: 1 / 4;
     }
@@ -26,7 +31,6 @@
       width: fit-content;
       gap: 15px;
       justify-content: left;
-      margin: 30px;
     }
     select {
       display: block;
@@ -45,12 +49,15 @@
     label {
       display: block;
       //   width: 100%;
+      &.full {
+        width: 100%;
+        input{
+          width: 100%;
+          display: block;
+        }
+      }
       input {
         box-shadow: 0px 0px 10px 2px rgb(233, 233, 233);
-
-        // background-color: lightgray;
-        //   border: none;
-        // background-color: var(--secondary-color);
         border-bottom: 2px solid transparent;
         display: block;
         font-size: 20px;
@@ -69,6 +76,16 @@
         }
       }
     }
+    .pharmacy-details {
+      display: grid;
+      gap: 20px;
+      justify-items: start;
+    }
+    button{
+      background-color: var(--main-color);
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+    }
   }
 }
-

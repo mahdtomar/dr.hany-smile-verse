@@ -5,6 +5,11 @@ const NewPatient = () => {
   const currentDate = new Date();
   const currentYear = currentDate.getFullYear();
 
+  function limitInputLength(element, maxLength) {
+    if (element.value.length > maxLength) {
+      element.value = element.value.slice(0, maxLength);
+    }
+  }
   return (
     <form className="newpatient-comp">
       <img src={teeth} className="bg-img" alt="" />
@@ -25,44 +30,49 @@ const NewPatient = () => {
             <input type="tel" name="phone" placeholder="Phone Number" />
           </label>
         </div>
-        <label className="wide" htmlFor="Address ">
+        <label className="wide full" htmlFor="Address" name="Address">
           <input type="text" name="Address" placeholder="Address" />
         </label>
-        <div className="wide flex-2">
-          <label htmlFor="months">
-            <select name="months" id="month">
-              <option>January</option>
-              <option>February</option>
-              <option>March</option>
-              <option>April</option>
-              <option>May</option>
-              <option>June</option>
-              <option>July</option>
-              <option>August</option>
-              <option>September</option>
-              <option>October</option>
-              <option>November</option>
-              <option>December</option>
-            </select>
-          </label>
-          <label htmlFor="days">
-            <input
-              type="number"
-              name="days"
-              placeholder="DD"
-              min={1}
-              max={31}
-            />
-          </label>
-          <label htmlFor="years">
-            <input
-              type="number"
-              name="years"
-              placeholder="YYYY"
-              min={currentYear - 100}
-              max={currentYear}
-            />
-          </label>
+        <div>
+          <p>date of birth</p>
+          <div className=" flex-2">
+            <label htmlFor="months">
+              <select name="months" id="month">
+                <option>January</option>
+                <option>February</option>
+                <option>March</option>
+                <option>April</option>
+                <option>May</option>
+                <option>June</option>
+                <option>July</option>
+                <option>August</option>
+                <option>September</option>
+                <option>October</option>
+                <option>November</option>
+                <option>December</option>
+              </select>
+            </label>
+            <label htmlFor="days">
+              <input
+                type="number"
+                name="days"
+                placeholder="DD"
+                min={1}
+                max={31}
+                onChange={(e) => limitInputLength(e.target, 2)}
+              />
+            </label>
+            <label htmlFor="years">
+              <input
+                type="number"
+                name="years"
+                placeholder="YYYY"
+                min={currentYear - 100}
+                max={currentYear}
+                onChange={(e) => limitInputLength(e.target, 4)}
+              />
+            </label>
+          </div>
         </div>
         <div className="wide flex-2">
           <label htmlFor="street">
@@ -82,7 +92,7 @@ const NewPatient = () => {
         </div>
         <div className="pharmacy-details">
           <h2>pharmacy-details</h2>
-          <label htmlFor="pharmacyName" className="wide">
+          <label htmlFor="pharmacyName" className="wide full">
             <input
               type="text"
               placeholder="Pharmacy Name"
@@ -122,6 +132,7 @@ const NewPatient = () => {
             </label>
           </div>
         </div>
+        <button type="submit">Schdule</button>
       </div>
     </form>
   );
