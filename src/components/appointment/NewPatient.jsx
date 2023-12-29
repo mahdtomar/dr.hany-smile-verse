@@ -14,6 +14,7 @@ const NewPatient = () => {
     <form className="newpatient-comp">
       <img src={teeth} className="bg-img" alt="" />
       <div className="container data">
+        <h2>Personal Details</h2>
         <div className="name flex-2 wide">
           <label htmlFor="first-name">
             <input type="text" name="first-name" placeholder="First Name" />
@@ -34,7 +35,7 @@ const NewPatient = () => {
           <input type="text" name="Address" placeholder="Address" />
         </label>
         <div>
-          <p>date of birth</p>
+          <h2>date of birth</h2>
           <div className=" flex-2">
             <label htmlFor="months">
               <select name="months" id="month">

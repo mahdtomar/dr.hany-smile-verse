@@ -2,13 +2,14 @@ import React from "react";
 import "./sass/AlignmentTeeth.css";
 import ServiceHeader from "./ServiceHeader";
 import ServicesDisplay from "./ServicesDisplay";
-import pdf1 from "../files/file.pdf";
-import headingImage from "../images/complementary-consultant.jpg";
-import downloadIcon from "../icons/ArrowLineDown.svg";
-import serviceDisplay from "../images/dentalia-demo-consultation-3-1.jpg";
-import syring from "../icons/Syringe.svg";
 import { Link } from "react-router-dom";
-import AppointmentBtn from "./AppointmentBtn";
+import AppointmentBtn from "../AppointmentBtn";
+// images & pdf
+import pdf1 from "../../files/file.pdf";
+import headingImage from "../../images/complementary-consultant.jpg";
+import downloadIcon from "../../icons/ArrowLineDown.svg";
+import serviceDisplay from "../../images/dentalia-demo-consultation-3-1.jpg";
+import syring from "../../icons/Syringe.svg";
 const AlignmentTeeth = () => {
   return (
     <div className="AlignmentTeeth-comp">
