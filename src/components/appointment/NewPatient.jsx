@@ -91,47 +91,15 @@ const NewPatient = () => {
             <input type="text" placeholder="zip code" name="zipcode" />
           </label>
         </div>
-        <div className="pharmacy-details">
-          <h2>pharmacy-details</h2>
-          <label htmlFor="pharmacyName" className="wide full">
+        <div className="Insurance-details">
+          <h2>Insurance-details</h2>
+          <label htmlFor="InsuranceName" className="wide full">
             <input
               type="text"
-              placeholder="Pharmacy Name"
-              name="pharmacyName"
+              placeholder="Insurance Company"
+              name="InsuranceCompany"
             />
           </label>
-          <div className="wide flex-2">
-            <label htmlFor="pharmacyStreet">
-              <input
-                type="text"
-                placeholder="Pharmacy Street"
-                name="pharmacyStreet"
-              />
-            </label>
-            <label htmlFor="pharmacyCity">
-              <input
-                type="text"
-                placeholder="Pharmacy City"
-                name="pharmacyCity"
-              />
-            </label>
-          </div>
-          <div className="wide flex-2">
-            <label htmlFor="pharmacyState">
-              <input
-                type="text"
-                placeholder="Pharmacy State"
-                name="pharmacyState"
-              />
-            </label>
-            <label htmlFor="pharmacyZipcode">
-              <input
-                type="text"
-                placeholder="Pharmacy Zip code"
-                name="pharmacyZipcode"
-              />
-            </label>
-          </div>
         </div>
         <button type="submit">Schdule</button>
       </div>
