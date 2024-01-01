@@ -6,6 +6,7 @@ import Services from "./pages/Services";
 import BookingAppointment from "./pages/BookingAppointment";
 import PatientType from "./components/appointment/PatientType";
 import NewPatient from "./components/appointment/NewPatient";
+import UserProfile from "./pages/UserProfile";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           element={<BookingAppointment content={<NewPatient />} />}
           path="/Appointment/New"
         />
+        <Route element={<UserProfile />} path="/Profile/:id" />
       </Routes>
     </div>
   );
