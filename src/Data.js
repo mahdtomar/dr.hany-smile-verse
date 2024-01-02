@@ -16,7 +16,7 @@ export const users = [
     id: 1,
     FirstName: "Omar",
     LastName: "Mahdy",
-    Image: image,
+    Image: require("./images/pfp.jpg"),
     Age: 20,
     PhoneNumber: "+00201029949333",
     Email: "omarmahdy@gmail.com",

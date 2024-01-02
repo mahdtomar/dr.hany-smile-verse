@@ -27,6 +27,11 @@ const SideBar = () => {
     return (
       <div>
         <UserImageAndName className="user-image" imageUrl={user.Image} />
+        <div className="user-name">
+          <b>
+            {user.FirstName} {user.LastName}
+          </b>
+        </div>
       </div>
     );
   }
