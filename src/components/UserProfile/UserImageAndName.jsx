@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from "react";
-
+import defaultImage from "../../icons/Default_pfp.png";
 const UserImageAndName = ({ imageUrl }) => {
-  const [imageSrc, setImageSrc] = useState(null);
+  const [imageSrc, setImageSrc] = useState(defaultImage);
 
   useEffect(() => {
     const importImage = async () => {
       try {
-        const { default: image } = await import(imageUrl);
-        setImageSrc(image);
+        setImageSrc(imageUrl);
       } catch (error) {
         console.error("Error importing image:", error);
       }

@@ -1,3 +1,4 @@
+import image from "./icons/10368224.png";
 export const appointments = [
   {
     id: 321,
@@ -15,7 +16,7 @@ export const users = [
     id: 1,
     FirstName: "Omar",
     LastName: "Mahdy",
-    Image: "/src/icons/Default_pfp.png",
+    Image: image,
     Age: 20,
     PhoneNumber: "+00201029949333",
     Email: "omarmahdy@gmail.com",
