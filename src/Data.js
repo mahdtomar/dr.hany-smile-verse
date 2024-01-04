@@ -1,4 +1,3 @@
-import image from "./icons/10368224.png";
 export const appointments = [
   {
     id: 321,
