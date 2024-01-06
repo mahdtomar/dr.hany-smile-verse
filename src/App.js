@@ -23,7 +23,14 @@ function App() {
           element={<BookingAppointment content={<NewPatient />} />}
           path="/Appointment/New"
         />
-        <Route element={<UserProfile />} path="/Profile/:id" />
+        <Route
+          element={<UserProfile content={"info"} />}
+          path="/Profile/:id/info"
+        />
+        <Route
+          element={<UserProfile content={"insurance"} />}
+          path="/Profile/:id/insurance"
+        />
       </Routes>
     </div>
   );

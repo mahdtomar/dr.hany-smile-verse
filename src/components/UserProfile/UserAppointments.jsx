@@ -17,7 +17,7 @@ const UserAppointments = ({ Appointments }) => {
     calculateAppointments();
   }, [Appointments]);
   return (
-    <div>
+    <div className="user-appointment-comp">
       <p>Appointments</p>
       <div className="done">
         <span>Done</span>

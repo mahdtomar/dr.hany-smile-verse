@@ -1,0 +1,57 @@
+.info-container-comp {
+  width: 75%;
+  background-color: white;
+  padding: 16px;
+  border-radius: 16px;
+  box-shadow: 0px 0px 10px 0px rgba($color: #000000, $alpha: 0.1);
+  .user-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+  }
+  label {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    input {
+      font-size: 22px;
+      display: block;
+      width: 100%;
+      padding: 4px;
+      transition: box-shadow 0.3s ease-in-out, border 0.2s ease-in-out;
+      border: 2px solid rgba($color: #000000, $alpha: 0.2);
+      border-radius: 5px;
+      &:focus,
+      &:hover {
+        box-shadow: 0px 0px 3px 0px var(--secondary-color);
+      }
+      &:focus {
+        outline: none;
+        border-color: var(--secondary-color);
+      }
+    }
+  }
+  .menu {
+    margin: 20px auto;
+    a {
+      text-decoration: none;
+      margin-inline: 10px;
+      padding: 10px;
+      border-radius: 100px;
+      box-shadow: 0px 0px 3px 0px black;
+      transition: box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out;
+      &[active="true"],
+      &:hover {
+        border-color: var(--secondary-color);
+        box-shadow: 0px 0px 5px 0px var(--secondary-color);
+      }
+      &[active="true"] {
+        border-color: var(--secondary-color);
+      }
+    }
+  }
+}

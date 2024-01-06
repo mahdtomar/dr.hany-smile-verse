@@ -1,0 +1,12 @@
+.user-profile-comp {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.user-profile-comp .main {
+  margin-top: 100px;
+  gap: 50px;
+  width: 90%;
+}/*# sourceMappingURL=userProfile.css.map */

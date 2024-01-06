@@ -18,7 +18,7 @@ const UserImageAndName = ({ imageUrl, userName }) => {
   }, [imageUrl]);
 
   return (
-    <div>
+    <div className="user-image">
       {imageSrc && (
         <>
           <img className="user-image" src={imageSrc} alt="Profile" />

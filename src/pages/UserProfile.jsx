@@ -5,7 +5,8 @@ import SideBar from "../components/UserProfile/SideBar";
 import InfoContainer from "../components/UserProfile/InfoContainer";
 import { useParams } from "react-router-dom";
 import { users } from "../Data";
-const UserProfile = () => {
+import "./sass/userProfile.css";
+const UserProfile = ({ content }) => {
   const [user, setUser] = useState(undefined);
   const { id } = useParams();
 
@@ -29,9 +30,9 @@ const UserProfile = () => {
     return (
       <div className="user-profile-comp">
         <Navbar />
-        <div className="container">
+        <div className="container main flex-2">
           <SideBar user={user} />
-          <InfoContainer user={user} />
+          <InfoContainer user={user} content={content} />
         </div>
         <Footer />
       </div>

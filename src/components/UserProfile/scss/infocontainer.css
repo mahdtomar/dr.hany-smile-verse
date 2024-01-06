@@ -1,0 +1,55 @@
+.info-container-comp {
+  width: 75%;
+  background-color: white;
+  padding: 16px;
+  border-radius: 16px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+.info-container-comp .user-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+.info-container-comp label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.info-container-comp label input {
+  font-size: 22px;
+  display: block;
+  width: 100%;
+  padding: 4px;
+  transition: box-shadow 0.3s ease-in-out, border 0.2s ease-in-out;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+.info-container-comp label input:focus, .info-container-comp label input:hover {
+  box-shadow: 0px 0px 3px 0px var(--secondary-color);
+}
+.info-container-comp label input:focus {
+  outline: none;
+  border-color: var(--secondary-color);
+}
+.info-container-comp .menu {
+  margin: 20px auto;
+}
+.info-container-comp .menu a {
+  text-decoration: none;
+  margin-inline: 10px;
+  padding: 10px;
+  border-radius: 100px;
+  box-shadow: 0px 0px 3px 0px black;
+  transition: box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+.info-container-comp .menu a[active=true], .info-container-comp .menu a:hover {
+  border-color: var(--secondary-color);
+  box-shadow: 0px 0px 5px 0px var(--secondary-color);
+}
+.info-container-comp .menu a[active=true] {
+  border-color: var(--secondary-color);
+}/*# sourceMappingURL=infocontainer.css.map */

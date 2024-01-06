@@ -3,7 +3,7 @@ import UserImageAndName from "./UserImageAndName";
 // import { users } from "../../Data";
 // import { useParams } from "react-router-dom";
 import UserAppointments from "./UserAppointments";
-
+import "./scss/sidebar.css";
 const SideBar = ({ user }) => {
   // const [user, setUser] = useState(undefined);
   // const { id } = useParams();
@@ -26,7 +26,6 @@ const SideBar = ({ user }) => {
   return (
     <div className="sidebar-comp">
       <UserImageAndName
-        className="user-image"
         imageUrl={user.Image}
         userName={`${user.FirstName} ${user.LastName}`}
       />

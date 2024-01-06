@@ -1,0 +1,70 @@
+.sidebar-comp {
+  width: 25%;
+  padding: 16px;
+  border-radius: 16px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  height: 100%;
+}
+.sidebar-comp .user-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+.sidebar-comp .user-image img {
+  border-radius: 10px;
+  width: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.sidebar-comp .user-image p {
+  font-weight: bold;
+  font-size: 23px;
+}
+.sidebar-comp .user-appointment-comp {
+  margin-top: 15px;
+  position: relative;
+}
+.sidebar-comp .user-appointment-comp::before {
+  content: "";
+  width: 50%;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.425);
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.sidebar-comp .user-appointment-comp p {
+  text-align: center;
+  font-weight: bold;
+  font-size: 19px;
+}
+.sidebar-comp .user-appointment-comp div {
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 4px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  margin: 20px auto;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease-in-out, border 0.2s ease-in-out;
+}
+.sidebar-comp .user-appointment-comp div.done:hover {
+  box-shadow: 0px 0px 3px 0px var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+.sidebar-comp .user-appointment-comp div.done * {
+  color: var(--secondary-color);
+  font-size: 18px;
+}
+.sidebar-comp .user-appointment-comp div.queued:hover {
+  box-shadow: 0px 0px 3px 0px orangered;
+  border-color: orangered;
+}
+.sidebar-comp .user-appointment-comp div.queued * {
+  color: orangered;
+}/*# sourceMappingURL=sidebar.css.map */
