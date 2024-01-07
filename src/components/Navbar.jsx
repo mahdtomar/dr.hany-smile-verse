@@ -62,8 +62,8 @@ const Navbar = () => {
     },
     {
       id: 4,
-      menuName: "patients",
-      mainLink: "/patients",
+      menuName: "profile",
+      mainLink: "/profile",
       dropMenu: false,
     },
     {

@@ -25,7 +25,7 @@ function App() {
         />
         <Route
           element={<UserProfile content={"info"} />}
-          path="/Profile/:id/info"
+          path="/profile/:id/info"
         />
         <Route
           element={<UserProfile content={"insurance"} />}
