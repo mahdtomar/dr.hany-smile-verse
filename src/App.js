@@ -7,6 +7,7 @@ import BookingAppointment from "./pages/BookingAppointment";
 import PatientType from "./components/appointment/PatientType";
 import NewPatient from "./components/appointment/NewPatient";
 import UserProfile from "./pages/UserProfile";
+import AboutUs from "./pages/AboutUs";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
           element={<UserProfile content={"insurance"} />}
           path="/Profile/:id/insurance"
         />
+        <Route element={<AboutUs />} path="/about-us" />
       </Routes>
     </div>
   );

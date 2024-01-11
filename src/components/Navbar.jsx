@@ -55,15 +55,15 @@ const Navbar = () => {
       dropMenu: false,
     },
     {
-      id: 3,
-      menuName: "Appointment",
-      mainLink: "/Appointment",
-      dropMenu: false,
-    },
-    {
       id: 4,
       menuName: "profile",
       mainLink: "/profile",
+      dropMenu: false,
+    },
+    {
+      id: 3,
+      menuName: "about us",
+      mainLink: "/about-us",
       dropMenu: false,
     },
     {
@@ -101,7 +101,7 @@ const Navbar = () => {
             })}
           </ul>
           <div>
-            <button>schedule Appointment</button>
+            <Link to={"/Appointment"}>schedule Appointment</Link>
             <div className="languages">
               <span>AR</span>
               <span>EN</span>

@@ -72,12 +72,14 @@
         flex-direction: row;
         justify-content: space-evenly;
         gap: 20px;
-        button {
+        a {
           color: var(--main-color);
           border: none;
           padding: 8px 4px;
           border-radius: 4px;
           font-weight: bold;
+          background-color: var(--background-color);
+          text-decoration: none;
         }
         .languages {
           display: flex;
