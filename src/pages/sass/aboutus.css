@@ -1,0 +1,89 @@
+.about-us-comp .container .achievments {
+  margin: 30px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 20px;
+}
+.about-us-comp .container .achievments figure {
+  width: 30%;
+  padding: 20px;
+  border-radius: 16px;
+}
+.about-us-comp .container .achievments figure:hover img {
+  transform: translateY(-10px);
+  top: -20px;
+}
+.about-us-comp .container .achievments figure img {
+  transition-property: transform;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+  width: 150px;
+  display: block;
+  margin: auto;
+}
+.about-us-comp .container .achievments figure figcaption {
+  text-align: center;
+}
+.about-us-comp .container .achievments figure figcaption .counter {
+  font-weight: bold;
+  font-size: 50px;
+  color: var(--main-color);
+}
+.about-us-comp .container .achievments figure figcaption .title {
+  font-weight: bold;
+}
+.about-us-comp .container .achievments figure figcaption span {
+  color: rgba(0, 0, 0, 0.8);
+}
+.about-us-comp .our-vision {
+  background-color: #73b9ff;
+}
+.about-us-comp .our-vision .container {
+  padding: 20px;
+}
+.about-us-comp .our-vision .container .FeatureTile-comp {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  padding: 30px;
+}
+.about-us-comp .our-vision .container .FeatureTile-comp .image {
+  display: none;
+}
+.about-us-comp .our-vision .container .FeatureTile-comp .description {
+  text-align: center;
+  line-height: 150%;
+  font-weight: bold;
+}
+.about-us-comp .our-vision .container .FeatureTile-comp .description span {
+  display: block;
+  margin-bottom: 30px;
+  font-size: 25px;
+  color: var(--main-color);
+  font-family: "Agbalumo";
+}
+.about-us-comp .testmonials h2 {
+  width: 100%;
+  font-weight: bold;
+  font-size: 27px;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 30px 0px;
+}
+.about-us-comp .testmonials .container {
+  text-align: center;
+  gap: 100px;
+}
+.about-us-comp .testmonials .container .testmonial p {
+  color: rgba(0, 0, 0, 0.8);
+  margin: 20px 0px;
+}
+.about-us-comp .testmonials .container .testmonial span {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.about-us-comp .testmonials .container .testmonial::before {
+  display: none;
+}/*# sourceMappingURL=aboutus.css.map */

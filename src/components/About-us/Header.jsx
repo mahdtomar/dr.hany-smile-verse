@@ -1,10 +1,11 @@
 import React from "react";
 import staffImage from "../../images/staff.jpeg";
+import "./scss/header.css";
 const Header = () => {
   return (
-    <div>
+    <div className="about-us-header">
       <div className="container">
-        <figure className=".flex-2">
+        <figure className="flex-2">
           <img src={staffImage} alt="" />
           <figcaption>
             <span className="title">about us</span>
