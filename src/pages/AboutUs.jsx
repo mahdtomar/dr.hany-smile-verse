@@ -10,6 +10,7 @@ import hostpital from "../icons/hospital.jpeg";
 import doctor from "../icons/dentist.jpeg";
 import FeatureTile from "../components/FeatureTile";
 import Testmonial from "../components/About-us/Testmonial";
+import FeedbackForm from "../components/faq/FeedbackForm";
 const AboutUs = () => {
   return (
     <div className="about-us-comp">
@@ -88,6 +89,7 @@ const AboutUs = () => {
           />
         </div>
       </div>
+      <FeedbackForm />
       <Footer />
     </div>
   );
