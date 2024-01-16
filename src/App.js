@@ -8,6 +8,7 @@ import PatientType from "./components/appointment/PatientType";
 import NewPatient from "./components/appointment/NewPatient";
 import UserProfile from "./pages/UserProfile";
 import AboutUs from "./pages/AboutUs";
+import ConfortAndTechnology from "./pages/ConfortAndTechnology";
 
 function App() {
   return (
@@ -27,6 +28,10 @@ function App() {
         <Route
           element={<UserProfile content={"info"} />}
           path="/profile/:id/info"
+        />
+        <Route
+          element={<ConfortAndTechnology />}
+          path="/comfort-and-technology"
         />
         <Route
           element={<UserProfile content={"insurance"} />}

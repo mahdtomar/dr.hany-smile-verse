@@ -1,0 +1,113 @@
+.confort-and-technology-comp .patient-comfort {
+  margin: 70px auto 30px;
+}
+.confort-and-technology-comp .patient-comfort figure {
+  gap: 20px;
+}
+.confort-and-technology-comp .patient-comfort figure img {
+  display: block;
+  width: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.confort-and-technology-comp .patient-comfort figure figcaption {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 15px;
+  width: 60%;
+}
+.confort-and-technology-comp .patient-comfort figure figcaption * {
+  line-height: 150%;
+}
+.confort-and-technology-comp .patient-comfort figure figcaption .title {
+  display: block;
+  text-align: left;
+  font-size: 35px;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-family: "Agbalumo", sans-serif;
+}
+.confort-and-technology-comp .patient-comfort figure figcaption > span {
+  font-size: 20px;
+  font-weight: bold;
+}
+.confort-and-technology-comp h2 {
+  text-align: center;
+  font-size: 35px;
+  width: 50%;
+  max-width: 1440px;
+  min-width: 400px;
+  margin: 30px auto;
+}
+.confort-and-technology-comp .dental-laser figure,
+.confort-and-technology-comp .x-rays figure {
+  gap: 20px;
+}
+.confort-and-technology-comp .dental-laser figure img,
+.confort-and-technology-comp .x-rays figure img {
+  width: 50%;
+  display: block;
+}
+.confort-and-technology-comp .dental-laser figure figcaption,
+.confort-and-technology-comp .x-rays figure figcaption {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 15px;
+  width: 60%;
+}
+.confort-and-technology-comp .dental-laser figure figcaption *,
+.confort-and-technology-comp .x-rays figure figcaption * {
+  line-height: 150%;
+}
+.confort-and-technology-comp .dental-laser figure figcaption .title,
+.confort-and-technology-comp .x-rays figure figcaption .title {
+  display: block;
+  text-align: left;
+  font-size: 35px;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-family: "Agbalumo", sans-serif;
+}
+.confort-and-technology-comp .dental-laser figure figcaption > span,
+.confort-and-technology-comp .x-rays figure figcaption > span {
+  font-size: 20px;
+  font-weight: bold;
+}
+.confort-and-technology-comp .x-rays figure {
+  flex-direction: row-reverse;
+}
+.confort-and-technology-comp .x-rays figure img {
+  width: 50%;
+}
+.confort-and-technology-comp .listed-technology section {
+  overflow: hidden;
+  margin: 50px auto;
+}
+.confort-and-technology-comp .listed-technology section figure {
+  height: 250px;
+  gap: 10px;
+  margin: 10px;
+  align-items: flex-start;
+}
+.confort-and-technology-comp .listed-technology section figure div {
+  width: 30%;
+  height: 100%;
+}
+.confort-and-technology-comp .listed-technology section figure img {
+  width: 100%;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.confort-and-technology-comp .listed-technology section figure figcaption {
+  width: 70%;
+}
+.confort-and-technology-comp .listed-technology section figure figcaption * {
+  line-height: 150%;
+}
+.confort-and-technology-comp .listed-technology section figure figcaption span {
+  font-weight: bold;
+  font-size: 25px;
+}/*# sourceMappingURL=confortandtechnology.css.map */
