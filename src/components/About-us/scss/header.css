@@ -4,9 +4,10 @@
 .about-us-header .container figure {
   gap: 20px;
   align-items: flex-start;
+  justify-content: center;
 }
 .about-us-header .container figure img {
-  width: 50%;
+  width: 30%;
 }
 .about-us-header .container figure figcaption {
   width: 50%;
