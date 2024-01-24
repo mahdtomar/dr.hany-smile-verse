@@ -107,6 +107,9 @@ const Navbar = () => {
               <span>EN</span>
               <span>Spa</span>
             </div>
+            <div className="mobile-options">
+              
+            </div>
           </div>
         </ul>
       </div>
