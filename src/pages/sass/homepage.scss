@@ -145,3 +145,115 @@
     }
   }
 }
+
+@media (max-width: 450px) {
+  .services {
+    > p {
+      text-align: center;
+      text-transform: capitalize;
+      &:first-child {
+        font-size: 55px;
+        font-weight: bold;
+      }
+    }
+    .container {
+      grid-template-columns: 1fr;
+      padding: 0px 10px;
+      .FeatureTile-comp {
+        padding: 12px;
+        * {
+          color: var(--main-color);
+        }
+        border: 2px solid var(--main-color);
+        border-radius: 2px;
+        align-items: flex-start;
+        .description {
+          border: none;
+          span {
+            font-weight: bold;
+            font-size: 30px;
+          }
+        }
+      }
+      > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 100px;
+      }
+      img {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+  .testmonials {
+    padding: 0px;
+    .container {
+      header {
+        margin-bottom: 75px;
+        text-align: center;
+        span {
+          color: var(--secondary-color);
+          font-weight: bold;
+          font-size: 20px;
+        }
+        p {
+          font-size: 45px;
+          font-weight: bold;
+          color: var(--main-color);
+        }
+      }
+      .slider {
+        display: flex;
+        gap: 80px;
+        flex-direction: column;
+        .testmonialCard-comp {
+          margin: 20px 0px;
+          position: relative;
+          box-shadow: 0px 0px 20px 5px lightgray;
+          padding: 100px 20px 20px;
+          > img {
+            position: absolute;
+            top: 0px;
+            left: 20px;
+            transform: translateY(-50%);
+            width: 150px;
+            border: 2px solid gray;
+          }
+          .hash {
+            position: absolute;
+            right:5%;
+            top: -45%;
+            font-size: 200px;
+            font-weight: bold;
+            color: rgba($color: #3498db, $alpha: 0.5);
+            transform: rotate(10deg);
+          }
+          .content {
+            p {
+              color: var(--main-color);
+            }
+            .doctor-name {
+              color: var(--secondary-color);
+              font-weight: bold;
+              font-size: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .why-us{
+    .container{
+      .flex-2{
+        .image{
+          img{
+            display: block;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

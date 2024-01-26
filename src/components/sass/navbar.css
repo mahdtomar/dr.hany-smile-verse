@@ -5,6 +5,9 @@
   top: 0px;
   z-index: 99;
 }
+.navbar-comp .container ul .mobile-options {
+  display: none;
+}
 .navbar-comp .container ul * {
   color: white;
 }
@@ -83,4 +86,135 @@
   justify-content: space-between;
   align-items: center;
   width: 100px;
+}
+
+@media (max-width: 450px) {
+  .navbar-comp {
+    background-color: var(--main-color);
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    z-index: 99;
+  }
+  .navbar-comp .container ul {
+    flex-direction: row;
+    position: relative;
+  }
+  .navbar-comp .container ul * {
+    color: white;
+  }
+  .navbar-comp .container ul .logo {
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: capitalize;
+    font-family: "Agbalumo", sans-serif;
+  }
+  .navbar-comp .container ul ul {
+    gap: 20px;
+    flex-direction: column;
+    visibility: hidden;
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%, -3%);
+    background-color: var(--main-color);
+    width: 70%;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    border-radius: 20px;
+    opacity: 0;
+  }
+  .navbar-comp .container ul ul.visible {
+    opacity: 1;
+    transform: translate(-50%, 0%);
+    visibility: visible;
+  }
+  .navbar-comp .container ul ul > a {
+    text-transform: capitalize;
+    padding: 2px;
+    text-decoration: none;
+    position: relative;
+    padding: 10px 10px;
+  }
+  .navbar-comp .container ul ul > a::before {
+    content: "";
+    position: absolute;
+    width: 0%;
+    bottom: 10px;
+    left: 0px;
+    height: 2px;
+    background-color: var(--background-color);
+    transition: width 0.4s ease-in;
+  }
+  .navbar-comp .container ul ul > a:hover::before {
+    width: 100%;
+  }
+  .navbar-comp .container ul ul > a ul {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    transition: opacity 0.3s;
+    width: -moz-max-content;
+    width: max-content;
+    background: var(--main-color);
+    padding: 8px;
+    left: 0px;
+    top: 100%;
+    padding: 8px;
+  }
+  .navbar-comp .container ul ul > a ul a {
+    padding: 2px;
+  }
+  .navbar-comp .container ul ul > a ul a::before {
+    bottom: 0px;
+  }
+  .navbar-comp .container ul ul > a:hover ul {
+    opacity: 1;
+    visibility: visible;
+  }
+  .navbar-comp .container ul > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 20px;
+    position: relative;
+  }
+  .navbar-comp .container ul > div a {
+    color: var(--main-color);
+    border: none;
+    padding: 8px 4px;
+    border-radius: 4px;
+    font-weight: bold;
+    background-color: var(--background-color);
+    text-decoration: none;
+  }
+  .navbar-comp .container ul > div .languages {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100px;
+    position: absolute;
+    top: 100%;
+    right: 0px;
+    background-color: var(--main-color);
+    flex-direction: column;
+    border-radius: 20px;
+    border-radius: 20px;
+    opacity: 0;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    transform: translate(5%, 3%);
+  }
+  .navbar-comp .container ul > div .languages.visible {
+    opacity: 1;
+    transform: translate(0%, 3%);
+    visibility: visible;
+  }
+  .navbar-comp .container ul > div .languages span {
+    padding: 10px;
+  }
+  .navbar-comp .container ul .mobile-options {
+    display: block;
+  }
 }/*# sourceMappingURL=navbar.css.map */

@@ -40,7 +40,7 @@ button {
 .container {
   max-width: 1440px;
   margin: 0px auto;
-  padding: 0px 4px;
+  padding: 0px 10px;
 }
 .flex-2 {
   display: flex;
@@ -48,6 +48,9 @@ button {
   align-items: center;
 }
 @media (max-width: 450px) {
+  p {
+    font-size: 14px;
+  }
   .container {
     width: 100%;
     padding: 0px 10px;

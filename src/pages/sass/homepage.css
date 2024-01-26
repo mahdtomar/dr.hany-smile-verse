@@ -135,4 +135,102 @@
   color: var(--secondary-color);
   font-weight: bold;
   font-size: 30px;
+}
+
+@media (max-width: 450px) {
+  .services > p {
+    text-align: center;
+    text-transform: capitalize;
+  }
+  .services > p:first-child {
+    font-size: 55px;
+    font-weight: bold;
+  }
+  .services .container {
+    grid-template-columns: 1fr;
+    padding: 0px 10px;
+  }
+  .services .container .FeatureTile-comp {
+    padding: 12px;
+    border: 2px solid var(--main-color);
+    border-radius: 2px;
+    align-items: flex-start;
+  }
+  .services .container .FeatureTile-comp * {
+    color: var(--main-color);
+  }
+  .services .container .FeatureTile-comp .description {
+    border: none;
+  }
+  .services .container .FeatureTile-comp .description span {
+    font-weight: bold;
+    font-size: 30px;
+  }
+  .services .container > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+  }
+  .services .container img {
+    display: block;
+    width: 100%;
+  }
+  .testmonials {
+    padding: 0px;
+  }
+  .testmonials .container header {
+    margin-bottom: 75px;
+    text-align: center;
+  }
+  .testmonials .container header span {
+    color: var(--secondary-color);
+    font-weight: bold;
+    font-size: 20px;
+  }
+  .testmonials .container header p {
+    font-size: 45px;
+    font-weight: bold;
+    color: var(--main-color);
+  }
+  .testmonials .container .slider {
+    display: flex;
+    gap: 80px;
+    flex-direction: column;
+  }
+  .testmonials .container .slider .testmonialCard-comp {
+    margin: 20px 0px;
+    position: relative;
+    box-shadow: 0px 0px 20px 5px lightgray;
+    padding: 100px 20px 20px;
+  }
+  .testmonials .container .slider .testmonialCard-comp > img {
+    position: absolute;
+    top: 0px;
+    left: 20px;
+    transform: translateY(-50%);
+    width: 150px;
+    border: 2px solid gray;
+  }
+  .testmonials .container .slider .testmonialCard-comp .hash {
+    position: absolute;
+    right: 5%;
+    top: -45%;
+    font-size: 200px;
+    font-weight: bold;
+    color: rgba(52, 152, 219, 0.5);
+    transform: rotate(10deg);
+  }
+  .testmonials .container .slider .testmonialCard-comp .content p {
+    color: var(--main-color);
+  }
+  .testmonials .container .slider .testmonialCard-comp .content .doctor-name {
+    color: var(--secondary-color);
+    font-weight: bold;
+    font-size: 30px;
+  }
+  .why-us .container .flex-2 .image img {
+    display: block;
+    width: 100%;
+  }
 }/*# sourceMappingURL=homepage.css.map */

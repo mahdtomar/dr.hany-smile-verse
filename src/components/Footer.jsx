@@ -81,38 +81,41 @@ const Footer = () => {
         </div>
         <div className="contact-us">
           <p className="title">Contact Us</p>
-          <div className="address">
-            <FeatureTile
-              img={addressIcon}
-              description={
-                <>
-                  <p>1247/Plot No. 39, 15th Phase,</p>
-                  <p>LHB Colony, Kanpur</p>
-                </>
-              }
-            />
-          </div>
-          <div className="phone">
-            <FeatureTile
-              img={phoneIcon}
-              description={
-                <>
-                  <p>1800-121-3637</p>
-                  <p>+91-7052-101-786</p>
-                </>
-              }
-            />
-          </div>
-          <div className="email">
-            <FeatureTile
-              img={emailIcon}
-              description={
-                <>
-                  <p>info@example.com</p>
-                  <p>help@example.com</p>
-                </>
-              }
-            />
+          <div className="flex-2">
+            {" "}
+            <div className="address">
+              <FeatureTile
+                img={addressIcon}
+                description={
+                  <>
+                    <p>1247/Plot No. 39, 15th Phase,</p>
+                    <p>LHB Colony, Kanpur</p>
+                  </>
+                }
+              />
+            </div>
+            <div className="phone">
+              <FeatureTile
+                img={phoneIcon}
+                description={
+                  <>
+                    <p>1800-121-3637</p>
+                    <p>+91-7052-101-786</p>
+                  </>
+                }
+              />
+            </div>
+            <div className="email">
+              <FeatureTile
+                img={emailIcon}
+                description={
+                  <>
+                    <p>info@example.com</p>
+                    <p>help@example.com</p>
+                  </>
+                }
+              />
+            </div>
           </div>
         </div>
       </div>

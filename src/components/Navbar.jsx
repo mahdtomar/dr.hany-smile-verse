@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useRef } from "react";
 import Logo from "./Logo";
 import "./sass/navbar.css";
 import { Link } from "react-router-dom";
-
+import globe from "../icons/Globe.svg";
+import list from "../icons/List.svg";
 const Navbar = () => {
   const links = [
     {
@@ -73,12 +74,21 @@ const Navbar = () => {
       dropMenu: false,
     },
   ];
+  const menu = useRef("menu");
+  const langs = useRef("langs");
+
+  const displayLangs = () => {
+    langs.current.classList.toggle("visible");
+  };
+  const displayMenu = () => {
+    menu.current.classList.toggle("visible");
+  };
   return (
     <div className="navbar-comp">
       <div className="container">
         <ul className="flex-2">
           <Logo />
-          <ul className="flex-2">
+          <ul ref={menu} className="flex-2">
             {links.map((link) => {
               return (
                 <Link key={link.id} to={link.mainLink}>
@@ -102,13 +112,14 @@ const Navbar = () => {
           </ul>
           <div>
             <Link to={"/Appointment"}>schedule Appointment</Link>
-            <div className="languages">
+            <div className="languages" ref={langs}>
               <span>AR</span>
               <span>EN</span>
               <span>Spa</span>
             </div>
             <div className="mobile-options">
-              
+              <img src={globe} onClick={displayLangs} alt="langueges" />
+              <img src={list} onClick={displayMenu} alt="list" />
             </div>
           </div>
         </ul>
