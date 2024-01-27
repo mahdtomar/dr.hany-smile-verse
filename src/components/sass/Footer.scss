@@ -88,10 +88,14 @@
       flex-direction: column;
       > div {
         margin-bottom: 15px;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 20px;
       }
       .FeatureTile-comp {
         gap: 10px;
         border: none;
+        flex-direction: row;
         .image {
           background-color: var(--secondary-color);
           border-radius: 50%;
