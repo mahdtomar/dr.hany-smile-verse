@@ -9,6 +9,8 @@ import NewPatient from "./components/appointment/NewPatient";
 import UserProfile from "./pages/UserProfile";
 import AboutUs from "./pages/AboutUs";
 import ConfortAndTechnology from "./pages/ConfortAndTechnology";
+import AuthContext from "./context/AuthContext";
+import Login from "./components/login/Login";
 
 function App() {
   return (
@@ -38,6 +40,7 @@ function App() {
           path="/Profile/:id/insurance"
         />
         <Route element={<AboutUs />} path="/about-us" />
+        <Route element={<Login />} path="/login" />
       </Routes>
     </div>
   );
