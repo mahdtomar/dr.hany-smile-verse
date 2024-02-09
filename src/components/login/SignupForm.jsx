@@ -38,12 +38,14 @@ const SignupForm = () => {
     return agePattern.test(age);
   };
   const userNameValidation = () => {
-    // console.log(userName);
-    console.log(userName.split(" "));
+    // filtering username from extra white spaces between the first and last name
     const test =
       userNamePattern.test(userName) && userName.split(" ").length === 2;
-    console.log(test, userName.split(" ").length);
-    return test;
+    if (!test) {
+      const filterdUserName = userName.split(" ").filter((str) => str !== "");
+      setUserName(filterdUserName.join(" "));
+    }
+    return userNamePattern.test(userName);
   };
 
   const validateInputs = () => {
@@ -58,21 +60,20 @@ const SignupForm = () => {
   const submitForm = async (e) => {
     e.preventDefault();
     if (validateInputs()) {
-      const trimmedString = userName.replace(/\s+/g, " ");
       const data = {
-        userName: trimmedString,
+        userName: userName,
         email: email,
         phoneNumber: phoneNumber,
         age: age,
         address: address,
       };
       console.log(data);
-      const config = {
-        headers: {
-          "Content-Type": "application/json",
-        },
-        withCredentials: true,
-      };
+      // const config = {
+      //   headers: {
+      //     "Content-Type": "application/json",
+      //   },
+      //   withCredentials: true,
+      // };
       // axios.post("url", data, config);
     }
   };
