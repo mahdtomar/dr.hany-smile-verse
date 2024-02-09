@@ -1,3 +1,4 @@
+import axios from "axios";
 import React, { useRef, useState } from "react";
 
 const SignupForm = () => {
@@ -5,10 +6,76 @@ const SignupForm = () => {
   const [email, setEmail] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [age, setAge] = useState("");
+  const [password, setPassword] = useState("");
+  const [address, setAddress] = useState("");
   const userNameRef = useRef(null);
   const emailRef = useRef(null);
   const phoneNumberRef = useRef(null);
   const ageRef = useRef(null);
+  const passwordRef = useRef(null);
+  const addressRef = useRef(null);
+  // validation
+  const emailPattern = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/;
+  const passwordPattern =
+    /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/;
+  const phonePattern = /^[+]?[(]?[0-9]{3}[)]?[-\s.]?[0-9]{3}[-\s.]?[0-9]{4,6}$/;
+  const agePattern = /^\d{1,2}$/;
+  const userNamePattern = /^[a-zA-Z\s]{3,30}$/;
+  const emailValidation = () => {
+    console.log(email);
+    return emailPattern.test(email);
+  };
+  const passwordValidation = () => {
+    console.log(password);
+    return passwordPattern.test(password);
+  };
+  const phoneNumberValidation = () => {
+    console.log(phoneNumber);
+    return phonePattern.test(phoneNumber);
+  };
+  const ageValidation = () => {
+    console.log(age);
+    return agePattern.test(age);
+  };
+  const userNameValidation = () => {
+    // console.log(userName);
+    console.log(userName.split(" "));
+    const test =
+      userNamePattern.test(userName) && userName.split(" ").length === 2;
+    console.log(test, userName.split(" ").length);
+    return test;
+  };
+
+  const validateInputs = () => {
+    return (
+      passwordValidation() &&
+      emailValidation() &&
+      phoneNumberValidation() &&
+      ageValidation() &&
+      userNameValidation()
+    );
+  };
+  const submitForm = async (e) => {
+    e.preventDefault();
+    if (validateInputs()) {
+      const trimmedString = userName.replace(/\s+/g, " ");
+      const data = {
+        userName: trimmedString,
+        email: email,
+        phoneNumber: phoneNumber,
+        age: age,
+        address: address,
+      };
+      console.log(data);
+      const config = {
+        headers: {
+          "Content-Type": "application/json",
+        },
+        withCredentials: true,
+      };
+      // axios.post("url", data, config);
+    }
+  };
   return (
     <form>
       <label htmlFor="userName">
@@ -18,6 +85,7 @@ const SignupForm = () => {
           autoComplete="no"
           ref={userNameRef}
           value={userName}
+          required
           onChange={(e) => {
             setUserName(e.target.value);
           }}
@@ -32,6 +100,7 @@ const SignupForm = () => {
           id="email"
           ref={emailRef}
           value={email}
+          required
           onChange={(e) => {
             setEmail(e.target.value);
           }}
@@ -46,9 +115,25 @@ const SignupForm = () => {
           id="phoneNumber"
           ref={phoneNumberRef}
           value={phoneNumber}
+          required
           onChange={(e) => {
             setPhoneNumber(e.target.value);
           }}
+          placeholder="Phone Number"
+        />
+        <p>please enter a valid phone number.</p>
+      </label>
+      <label htmlFor="address">
+        <input
+          type="text"
+          id="address"
+          ref={addressRef}
+          value={address}
+          required
+          onChange={(e) => {
+            setAddress(e.target.value);
+          }}
+          placeholder="address"
         />
       </label>
       <label htmlFor="age">
@@ -58,12 +143,32 @@ const SignupForm = () => {
           autoComplete="off"
           ref={ageRef}
           value={age}
+          required
           onChange={(e) => {
             setAge(e.target.value);
           }}
           placeholder="age"
         />
       </label>
+      <label htmlFor="password">
+        <input
+          type="password"
+          id="password"
+          autoComplete="off"
+          required
+          onChange={(e) => {
+            setPassword(e.target.value);
+          }}
+          value={password}
+          ref={passwordRef}
+          placeholder="Password"
+        />
+        <p>
+          password should containt at least one capital letter, small letter,
+          number and a spacial character.
+        </p>
+      </label>
+      <button onClick={(e) => submitForm(e)}>Sign Up</button>
     </form>
   );
 };

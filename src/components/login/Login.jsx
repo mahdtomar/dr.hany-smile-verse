@@ -9,7 +9,6 @@ const Login = () => {
     /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/;
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
   const emailValidation = () => {
     return emailPattern.test(email);
   };
@@ -24,7 +23,6 @@ const Login = () => {
       : email === "" || password === ""
       ? alert("missing email or password")
       : alert("invalid email or password");
-
     // api call
     const config = {
       headers: {
