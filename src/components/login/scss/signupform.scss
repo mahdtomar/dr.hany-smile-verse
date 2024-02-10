@@ -1,0 +1,10 @@
+.signupform {
+  label {
+    input + p {
+      display: none;
+    }
+    input.visible + p{
+        display: block;
+    }
+  }
+}

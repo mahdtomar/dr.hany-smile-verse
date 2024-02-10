@@ -1,0 +1,6 @@
+.signupform label input + p {
+  display: none;
+}
+.signupform label input.visible + p {
+  display: block;
+}/*# sourceMappingURL=signupform.css.map */

@@ -4,25 +4,25 @@ import { Link } from "react-router-dom";
 const Login = () => {
   const emailRef = useRef(null);
   const passwordRef = useRef(null);
-  const emailPattern = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
-  const passwordPattern =
-    /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/;
+  // const emailPattern = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+  // const passwordPattern =
+  //   /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/;
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const emailValidation = () => {
-    return emailPattern.test(email);
-  };
-  const passwordValidation = () => {
-    return passwordPattern.test(password);
-  };
+  // const emailValidation = () => {
+  //   return emailPattern.test(email);
+  // };
+  // const passwordValidation = () => {
+  //   return passwordPattern.test(password);
+  // };
   const submit = async (e) => {
     e.preventDefault();
     // inputs validation
-    passwordValidation() && emailValidation()
-      ? console.log("nice")
-      : email === "" || password === ""
-      ? alert("missing email or password")
-      : alert("invalid email or password");
+    // passwordValidation() && emailValidation()
+    //   ? console.log("nice")
+    //   : email === "" || password === ""
+    //   ? alert("missing email or password")
+    //   : alert("invalid email or password");
     // api call
     const config = {
       headers: {
@@ -42,10 +42,7 @@ const Login = () => {
   return (
     <div>
       <form>
-        <label
-          htmlFor="email"
-          className={emailValidation ? "hidden" : "visible"}
-        >
+        <label htmlFor="email">
           <input
             type="email"
             id="email"

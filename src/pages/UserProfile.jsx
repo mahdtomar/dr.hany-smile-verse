@@ -9,7 +9,7 @@ import "./sass/userProfile.css";
 import AuthContext from "../context/AuthContext";
 
 const UserProfile = ({ content }) => {
-  const { isLoggedIn, login, logout } = useContext(AuthContext);
+  const { isLoggedIn } = useContext(AuthContext);
   const [user, setUser] = useState(undefined);
   const { id } = useParams();
 
