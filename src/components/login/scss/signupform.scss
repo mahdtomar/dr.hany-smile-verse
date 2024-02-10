@@ -1,10 +1,19 @@
 .signupform {
+  padding: 20px;
+  background-color: red;
+  width: 50%;
+  max-width: 800px;
+  min-width: 350px;
+  margin: 60px auto 0px;
   label {
+    display: block;
+    width: 100%;
+    background-color: blue;
     input + p {
       display: none;
     }
-    input.visible + p{
-        display: block;
+    input.visible + p {
+      display: block;
     }
   }
 }

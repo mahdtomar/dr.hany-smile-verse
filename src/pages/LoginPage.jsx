@@ -1,11 +1,15 @@
 import React from "react";
 import Login from "../components/login/Login";
 import SignupForm from "../components/login/SignupForm";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 const LoginPage = () => {
   return (
-    <div>
+    <div className="login-page">
       {/* <Login></Login> */}
-      <SignupForm/>
+      <Navbar />
+      <SignupForm />
+      <Footer />
     </div>
   );
 };
