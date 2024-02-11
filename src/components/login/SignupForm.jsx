@@ -14,6 +14,7 @@ const SignupForm = () => {
   const ageRef = useRef(null);
   const passwordRef = useRef(null);
   const addressRef = useRef(null);
+  const userNameErr = useRef(null);
   // validation
   const emailPattern = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/;
   const passwordPattern =
@@ -46,30 +47,37 @@ const SignupForm = () => {
     return phonePattern.test(phoneNumber);
   };
   const ageValidation = () => {
-    if (age < 1) {
-      setAge(0);
-    } else if (age > 100) {
-      setAge(99);
-    }
-    if (!agePattern.test(age)) {
+    if (!agePattern.test(age) || age < 3) {
       ageRef.current.classList.add("visible");
     } else {
       ageRef.current.classList.remove("visible");
     }
     return agePattern.test(age) && +age > 1;
   };
+  const addressValidation = () => {
+    if (address.length < 10) {
+      addressRef.current.classList.add("visible");
+      return false;
+    } else {
+      addressRef.current.classList.remove("visible");
+      return true;
+    }
+  };
   const userNameValidation = () => {
-    // filtering username from the extra white spaces that may be between the first and last name
-    const test =
-      userNamePattern.test(userName) && userName.split(" ").length === 2;
+    const test = userNamePattern.test(userName);
+    const filterdUserName = userName.split(" ").filter((str) => str !== "");
+    setUserName(filterdUserName.join(" "));
     if (!test) {
-      const filterdUserName = userName.split(" ").filter((str) => str !== "");
-      setUserName(filterdUserName.join(" "));
+      if (userName.length >= 30) {
+        userNameErr.current.innerHTML = `max length is 30 characters`;
+      } else {
+        userNameErr.current.innerHTML = `user name shouldn't contain numbers or special letters`;
+      }
       userNameRef.current.classList.add("visible");
     } else {
       userNameRef.current.classList.remove("visible");
     }
-    return userNamePattern.test(userName);
+    return test;
   };
 
   const validateInputs = () => {
@@ -78,6 +86,7 @@ const SignupForm = () => {
       emailValidation() &&
       phoneNumberValidation() &&
       ageValidation() &&
+      addressValidation() &&
       userNameValidation()
     );
   };
@@ -103,7 +112,7 @@ const SignupForm = () => {
   };
   return (
     <form className="signupform">
-      <label className={""} htmlFor="userName">
+      <label htmlFor="userName">
         <input
           type="text"
           id="userName"
@@ -118,7 +127,9 @@ const SignupForm = () => {
           placeholder="Full Name"
           onBlur={userNameValidation}
         />
-        <p>user name shouldn't contain numbers or special letters</p>
+        <p ref={userNameErr}>
+          user name shouldn't contain numbers or special letters
+        </p>
       </label>
       <label htmlFor="email">
         <input
@@ -160,11 +171,13 @@ const SignupForm = () => {
           value={address}
           required
           onChange={(e) => {
+            e.target.classList.remove("visible");
             setAddress(e.target.value);
           }}
           placeholder="address"
-          min="50"
+          onBlur={addressValidation}
         />
+        <p>please enter full address</p>
       </label>
       <label htmlFor="age">
         <input
@@ -181,6 +194,7 @@ const SignupForm = () => {
           onBlur={ageValidation}
           placeholder="age"
         />
+        <p>please inter a valid age</p>
       </label>
       <label htmlFor="password">
         <input
