@@ -40,6 +40,9 @@
   background-color: rgba(255, 0, 0, 0.3);
   transition: 0.3s visibility ease-in;
 }
+.signupform label input.visible {
+  box-shadow: 0px 0px 3px 0px red;
+}
 .signupform label input.visible + p {
   display: block;
   visibility: visible;

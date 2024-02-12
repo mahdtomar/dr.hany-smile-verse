@@ -37,9 +37,13 @@
         background-color: rgba($color: #ff0000, $alpha: 0.3);
         transition: 0.3s visibility ease-in;
       }
-      &.visible + p {
-        display: block;
-        visibility: visible;
+      &.visible {
+        // background-color: rgba($color: #ff0000, $alpha: 0.3);
+        box-shadow: 0px 0px 3px 0px red;
+        & + p {
+          display: block;
+          visibility: visible;
+        }
       }
     }
   }

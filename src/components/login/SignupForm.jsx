@@ -79,7 +79,6 @@ const SignupForm = () => {
     }
     return test;
   };
-
   const validateInputs = () => {
     return (
       passwordValidation() &&
