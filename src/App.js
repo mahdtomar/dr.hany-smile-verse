@@ -11,6 +11,7 @@ import AboutUs from "./pages/AboutUs";
 import ConfortAndTechnology from "./pages/ConfortAndTechnology";
 // import Login from "./components/login/Login";
 import LoginPage from "./pages/LoginPage";
+import Admin from "./pages/Admin";
 
 function App() {
   return (
@@ -41,6 +42,7 @@ function App() {
         />
         <Route element={<AboutUs />} path="/about-us" />
         <Route element={<LoginPage />} path="/login" />
+        <Route element={<Admin />} path="/admin" />
       </Routes>
     </div>
   );
