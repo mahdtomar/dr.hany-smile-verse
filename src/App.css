@@ -4,6 +4,7 @@
   box-sizing: border-box;
   font-family: "Source Sans 3", sans-serif;
   color: rgba(0, 0, 0, 0.9);
+  border: 1px solid red;
 }
 p {
   font-size: 20px;

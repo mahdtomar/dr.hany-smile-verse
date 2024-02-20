@@ -73,6 +73,12 @@ const Navbar = () => {
       mainLink: "/faq",
       dropMenu: false,
     },
+    {
+      id: 6,
+      menuName: "Schedule Appointment",
+      mainLink: "/Appointment",
+      dropMenu: false,
+    },
   ];
   const menu = useRef("menu");
   const langs = useRef("langs");
@@ -118,7 +124,7 @@ const Navbar = () => {
               <span>Spa</span>
             </div>
             <div className="mobile-options">
-              <img src={globe} onClick={displayLangs} alt="langueges" />
+              {/* <img src={globe} onClick={displayLangs} alt="langueges" /> */}
               <img src={list} onClick={displayMenu} alt="list" />
             </div>
           </div>
