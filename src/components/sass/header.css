@@ -33,4 +33,35 @@
 }
 .header-comp .container button:hover {
   color: var(--main-color);
+}
+
+@media (max-width: 450px) {
+  .header-comp {
+    height: 100vh;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.52), rgba(0, 0, 0, 0.52), var(--secondary-color)), url("../../images//dentalCare1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .header-comp * {
+    color: var(--background-color);
+  }
+  .header-comp .container h1 {
+    font-size: 30px;
+  }
+  .header-comp .container p {
+    margin: 20px 0px;
+    width: 90%;
+    font-size: 20px;
+  }
+  .header-comp .container button {
+    background-color: var(--secondary-color);
+    padding: 12px 6px;
+    transition: color 0.3s;
+    font-size: 16px;
+    font-weight: 100;
+  }
+  .header-comp .container button:hover {
+    color: var(--main-color);
+  }
 }/*# sourceMappingURL=header.css.map */

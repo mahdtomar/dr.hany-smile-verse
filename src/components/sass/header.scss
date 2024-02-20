@@ -40,3 +40,41 @@
     }
   }
 }
+@media (max-width: 450px) {
+  .header-comp {
+    * {
+      color: var(--background-color);
+    }
+    height: 100vh;
+    background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.52),
+        rgba(0, 0, 0, 0.52),
+        var(--secondary-color)
+      ),
+      url("../../images//dentalCare1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    .container {
+      h1 {
+        font-size: 30px;
+      }
+      p {
+        margin: 20px 0px;
+        width: 90%;
+        font-size: 20px;
+      }
+      button {
+        background-color: var(--secondary-color);
+        padding: 12px 6px;
+        transition: color 0.3s;
+        font-size: 16px;
+        font-weight: 100;
+        &:hover {
+          color: var(--main-color);
+        }
+      }
+    }
+  }
+}

@@ -241,21 +241,15 @@
     flex-direction: column;
   }
   .combined-squares .flex-2 h2 {
-    color: var(--main-color);
     font-size: 25px;
   }
   .combined-squares .flex-2 article {
     width: 100%;
-    padding: 20px;
   }
   .combined-squares .flex-2 div {
-    height: 100%;
     width: 100%;
   }
   .combined-squares .flex-2 div img {
-    height: 100%;
     width: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
   }
 }/*# sourceMappingURL=homepage.css.map */
