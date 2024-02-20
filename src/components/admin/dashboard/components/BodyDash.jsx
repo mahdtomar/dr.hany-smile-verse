@@ -1,7 +1,7 @@
 function BodyDash() {
   return (
     <div className="bodydash">
-      <h1>Appointment</h1>
+      <h1 className="heading-dash">Appointment</h1>
       <div className="parent-bodydash">
         <div className="appoint-done">
           <h3>Appointment Done</h3>
