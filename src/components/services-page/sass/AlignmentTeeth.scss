@@ -203,8 +203,17 @@
       display: flex;
       // grid-template-columns: 30% 1fr;
       // gap: 20px;
-      flex-direction: column;
+      flex-direction: column-reverse;
       padding: 0px 4px;
+      .header {
+        .container {
+          gap: 30px;
+          img {
+            aspect-ratio: 4/3;
+            width: 50%;
+          }
+        }
+      }
       .service-display {
         .container {
           .img {
@@ -235,7 +244,7 @@
       }
       .further-details {
         .container {
-          grid-template-columns: 1fr ;
+          grid-template-columns: 1fr;
         }
       }
     }

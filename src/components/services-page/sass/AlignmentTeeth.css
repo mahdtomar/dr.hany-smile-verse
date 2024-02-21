@@ -184,8 +184,15 @@
   }
   .AlignmentTeeth-comp > .container {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     padding: 0px 4px;
+  }
+  .AlignmentTeeth-comp > .container .header .container {
+    gap: 30px;
+  }
+  .AlignmentTeeth-comp > .container .header .container img {
+    aspect-ratio: 4/3;
+    width: 50%;
   }
   .AlignmentTeeth-comp > .container .service-display .container .img {
     width: 100%;
