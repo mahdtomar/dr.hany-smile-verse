@@ -1,7 +1,7 @@
 function Message() {
   const handleClickMsg = (e) => {
     document
-      .querySelectorAll(".table-msg td tr")
+      .querySelectorAll(".table-mgs td tr")
       .forEach((e) => e.classList.remove("active"));
     e.currentTarget.classList.toggle("active");
   };
@@ -14,42 +14,42 @@ function Message() {
         <td className="home">
           <tr className="active" onClick={handleClickMsg}>
             <h2>Ahmed Mohamed</h2>
-            <p>Hello, How mush does it cost?</p>{" "}
+            <p>Hello, How mush does it cost?</p>
           </tr>
           <tr onClick={handleClickMsg}>
             <h2>Samar Mohmoud</h2>
-            <p>Hello, How mush does it cost?</p>{" "}
+            <p>Hello, How mush does it cost?</p>
           </tr>
           <tr onClick={handleClickMsg}>
             Ali Fawzy
-            <p>Hello, How mush does it cost?</p>{" "}
+            <p>Hello, How mush does it cost?</p>
           </tr>
           <tr onClick={handleClickMsg}>
             Sara Emam
-            <p>Hello, How mush does it cost?</p>{" "}
+            <p>Hello, How mush does it cost?</p>
           </tr>
           <tr onClick={handleClickMsg}>
             Ali Fawzy
-            <p>Hello, How mush does it cost?</p>{" "}
+            <p>Hello, How mush does it cost?</p>
           </tr>
           <tr onClick={handleClickMsg}>
             Sara Emam
-            <p>Hello, How mush does it cost?</p>{" "}
+            <p>Hello, How mush does it cost?</p>
           </tr>
           <tr onClick={handleClickMsg}>
             Khaled Younis
-            <p>Hello, How mush does it cost?</p>{" "}
+            <p>Hello, How mush does it cost?</p>
           </tr>
           <tr onClick={handleClickMsg}>
             Sara Emam
-            <p>Hello, How mush does it cost?</p>{" "}
+            <p>Hello, How mush does it cost?</p>
           </tr>
           <tr onClick={handleClickMsg}>
             Samar Mohmoud
-            <p>Hello, How mush does it cost?</p>{" "}
+            <p>Hello, How mush does it cost?</p>
           </tr>
         </td>
-        <td className="msg-body ">
+        <td className="msg-body">
           <tr>
             <td>
               <tr>
