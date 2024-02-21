@@ -196,3 +196,48 @@
     }
   }
 }
+@media (max-width: 450px) {
+  .AlignmentTeeth-comp {
+    margin-top: 44px;
+    > .container {
+      display: flex;
+      // grid-template-columns: 30% 1fr;
+      // gap: 20px;
+      flex-direction: column;
+      padding: 0px 4px;
+      .service-display {
+        .container {
+          .img {
+            width: 100%;
+            > img {
+              width: 100%;
+              display: block;
+              object-fit: cover;
+            }
+          }
+          .services {
+            width: 100%;
+            display: grid;
+            .service {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              gap: 10px;
+              border-bottom: 1px dashed var(--secondary-color);
+              p {
+                width: min-content;
+                white-space: nowrap;
+              }
+            }
+          }
+        }
+      }
+      .further-details {
+        .container {
+          grid-template-columns: 1fr ;
+        }
+      }
+    }
+  }
+}

@@ -176,4 +176,44 @@
   font-size: larger;
   background-color: var(--secondary-color);
   color: white;
+}
+
+@media (max-width: 450px) {
+  .AlignmentTeeth-comp {
+    margin-top: 44px;
+  }
+  .AlignmentTeeth-comp > .container {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 4px;
+  }
+  .AlignmentTeeth-comp > .container .service-display .container .img {
+    width: 100%;
+  }
+  .AlignmentTeeth-comp > .container .service-display .container .img > img {
+    width: 100%;
+    display: block;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .AlignmentTeeth-comp > .container .service-display .container .services {
+    width: 100%;
+    display: grid;
+  }
+  .AlignmentTeeth-comp > .container .service-display .container .services .service {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-bottom: 1px dashed var(--secondary-color);
+  }
+  .AlignmentTeeth-comp > .container .service-display .container .services .service p {
+    width: -moz-min-content;
+    width: min-content;
+    white-space: nowrap;
+  }
+  .AlignmentTeeth-comp > .container .further-details .container {
+    grid-template-columns: 1fr;
+  }
 }/*# sourceMappingURL=AlignmentTeeth.css.map */

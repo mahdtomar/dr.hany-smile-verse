@@ -14,6 +14,7 @@ p {
   --secondary-color: #3498db;
   --background-color: #f9f7f3;
   --CTA-color: #e74c3c;
+  --mobile-view: 450px;
 }
 body {
   background: #f8f8f8;
