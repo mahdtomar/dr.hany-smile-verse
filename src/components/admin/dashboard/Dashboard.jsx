@@ -1,6 +1,6 @@
 import SidebarDash from "./components/SidebarDash";
-import BodyDash from "./components/BodyDash";
-import Message from "../components/Message";
+// import BodyDash from "./components/BodyDash";
+import Message from "./components/Message";
 function Dashboard() {
   return (
     <div className="dash">
