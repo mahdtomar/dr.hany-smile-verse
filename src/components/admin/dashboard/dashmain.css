@@ -1,0 +1,3 @@
+body:has(.dash) {
+    overflow: hidden;
+}

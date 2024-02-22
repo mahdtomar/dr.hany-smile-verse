@@ -6,13 +6,16 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 import { AuthProvider } from "./context/AuthContext";
+import { RecoilRoot } from "recoil";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter basename="/dr.hany-smile-verse">
       <AuthProvider>
+        <RecoilRoot>
         <App />
+        </RecoilRoot>
       </AuthProvider>
     </BrowserRouter>
   </React.StrictMode>
