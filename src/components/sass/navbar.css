@@ -27,6 +27,9 @@
   position: relative;
   padding: 10px 0px;
 }
+.navbar-comp .container ul ul > a:last-child {
+  display: none;
+}
 .navbar-comp .container ul ul > a::before {
   content: "";
   position: absolute;
@@ -123,6 +126,7 @@
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
     border-radius: 20px;
     opacity: 0;
+    padding: 10px;
   }
   .navbar-comp .container ul ul.visible {
     opacity: 1;
@@ -135,6 +139,9 @@
     text-decoration: none;
     position: relative;
     padding: 10px 10px;
+  }
+  .navbar-comp .container ul ul > a:last-child {
+    display: block;
   }
   .navbar-comp .container ul ul > a:last-child {
     background-color: white;

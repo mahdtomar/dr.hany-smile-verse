@@ -17,7 +17,6 @@ function Message() {
           <tr className="side active" onClick={handleClickMsg}>
             <img src={man_user} alt="man" />
             <div className="head">
-              {" "}
               <h3>Ahmed Mohamed</h3>
               <p>Hello, How mush does it cost?</p>
             </div>
@@ -25,12 +24,10 @@ function Message() {
           <tr className="side" onClick={handleClickMsg}>
             <img src={woman_user} alt="woman" />
             <div className="head">
-              {" "}
               <h3>Samar Mohmoud</h3>
               <p>Hello, How mush does it cost?</p>
             </div>
           </tr>
-
           <tr className="side" onClick={handleClickMsg}>
             <img src={man_user} alt="man" />
             <div className="head"></div>

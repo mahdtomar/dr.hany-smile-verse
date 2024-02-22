@@ -20,7 +20,11 @@
       }
       ul {
         gap: 20px;
+
         > a {
+          &:last-child {
+            display: none;
+          }
           text-transform: capitalize;
           padding: 2px;
           text-decoration: none;
@@ -129,6 +133,7 @@
             visibility 0.3s ease-in-out;
           border-radius: 20px;
           opacity: 0;
+          padding: 10px;
           &.visible {
             opacity: 1;
             transform: translate(-50%, 0%);
@@ -140,6 +145,9 @@
             text-decoration: none;
             position: relative;
             padding: 10px 10px;
+            &:last-child {
+              display: block;
+            }
             &:last-child {
               background-color: white;
               color: var(--main-color);
