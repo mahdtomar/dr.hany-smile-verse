@@ -1,29 +1,19 @@
 import axios from "axios";
 import React, { useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
+import "./scss/loginform.css";
 const Login = () => {
   const emailRef = useRef(null);
   const passwordRef = useRef(null);
-  // const emailPattern = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
-  // const passwordPattern =
-  //   /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/;
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  // const emailValidation = () => {
-  //   return emailPattern.test(email);
-  // };
-  // const passwordValidation = () => {
-  //   return passwordPattern.test(password);
-  // };
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || "/";
   const submit = async (e) => {
     e.preventDefault();
-    // inputs validation
-    // passwordValidation() && emailValidation()
-    //   ? console.log("nice")
-    //   : email === "" || password === ""
-    //   ? alert("missing email or password")
-    //   : alert("invalid email or password");
-    // api call
+
     const config = {
       headers: {
         "Content-Type": "application/json",
@@ -38,9 +28,12 @@ const Login = () => {
     //   },
     //   config
     // );
+    setEmail("");
+    setPassword("");
+    navigate(from, { replace: true });
   };
   return (
-    <div>
+    <div className="loginform">
       <form>
         <label htmlFor="email">
           <input
@@ -52,6 +45,7 @@ const Login = () => {
             }}
             value={email}
             ref={emailRef}
+            placeholder="Email"
           />
         </label>
         <label htmlFor="password">
@@ -64,6 +58,7 @@ const Login = () => {
             }}
             value={password}
             ref={passwordRef}
+            placeholder="password"
           />
         </label>
         <button
@@ -73,10 +68,10 @@ const Login = () => {
         >
           Login
         </button>
+        <p>
+          don't have an account? <Link to={"/signup"}>sign up</Link>
+        </p>
       </form>
-      <p>
-        don't have an account? <Link>sign up</Link>
-      </p>
     </div>
   );
 };

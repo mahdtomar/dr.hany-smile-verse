@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useRef, useState } from "react";
 import "./scss/signupform.css";
+import { Link } from "react-router-dom";
 const SignupForm = () => {
   const [userName, setUserName] = useState("");
   const [email, setEmail] = useState("");
@@ -216,6 +217,9 @@ const SignupForm = () => {
         </p>
       </label>
       <button onClick={(e) => submitForm(e)}>Sign Up</button>
+      <p>
+        Do You Have An Account Already?<Link to={"/login"}>Log in</Link>
+      </p>
     </form>
   );
 };

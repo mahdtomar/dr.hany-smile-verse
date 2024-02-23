@@ -1,19 +1,21 @@
-.signupform {
+.loginform form {
+  display: flex;
+  flex-direction: column;
   padding: 20px;
-  width: 50%;
+  width: 35%;
   background-color: #fff;
   border-radius: 12px;
   box-shadow: 3px 3px 10px 0px gray;
-  max-width: 800px;
+  max-width: 500px;
   min-width: 350px;
   margin: 130px auto 100px;
 }
-.signupform label {
+.loginform form label {
   display: block;
   width: 100%;
   margin: 10px 0px;
 }
-.signupform label input {
+.loginform form label input {
   display: block;
   width: 100%;
   padding: 4px;
@@ -22,14 +24,14 @@
   border: 1px solid black;
   transition: 0.3s box-shadow ease-in-out, 0.3s border ease-in-out;
 }
-.signupform label input:focus, .signupform label input:hover {
+.loginform form label input:focus, .loginform form label input:hover {
   box-shadow: 0px 0px 3px 0px var(--secondary-color);
   border-color: var(--secondary-color);
 }
-.signupform label input:focus {
+.loginform form label input:focus {
   outline: none;
 }
-.signupform label input + p {
+.loginform form label input + p {
   visibility: hidden;
   display: none;
   margin: 10px 0px;
@@ -40,18 +42,18 @@
   background-color: rgba(255, 0, 0, 0.3);
   transition: 0.3s visibility ease-in;
 }
-.signupform label input.visible {
+.loginform form label input.visible {
   box-shadow: 0px 0px 3px 0px red;
 }
-.signupform label input.visible + p {
+.loginform form label input.visible + p {
   display: block;
   visibility: visible;
 }
-.signupform button {
+.loginform form button {
   display: block;
   background-color: var(--secondary-color);
   color: white;
   width: 100%;
   padding: 10px;
   font-size: 20px;
-}/*# sourceMappingURL=signupform.css.map */
+}/*# sourceMappingURL=loginform.css.map */

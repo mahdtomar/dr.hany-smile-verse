@@ -44,6 +44,6 @@
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "gh-pages": "^6.1.0",
-    "mplayer": "^2.1.0"
+    "react-devtools": "^5.0.0"
   }
 }

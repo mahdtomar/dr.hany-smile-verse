@@ -9,10 +9,12 @@ import NewPatient from "./components/appointment/NewPatient";
 import UserProfile from "./pages/UserProfile";
 import AboutUs from "./pages/AboutUs";
 import ConfortAndTechnology from "./pages/ConfortAndTechnology";
-// import Login from "./components/login/Login";
 import LoginPage from "./pages/LoginPage";
 import Admin from "./pages/Admin";
-
+import ProtectedRoutes from "./routes/ProtectedRoutes";
+import UnAuthorized from "./routes/UnAuthorized";
+import SignupForm from "./components/login/SignupForm";
+import LoginForm from "./components/login/loginForm";
 function App() {
   return (
     <div className="App">
@@ -20,10 +22,13 @@ function App() {
         <Route element={<HomePage />} path="/" />
         <Route element={<Logo />} path="/logo" />
         <Route element={<Services />} path="/services" />
-        <Route
-          element={<BookingAppointment content={<PatientType />} />}
-          path="/Appointment"
-        />
+        <Route element={<ProtectedRoutes allowedRoles={[1, 2, 3]} />}>
+          <Route
+            element={<BookingAppointment content={<PatientType />} />}
+            path="/Appointment"
+          />
+        </Route>
+
         <Route
           element={<BookingAppointment content={<NewPatient />} />}
           path="/Appointment/New"
@@ -41,8 +46,10 @@ function App() {
           path="/Profile/:id/insurance"
         />
         <Route element={<AboutUs />} path="/about-us" />
-        <Route element={<LoginPage />} path="/login" />
+        <Route element={<LoginPage child={<LoginForm />} />} path="/login" />
+        <Route element={<LoginPage child={<SignupForm />} />} path="/signup" />
         <Route element={<Admin />} path="/admin" />
+        <Route element={<UnAuthorized />} path="/unAuthorized" />
       </Routes>
     </div>
   );

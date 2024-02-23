@@ -2,22 +2,24 @@
 import { createContext, useState } from "react";
 
 const AuthContext = createContext();
-
+const testUser = {
+  userName: "omar mahdy",
+  role: [1, 2, 3],
+};
 export const AuthProvider = ({ children }) => {
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
-
+  const [user, setUser] = useState(testUser);
   const login = () => {
     // Perform login logic
-    setIsLoggedIn(true);
+    setUser(true);
   };
 
   const logout = () => {
     // Perform logout logic
-    setIsLoggedIn(false);
+    setUser(false);
   };
 
   const contextValue = {
-    isLoggedIn,
+    user,
     login,
     logout,
   };

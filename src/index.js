@@ -4,7 +4,7 @@ import "./index.css";
 import "./App.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { AuthProvider } from "./context/AuthContext";
 import { RecoilRoot } from "recoil";
 
@@ -14,7 +14,9 @@ root.render(
     <BrowserRouter basename="/dr.hany-smile-verse">
       <AuthProvider>
         <RecoilRoot>
-        <App />
+          <Routes>
+            <Route path="/*" element={<App />} />
+          </Routes>
         </RecoilRoot>
       </AuthProvider>
     </BrowserRouter>
