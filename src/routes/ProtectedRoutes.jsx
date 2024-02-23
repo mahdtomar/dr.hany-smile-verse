@@ -1,7 +1,6 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Navigate, useLocation, Outlet } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
-import UnAuthorized from "./UnAuthorized";
 
 const ProtectedRoutes = ({ allowedRoles }) => {
   const isAuth = useAuth();
