@@ -6,7 +6,7 @@ import settings_icon from "../assets/icons/settings_icon.svg";
 import signout_icon from "../assets/icons/signout_icon.svg";
 import bar_icon from "../assets/icons/bar_icon.svg";
 // import { useState } from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 function SidebarDash() {
   // const handleClickBar = () => {
   //   document.querySelector(".parent-sidebardash h1").classList.toggle("hidden");
@@ -27,14 +27,14 @@ function SidebarDash() {
         <h1 style={{ color: "#2c3e50" }}>Dr Hany</h1>
       </div>
       <ul className="sidebar-content">
-        <li className="active" onClick={handleClick}>
+        <Link to="appoint" className="active" onClick={handleClick}>
           <img src={appointment_icon} alt="appointment" />
           <p>Appointment</p>
-        </li>
-        <li onClick={handleClick}>
+        </Link>
+        <Link to="/" onClick={handleClick}>
           <img src={envelope_icon} alt="envelope" />
           <p>Message</p>
-        </li>
+        </Link>
         <li onClick={handleClick}>
           <img src={patient_icon} alt="patient" />
           <p>Patient</p>
