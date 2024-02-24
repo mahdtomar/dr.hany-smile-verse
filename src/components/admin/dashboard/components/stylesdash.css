@@ -319,6 +319,7 @@ td.home::-webkit-scrollbar-thumb:hover {
 
 /* inbox */
 .msg-body {
+  position: relative;
   background: white;
   /* flex: 1;
   display: flex;
@@ -344,12 +345,16 @@ td.home::-webkit-scrollbar-thumb:hover {
 }
 
 .msg-body .send-mgs {
+  width: 100%;
   padding: 0 10px;
   display: flex;
   justify-content: center;
-  bottom: 0;
+  width: 100%;
   position: absolute;
-  width: -webkit-fill-available;
+  bottom: 30%;
+  /* bottom: 0; */
+  /* position: absolute; */
+  /* width: -webkit-fill-available; */
 }
 
 .msg-body .send-mgs input {
@@ -362,6 +367,10 @@ td.home::-webkit-scrollbar-thumb:hover {
   margin: 20px auto;
   border-radius: 30px;
   border: 1px solid darkgray;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
 }
 
 .msg-body .icons-mgs {
@@ -380,7 +389,7 @@ td.home::-webkit-scrollbar-thumb:hover {
 
 @media (max-width:767px) {
   .msg-body .send-mgs {
-    width: 70%;
+    width: 80%;
   }
 
 }

@@ -2,8 +2,6 @@ import "./stylesdash.css";
 import { useRecoilState } from "recoil";
 import textState from "./user-atom";
 import send_icons from "../assets/icons/send_icon.svg";
-import video_call from "../assets/icons/video_call.svg";
-import phone_call from "../assets/icons/phone_call.svg";
 import { useState } from "react";
 function Message() {
   const [msg, setMsg] = useState("");
@@ -51,12 +49,7 @@ function Message() {
               <img src={data[0].src} alt={data[0].alt} />
               <h2>{data[0].name}</h2>
             </div>
-            <div className="icons-mgs">
-              <img src={video_call} alt="video" />
-              <img src={phone_call} alt="video" />
-            </div>
           </tr>
-          <hr />
           <div className="send-mgs">
             <input
               type="text"
