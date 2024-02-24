@@ -1,3 +1,8 @@
+import teethAlignmentIcon from "./icons/Alignment.svg";
+import rootCanalIcon from "./icons/rootcanal.svg";
+import oralHygiene from "./icons/hygiene.svg";
+import cosmiticTeethIcon from "./icons/teeth-solid.svg";
+import liveAdvisoryIcon from "./icons/LiveAdvisory.svg";
 export const appointments = [
   {
     id: 321,
@@ -9,12 +14,43 @@ export const appointments = [
     location_id: 1,
   },
 ];
-
+export const services = [
+  {
+    id: 423,
+    Name: "Alignment Teeth",
+    icon: teethAlignmentIcon,
+    link: "/services/Alignment-teeth",
+  },
+  {
+    id: 453,
+    Name: "Root Canal",
+    icon: rootCanalIcon,
+    link: "/services/root-canal",
+  },
+  {
+    id: 58,
+    Name: "Cosmetic teeth",
+    icon: cosmiticTeethIcon,
+    link: "/services/cosmetic-teeth",
+  },
+  {
+    id: 35,
+    Name: "Oral Hygiene",
+    icon: oralHygiene,
+    link: "/services/oral-hygiene",
+  },
+  {
+    id: 55,
+    Name: "Live Advisory",
+    icon: liveAdvisoryIcon,
+    link: "/services/live-advisory",
+  },
+];
 export const users = [
   {
     id: 1,
-    FirstName: "Omar",
-    LastName: "Mahdy",
+    UserName: "omar mahdy",
+    roles: [1, 2, 3],
     Image: require("./images/pfp.jpg"),
     Age: 20,
     PhoneNumber: "+00201029949333",

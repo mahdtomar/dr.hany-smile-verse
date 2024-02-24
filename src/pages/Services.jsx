@@ -1,14 +1,15 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import AlignmentTeeth from "../components/services-page/AlignmentTeeth";
+import ServicesSelector from "../components/services-page/ServicesSelector";
+import "./sass/services.css";
 const Services = () => {
   return (
-    <>
+    <div className="services-page">
       <Navbar />
-      <AlignmentTeeth />
+      <ServicesSelector />
       <Footer />
-    </>
+    </div>
   );
 };
 

@@ -15,6 +15,7 @@ import ProtectedRoutes from "./routes/ProtectedRoutes";
 import UnAuthorized from "./routes/UnAuthorized";
 import SignupForm from "./components/login/SignupForm";
 import LoginForm from "./components/login/loginForm";
+import AlignmentTeeth from "./components/services-page/AlignmentTeeth";
 function App() {
   return (
     <div className="App">
@@ -22,6 +23,7 @@ function App() {
         <Route element={<HomePage />} path="/" />
         <Route element={<Logo />} path="/logo" />
         <Route element={<Services />} path="/services" />
+        <Route element={<AlignmentTeeth />} path="/services/Alignment-teeth" />
         <Route element={<ProtectedRoutes allowedRoles={[1, 2, 3]} />}>
           <Route
             element={<BookingAppointment content={<PatientType />} />}
