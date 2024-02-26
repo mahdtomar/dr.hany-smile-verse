@@ -15,7 +15,7 @@ function SidebarDash() {
     document
       .querySelectorAll(".sidebar-content li")
       .forEach((e) => e.classList.remove("active"));
-    e.currentTarget.classList.toggle("active");
+    e.currentTarget.classList.add("active");
   };
   return (
     <div className="parent-sidebardash">
@@ -28,7 +28,13 @@ function SidebarDash() {
           <img src={appointment_icon} alt="appointment" />
           <p>Appointment</p>
         </li>
-        <li className="msg-side" onClick={(handleClick, handleDrawer)}>
+        <li
+          className="msg-side"
+          onClick={() => {
+            handleClick();
+            handleDrawer();
+          }}
+        >
           <img src={envelope_icon} alt="envelope" />
           <p>Message</p>
         </li>

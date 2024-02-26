@@ -14,7 +14,7 @@ import Admin from "./pages/Admin";
 import ProtectedRoutes from "./routes/ProtectedRoutes";
 import UnAuthorized from "./routes/UnAuthorized";
 import SignupForm from "./components/login/SignupForm";
-import LoginForm from "./components/login/loginForm";
+import LoginForm from "./components/login/LoginForm";
 import AlignmentTeeth from "./components/services-page/AlignmentTeeth";
 function App() {
   return (
