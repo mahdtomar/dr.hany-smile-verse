@@ -5,15 +5,12 @@ import patient_icon from "../assets/icons/patient_icon.svg";
 import settings_icon from "../assets/icons/settings_icon.svg";
 import signout_icon from "../assets/icons/signout_icon.svg";
 import bar_icon from "../assets/icons/bar_icon.svg";
-// import { useState } from "react";
-import { Link } from "react-router-dom";
 function SidebarDash() {
-  // const handleClickBar = () => {
-  //   document.querySelector(".parent-sidebardash h1").classList.toggle("hidden");
-  //   document
-  //     .querySelectorAll(".sidebar-content li")
-  //     .forEach((e) => e.classList.toggle("hidden"));
-  // };
+  const handleDrawer = () => {
+    let home = document.querySelector(".table-mgs td.home");
+    home.classList.toggle("drawer");
+    // console.log(home);
+  };
   const handleClick = (e) => {
     document
       .querySelectorAll(".sidebar-content li")
@@ -27,14 +24,14 @@ function SidebarDash() {
         <h1 style={{ color: "#2c3e50" }}>Dr Hany</h1>
       </div>
       <ul className="sidebar-content">
-        <Link to="appoint" className="active" onClick={handleClick}>
+        <li className="active" onClick={handleClick}>
           <img src={appointment_icon} alt="appointment" />
           <p>Appointment</p>
-        </Link>
-        <Link to="/" onClick={handleClick}>
+        </li>
+        <li className="msg-side" onClick={(handleClick, handleDrawer)}>
           <img src={envelope_icon} alt="envelope" />
           <p>Message</p>
-        </Link>
+        </li>
         <li onClick={handleClick}>
           <img src={patient_icon} alt="patient" />
           <p>Patient</p>

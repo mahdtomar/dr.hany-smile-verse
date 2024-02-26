@@ -35,6 +35,8 @@ ul {
 }
 
 .parent-sidebardash {
+  background: #f8f8f8;
+  z-index: 1000;
   width: 250px;
   top: 0;
   display: flex;
@@ -232,6 +234,10 @@ ul {
 }
 
 /* Messages */
+.dash {
+  width: 100%;
+}
+
 .dash:has(.table-mgs) {
   gap: 0px;
 }
@@ -248,6 +254,7 @@ ul {
   margin-right: 5px;
   gap: 0px;
   overflow-y: scroll;
+  max-height: 100vh;
 }
 
 .table-mgs>td>tr {
@@ -303,17 +310,18 @@ ul {
 
 td.home::-webkit-scrollbar {
   width: 15px;
-  background-color: gray;
+  background-color: white;
+  border: 1px solid#ddd;
 }
 
 td.home::-webkit-scrollbar-thumb {
-  background-color: white;
+  background-color: rgb(45, 78, 110);
   width: 20px !important;
   height: 30px !important;
 }
 
 td.home::-webkit-scrollbar-thumb:hover {
-  background-color: rgb(117, 115, 115);
+  background-color: rgb(39, 65, 90);
   cursor: pointer;
 }
 
@@ -321,9 +329,10 @@ td.home::-webkit-scrollbar-thumb:hover {
 .msg-body {
   position: relative;
   background: white;
-  /* flex: 1;
+  max-height: 100%;
   display: flex;
-  justify-content: space-between; */
+  justify-content: space-between;
+  flex-direction: column;
   gap: 20px;
 }
 
@@ -346,12 +355,11 @@ td.home::-webkit-scrollbar-thumb:hover {
 
 .msg-body .send-mgs {
   width: 100%;
-  padding: 0 10px;
+  padding: 10px;
   display: flex;
   justify-content: center;
-  width: 100%;
-  position: absolute;
-  bottom: 30%;
+  /* position: absolute;
+  bottom: 30%; */
   /* bottom: 0; */
   /* position: absolute; */
   /* width: -webkit-fill-available; */
@@ -389,10 +397,40 @@ td.home::-webkit-scrollbar-thumb:hover {
 
 @media (max-width:767px) {
   .msg-body .send-mgs {
-    width: 80%;
+    width: 100%;
   }
 
+  .table-mgs>td.home {
+    position: absolute;
+    max-height: 85vh;
+    z-index: 100;
+    width: 50%;
+    height: 100%;
+    left: -320px;
+    transition: all ease-in 0.3s;
+    -webkit-transition: all ease-in 0.3s;
+    -moz-transition: all ease-in 0.3s;
+    -ms-transition: all ease-in 0.3s;
+    -o-transition: all ease-in 0.3s;
+    /*left: 70px;
+    */
+    /*transform: translateX(-81%);
+    */
+  }
+
+  .drawer {
+    left: 65px !important;
+  }
+
+
 }
+
+
+
+/* li.msg-side.active:hover .table-mgs>td.home {
+  background-color: red;
+  /* left: 75 !important; */
+
 
 /* inbox */
 
