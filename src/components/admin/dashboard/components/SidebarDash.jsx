@@ -15,7 +15,7 @@ function SidebarDash() {
     document
       .querySelectorAll(".sidebar-content li")
       .forEach((e) => e.classList.remove("active"));
-    e.currentTarget.classList.add("active");
+    e.target.classList.add("active");
   };
   return (
     <div className="parent-sidebardash">
@@ -30,8 +30,8 @@ function SidebarDash() {
         </li>
         <li
           className="msg-side"
-          onClick={() => {
-            handleClick();
+          onClick={(e) => {
+            handleClick(e);
             handleDrawer();
           }}
         >
