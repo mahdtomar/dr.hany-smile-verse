@@ -22,6 +22,10 @@ li.active {
   background-color: #ddd;
 }
 
+tr.active {
+  background-color: #ddd;
+}
+
 .d-flex {
   display: flex;
   align-items: center;
@@ -246,7 +250,7 @@ li.active {
   height: 100%;
 }
 
-.table-mgs > td.home {
+.table-mgs>td.home {
   width: 35%;
   background-color: white;
   display: flex;
@@ -257,7 +261,7 @@ li.active {
   max-height: 100vh;
 }
 
-.table-mgs > td > tr {
+.table-mgs>td>tr {
   /* width: 100%; */
   /* height: 100%; */
   padding: 10px;
@@ -399,7 +403,7 @@ td.home::-webkit-scrollbar-thumb:hover {
     width: 100%;
   }
 
-  .table-mgs > td.home {
+  .table-mgs>td.home {
     position: absolute;
     max-height: 85vh;
     z-index: 100;

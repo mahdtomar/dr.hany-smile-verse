@@ -14,8 +14,9 @@ import Admin from "./pages/Admin";
 import ProtectedRoutes from "./routes/ProtectedRoutes";
 import UnAuthorized from "./routes/UnAuthorized";
 import SignupForm from "./components/login/SignupForm";
-import LoginForm from "./components/login/LoginForm";
+import LoginForm from "./components/login/loginForm";
 import AlignmentTeeth from "./components/services-page/AlignmentTeeth";
+import Faq from "./pages/Faq";
 function App() {
   return (
     <div className="App">
@@ -52,6 +53,7 @@ function App() {
         <Route element={<LoginPage child={<SignupForm />} />} path="/signup" />
         <Route element={<Admin />} path="/admin" />
         <Route element={<UnAuthorized />} path="/unAuthorized" />
+        <Route element={<Faq/>} path="/faq"></Route>
       </Routes>
     </div>
   );
