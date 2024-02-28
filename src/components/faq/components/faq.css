@@ -1,5 +1,21 @@
 .container-faq {
-    padding: 20px 30px;
+    padding: 8rem 3rem 5rem;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.items-center {
+    align-items: center;
 }
 
 .mt-5 {
@@ -9,8 +25,10 @@
 /* Faq header */
 .faq-header {
     background-image: linear-gradient(153deg, #2c3e50 60%, #98abbef2 40%);
-    padding: 5rem 3rem;
+    padding: 8rem 3rem 5rem;
 }
+
+
 
 .faq-header h1 {
     font-size: 4rem;
@@ -32,6 +50,12 @@
     color: rgb(233 232 232 / 50%);
 }
 
+@media (max-width:767px) {
+    .faq-header {
+        text-align: center;
+        background-image: linear-gradient(168deg, #2c3e50 85%, #98abbef2 15%);
+    }
+}
 
 /* Faq header */
 
@@ -42,4 +66,62 @@
     min-width: auto;
 }
 
+.feedback-form input, .feedback-form textarea {
+    border: 1px solid #ccc !important;
+    border-radius: 4px !important;
+    -webkit-border-radius: 4px !important;
+    -moz-border-radius: 4px !important;
+    -ms-border-radius: 4px !important;
+    -o-border-radius: 4px !important;
+}
+
+.feedback-form button {
+    width: fit-content !important;
+    padding: 15px 25px !important;
+    color: white !important;
+}
+
+@media (max-width:767px) {
+    .feedback-form button {
+        margin: auto !important;
+    }
+}
+
 /* Faq Feedback */
+
+/* Faq Questions */
+.faq-content {
+    flex: 0.678;
+}
+
+.faq-content span {
+    color: #2c3e50;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.faq-content h1 {
+    padding: 15px 0;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    font-family: 'Roboto';
+    font-weight: 500;
+}
+
+.faq-content p {
+    color: #00000085;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+@media (max-width:767px) {
+    .faq-questions {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+    }
+}
+
+/* Faq Questions */
