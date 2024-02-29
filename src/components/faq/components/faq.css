@@ -24,7 +24,8 @@
 
 /* Faq header */
 .faq-header {
-    background-image: linear-gradient(153deg, #2c3e50 60%, #98abbef2 40%);
+    background-image: linear-gradient(193deg, #047bcb 30%, #012441f2);
+    /* background-image: url(./assets/imgs/colorful_back.jpg); */
     padding: 8rem 3rem 5rem;
 }
 
@@ -40,20 +41,21 @@
 
 .faq-header p {
     padding: 20px 0;
-    color: white;
+    color: #05ffff;
 }
 
 .faq-header span {
     display: block;
     padding: 30px 0;
     font-size: 20px;
-    color: rgb(233 232 232 / 50%);
+    color: #cbcaca;
 }
 
 @media (max-width:767px) {
     .faq-header {
         text-align: center;
-        background-image: linear-gradient(168deg, #2c3e50 85%, #98abbef2 15%);
+        background-image: linear-gradient(193deg, #047bcb 30%, #012441f2);
+        /* background-image: linear-gradient(168deg, #2c3e50 85%, #98abbef2 15%); */
     }
 }
 
@@ -64,6 +66,10 @@
     width: 80% !important;
     max-width: 100%;
     min-width: auto;
+}
+
+.feedback-form .container p {
+    font-family: unset !important;
 }
 
 .feedback-form input, .feedback-form textarea {
@@ -95,7 +101,8 @@
 }
 
 .faq-content span {
-    color: #2c3e50;
+    /* color: #2c3e50; */
+    color: #05ffff;
     font-weight: 700;
     font-size: 15px;
 }
@@ -124,4 +131,49 @@
     }
 }
 
+.active-accord {
+    display: none;
+}
+
+.faq-questions .accordion-heading {
+    font-size: 20px;
+    padding: 15px 0;
+    font-weight: 600;
+}
+
+.faq-questions .parent-accord {
+    flex: 1;
+}
+
+.faq-questions button {
+    background: none;
+    color: black;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.faq-questions .accordion {
+    background-color: #ddd;
+    padding: 2px 15px;
+}
+
+.faq-questions .panel {
+    padding: 14px;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
 /* Faq Questions */
+
+/* Faq Footer */
+.footer-comp .container .other-links ul a img {
+    filter: brightness(100) !important;
+    -webkit-filter: brightness(100) !important;
+}
+
+.footer-comp .container .our-services ul a img {
+    filter: brightness(100) !important;
+    -webkit-filter: brightness(100) !important;
+}
+
+/* Faq Footer */

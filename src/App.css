@@ -10,8 +10,10 @@ p {
   font-size: 20px;
 }
 :root {
-  --main-color: #2c3e50;
-  --secondary-color: #3498db;
+  --main-color: #3498db;
+  --secondary-color: #185d8b;
+  /* --main-color: #2c3e50;
+  --secondary-color: #3498db; */
   --background-color: #f9f7f3;
   --CTA-color: #e74c3c;
   --mobile-view: 450px;

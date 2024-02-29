@@ -1,7 +1,16 @@
 // import plus_icon from "./assets/icons/plus_icon.svg";
 // import minus_icon from "./assets/icons/minus_icon.svg";
 
+import { useRecoilState } from "recoil";
+import questions from "./accord-questions";
 function Faqquestions() {
+  const [ques] = useRecoilState(questions);
+  const handleAccord = () => {
+    // document.querySelector("accordion button")
+    document
+      .querySelectorAll(".panel")
+      .forEach((e) => e.classList.toggle("active-accord"));
+  };
   return (
     <div className="faq-questions container-faq d-flex justify-between">
       <div className="faq-content">
@@ -12,19 +21,19 @@ function Faqquestions() {
           looking for ? please write your questions in feedback questions .
         </p>
       </div>
-      <ul>
-        <li>
-          <details open>
-            <summary className="d-flex">
-              How will we conduct IEP and 504 meetings?
-            </summary>
-            <div>
-              <p>All meetings will be held remotely.</p>
+      <div className="parent-accord">
+        {ques.map((e) => (
+          <div key={e.id}>
+            <div key={e.id} className="accordion d-flex justify-between">
+              <p key={e.id} className="accordion-heading">
+                {e.title_question}
+              </p>
+              <button onClick={handleAccord}>+</button>
             </div>
-          </details>{" "}
-        </li>
-        <li></li>
-      </ul>
+            <div className="panel">{e.description}</div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
