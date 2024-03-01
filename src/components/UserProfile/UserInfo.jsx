@@ -3,25 +3,9 @@ import React from "react";
 const UserInfo = ({ user }) => {
   return (
     <div className="user-info">
-      <label htmlFor="firstName">
-        <span>First Name</span>
-        <input
-          type="text"
-          name="firstName"
-          //   placeholder=""
-          required
-          placeholder={user.FirstName}
-        />
-      </label>
-      <label htmlFor="lastName">
-        <span>Last Name</span>
-        <input
-          type="text"
-          name="lastName"
-          //   placeholder=""
-          required
-          placeholder={user.LastName}
-        />
+      <label htmlFor="userName">
+        <span>User Name</span>
+        <input type="text" value={user.userName} />
       </label>
       <label htmlFor="phone">
         <span>Phone Number</span>
@@ -32,6 +16,7 @@ const UserInfo = ({ user }) => {
           required
           //   placeholder=""
           placeholder={user.PhoneNumber}
+          onChange={()=>{}}
         />
       </label>
       <label htmlFor="email">
@@ -43,6 +28,7 @@ const UserInfo = ({ user }) => {
           //   placeholder=""
           required
           placeholder={user.Email}
+          onChange={()=>{}}
         />
       </label>
       <label htmlFor="city">
@@ -53,6 +39,7 @@ const UserInfo = ({ user }) => {
           //   placeholder=""
           required
           placeholder={user.City}
+          onChange={()=>{}}
         />
       </label>
       <label htmlFor="state">
@@ -63,6 +50,7 @@ const UserInfo = ({ user }) => {
           //   placeholder=""
           required
           placeholder={user.State_Country}
+          onChange={()=>{}}
         />
       </label>
       <label htmlFor="Postcode">
@@ -74,8 +62,13 @@ const UserInfo = ({ user }) => {
           //   placeholder=""
           required
           placeholder={user.Postcode}
+          onChange={()=>{}}
         />
       </label>
+      <div className="options">
+        <button>edit</button>
+        <button disabled>save</button>
+      </div>
     </div>
   );
 };

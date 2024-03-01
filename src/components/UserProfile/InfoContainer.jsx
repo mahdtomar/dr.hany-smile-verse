@@ -19,7 +19,6 @@ const InfoContainer = ({ user, content }) => {
   }, [content, user]);
   function setActive(link) {
     let menu = document.querySelector(".menu");
-    console.log(menu.children);
     Array.from(menu.children).map((child) => {
       child.removeAttribute("active");
       return "";
@@ -33,7 +32,7 @@ const InfoContainer = ({ user, content }) => {
           onClick={(e) => {
             setActive(e.target);
           }}
-          to={`/Profile/${user.id}/info`}
+          to={`/profile/`}
         >
           Personal Info
         </Link>
@@ -41,7 +40,7 @@ const InfoContainer = ({ user, content }) => {
           onClick={(e) => {
             setActive(e.target);
           }}
-          to={`/Profile/${user.id}/insurance`}
+          to={`/profile/insurance`}
         >
           Insurance Details
         </Link>

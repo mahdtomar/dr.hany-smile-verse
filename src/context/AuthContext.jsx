@@ -2,9 +2,29 @@
 import { createContext, useState } from "react";
 
 const AuthContext = createContext();
+
 const testUser = {
+  id: 1,
   userName: "omar mahdy",
-  role: [1, 2, 3],
+  roles: [1, 2, 3],
+  // Image: require("./images/pfp.jpg"),
+  Age: 20,
+  PhoneNumber: "+00201029949333",
+  Email: "omarmahdy@gmail.com",
+  Address: "Tanta, El-Gharbia, Egypt",
+  City: "Tanta",
+  State_Country: "Egypt",
+  Postcode: 12345,
+  DateOfBirth: "12Th Nov 2003",
+  Insurance: {
+    // add more details later
+    CompanyName: "Insuance Company Name",
+    Notes: "this is notes on the insurance company i use.",
+  },
+  Appointments: {
+    Done: [],
+    // Queued: [appointments],
+  },
 };
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(testUser);

@@ -31,29 +31,25 @@ function App() {
             path="/Appointment"
           />
         </Route>
-
         <Route
           element={<BookingAppointment content={<NewPatient />} />}
           path="/Appointment/New"
         />
-        <Route
-          element={<UserProfile content={"info"} />}
-          path="/profile/:id/info"
-        />
+        <Route element={<UserProfile content={"info"} />} path="/profile" />
         <Route
           element={<ConfortAndTechnology />}
           path="/comfort-and-technology"
         />
         <Route
           element={<UserProfile content={"insurance"} />}
-          path="/Profile/:id/insurance"
+          path="/profile/insurance"
         />
         <Route element={<AboutUs />} path="/about-us" />
         <Route element={<LoginPage child={<LoginForm />} />} path="/login" />
         <Route element={<LoginPage child={<SignupForm />} />} path="/signup" />
         <Route element={<Admin />} path="/admin" />
         <Route element={<UnAuthorized />} path="/unAuthorized" />
-        <Route element={<Faq/>} path="/faq"></Route>
+        <Route element={<Faq />} path="/faq"></Route>
       </Routes>
     </div>
   );
