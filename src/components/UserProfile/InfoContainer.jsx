@@ -33,6 +33,7 @@ const InfoContainer = ({ user, content }) => {
             setActive(e.target);
           }}
           to={`/profile/`}
+          active="true"
         >
           Personal Info
         </Link>

@@ -1,11 +1,34 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 
 const UserInfo = ({ user }) => {
+  const [userName, setUserName] = useState(user.userName);
+  const [phoneNumber, setPhoneNumber] = useState(user.PhoneNumber);
+  const [email, setEmail] = useState(user.Email);
+  const [city, setCity] = useState(user.City);
+  const [state, setState] = useState(user.State_Country);
+  const [postcode, setPostcode] = useState(user.Postcode);
+  const [editable, setEditable] = useState(false);
+  const saveBtnRef = useRef("");
+  const editHandler = () => {
+    if (editable) {
+      setEditable(true);
+      saveBtnRef.current.classList.add("working");
+    } else {
+      setEditable(false);
+      saveBtnRef.current.classList.remove("working");
+    }
+  };
   return (
     <div className="user-info">
       <label htmlFor="userName">
         <span>User Name</span>
-        <input type="text" value={user.userName} />
+        <input
+          type="text"
+          value={userName}
+          onChange={(e) => {
+            setUserName(e.target.value);
+          }}
+        />
       </label>
       <label htmlFor="phone">
         <span>Phone Number</span>
@@ -14,9 +37,11 @@ const UserInfo = ({ user }) => {
           id="phoneNumber"
           name="phoneNumber"
           required
-          //   placeholder=""
-          placeholder={user.PhoneNumber}
-          onChange={()=>{}}
+          placeholder={phoneNumber}
+          value={phoneNumber}
+          onChange={(e) => {
+            setPhoneNumber(e.target.value);
+          }}
         />
       </label>
       <label htmlFor="email">
@@ -27,8 +52,11 @@ const UserInfo = ({ user }) => {
           id="userEmail"
           //   placeholder=""
           required
-          placeholder={user.Email}
-          onChange={()=>{}}
+          placeholder={email}
+          value={email}
+          onChange={(e) => {
+            setEmail(e.target.value);
+          }}
         />
       </label>
       <label htmlFor="city">
@@ -38,8 +66,11 @@ const UserInfo = ({ user }) => {
           name="city"
           //   placeholder=""
           required
-          placeholder={user.City}
-          onChange={()=>{}}
+          placeholder={city}
+          value={city}
+          onChange={(e) => {
+            setCity(e.target.value);
+          }}
         />
       </label>
       <label htmlFor="state">
@@ -49,8 +80,11 @@ const UserInfo = ({ user }) => {
           name="state"
           //   placeholder=""
           required
-          placeholder={user.State_Country}
-          onChange={()=>{}}
+          placeholder={state}
+          value={state}
+          onChange={(e) => {
+            setState(e.target.value);
+          }}
         />
       </label>
       <label htmlFor="Postcode">
@@ -61,13 +95,16 @@ const UserInfo = ({ user }) => {
           name="postcode"
           //   placeholder=""
           required
-          placeholder={user.Postcode}
-          onChange={()=>{}}
+          placeholder={postcode}
+          value={postcode}
+          onChange={(e) => {
+            setPostcode(e.target.value);
+          }}
         />
       </label>
       <div className="options">
-        <button>edit</button>
-        <button disabled>save</button>
+        <button onClick={editHandler}>edit</button>
+        <button ref={saveBtnRef}>save</button>
       </div>
     </div>
   );
