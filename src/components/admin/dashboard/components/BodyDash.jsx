@@ -1,8 +1,11 @@
 // import SidebarDash from "./SidebarDash";
 
+// import SidebarDash from "./SidebarDash";
+
 function BodyDash() {
   return (
-    <div>
+    <div style={{ display: "flex", flex: 1 }}>
+      {/* <SidebarDash /> */}
       <div className="bodydash">
         <h1 className="heading-dash">Appointment</h1>
         <div className="parent-bodydash">

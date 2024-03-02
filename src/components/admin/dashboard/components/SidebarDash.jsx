@@ -5,6 +5,7 @@ import patient_icon from "../assets/icons/patient_icon.svg";
 import settings_icon from "../assets/icons/settings_icon.svg";
 import signout_icon from "../assets/icons/signout_icon.svg";
 import bar_icon from "../assets/icons/bar_icon.svg";
+import { Link } from "react-router-dom";
 function SidebarDash() {
   const handleDrawer = () => {
     let home = document.querySelector(".table-mgs td.home");
@@ -24,10 +25,14 @@ function SidebarDash() {
         <h1 style={{ color: "#2c3e50" }}>Dr Hany</h1>
       </div>
       <ul className="sidebar-content">
-        <li className="active" onClick={handleClick}>
+        <Link
+          to={"/admin/appointment"}
+          className="active"
+          onClick={handleClick}
+        >
           <img src={appointment_icon} alt="appointment" />
           <p>Appointment</p>
-        </li>
+        </Link>
         <li
           className="msg-side"
           onClick={(e) => {

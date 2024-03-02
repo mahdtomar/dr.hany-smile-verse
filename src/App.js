@@ -17,6 +17,12 @@ import SignupForm from "./components/login/SignupForm";
 import LoginForm from "./components/login/loginForm";
 import AlignmentTeeth from "./components/services-page/AlignmentTeeth";
 import Faq from "./pages/Faq";
+import RootCanel from "./components/services-page/RootCanel";
+import CosmeticTeeth from "./components/services-page/CosmeticTeeth";
+import OralHygiene from "./components/services-page/OralHygiene";
+import LiveAdvisory from "./components/services-page/LiveAdvisory";
+import Dashboard from "./components/admin/dashboard/Dashboard";
+import BodyDash from "./components/admin/dashboard/components/BodyDash";
 function App() {
   return (
     <div className="App">
@@ -25,6 +31,10 @@ function App() {
         <Route element={<Logo />} path="/logo" />
         <Route element={<Services />} path="/services" />
         <Route element={<AlignmentTeeth />} path="/services/Alignment-teeth" />
+        <Route element= {<RootCanel/>} path="/services/root-canal"></Route>
+        <Route element = {<CosmeticTeeth/>} path="/services/cosmetic-teeth"></Route>
+        <Route element ={<OralHygiene/>} path="/services/oral-hygiene"></Route>
+        <Route element={<LiveAdvisory/>} path="/services/live-advisory"></Route>
         <Route element={<ProtectedRoutes allowedRoles={[1, 2, 3]} />}>
           <Route
             element={<BookingAppointment content={<PatientType />} />}
@@ -48,6 +58,7 @@ function App() {
         <Route element={<LoginPage child={<LoginForm />} />} path="/login" />
         <Route element={<LoginPage child={<SignupForm />} />} path="/signup" />
         <Route element={<Admin />} path="/admin" />
+        <Route element ={<BodyDash/>} path="/admin/appointment"></Route>
         <Route element={<UnAuthorized />} path="/unAuthorized" />
         <Route element={<Faq />} path="/faq"></Route>
       </Routes>
