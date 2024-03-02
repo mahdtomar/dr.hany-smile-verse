@@ -5,7 +5,7 @@ import BodyDash from "./components/BodyDash";
 function Dashboard() {
   return (
     <div className="dash">
-      <SidebarDash />
+      {/* <SidebarDash /> */}
       <BodyDash />
       {/* <Message /> */}
     </div>

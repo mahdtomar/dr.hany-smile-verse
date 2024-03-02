@@ -10,7 +10,7 @@ function Faqquestions() {
 
     document
       .querySelectorAll(".panel")
-      .forEach((e) => e.classList.toggle("active-accord")[e.id]);
+      .forEach((e) => e.classList.toggle("active-accord"));
   };
   return (
     <div className="faq-questions container-faq d-flex justify-between">
@@ -29,9 +29,13 @@ function Faqquestions() {
               <p key={e.id} className="accordion-heading">
                 {e.title_question}
               </p>
-              <button onClick={handleAccord}>+</button>
+              <button key={e.id} onClick={handleAccord}>
+                +
+              </button>
             </div>
-            <div className="panel">{e.description}</div>
+            <div key={e.id} className="panel">
+              {e.description}
+            </div>
           </div>
         ))}
       </div>

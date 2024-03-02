@@ -77,7 +77,7 @@ export const Doctors = [
     id: 243,
     FirstName: "Ahmed",
     LastName: "Mohammed",
-    Image: "/src/icons/Default_pfp.png",
+    Image: "./src/icons/Default_pfp.png",
     Age: 35,
     PhoneNumber: "+00201012345678",
     Email: "AhmedMohammed@gmail.com",

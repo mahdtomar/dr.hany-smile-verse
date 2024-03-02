@@ -23,6 +23,7 @@ import OralHygiene from "./components/services-page/OralHygiene";
 import LiveAdvisory from "./components/services-page/LiveAdvisory";
 import Dashboard from "./components/admin/dashboard/Dashboard";
 import BodyDash from "./components/admin/dashboard/components/BodyDash";
+import Message from "./components/admin/dashboard/components/Message";
 function App() {
   return (
     <div className="App">
@@ -59,6 +60,7 @@ function App() {
         <Route element={<LoginPage child={<SignupForm />} />} path="/signup" />
         <Route element={<Admin />} path="/admin" />
         <Route element ={<BodyDash/>} path="/admin/appointment"></Route>
+        <Route element={<Message/>} path="/admin/messages"></Route>
         <Route element={<UnAuthorized />} path="/unAuthorized" />
         <Route element={<Faq />} path="/faq"></Route>
       </Routes>

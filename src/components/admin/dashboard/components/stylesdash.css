@@ -5,7 +5,15 @@ ul {
 .flex-1 {
   flex: 1;
 }
-
+.border-0 {
+  border: 0;
+}
+.link {
+  border: 0px;
+  text-decoration: none;
+  display: flex;
+  gap: 10px;
+}
 .overflow-hidden {
   overflow: hidden;
 }
@@ -62,11 +70,12 @@ tr.active {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  align-items: center;
   gap: 20px;
   font-weight: bold;
 }
 
-.sidebar-content li {
+.sidebar-content .link {
   display: flex;
   gap: 10px;
   padding: 10px;
@@ -82,16 +91,16 @@ tr.active {
   -o-transition: all 0.3s ease-in;
 }
 
-.sidebar-content li p {
+.sidebar-content .link p {
   font-size: 18px !important;
 }
 
-.sidebar-content li img {
+.sidebar-content .link img {
   width: 20px;
   height: 20px;
 }
 
-.sidebar-content li:hover {
+.sidebar-content .link:hover {
   cursor: pointer;
   background-color: #ddd;
 }
@@ -192,7 +201,7 @@ tr.active {
     display: none;
   }
 
-  .sidebar-content li p {
+  .sidebar-content .link p {
     display: none;
   }
 
@@ -220,6 +229,7 @@ tr.active {
   }
 
   .bodydash {
+    height: 100%;
     text-align: center;
   }
 
@@ -238,6 +248,7 @@ tr.active {
 }
 
 /* Messages */
+
 .dash {
   width: 100%;
 }
@@ -245,12 +256,17 @@ tr.active {
 .dash:has(.table-mgs) {
   gap: 0px;
 }
-
+.mgs-parent {
+  gap: 0px;
+  height: 100vh;
+  width: 100%;
+  overflow-y: hidden;
+}
 .table-mgs {
   height: 100%;
 }
 
-.table-mgs>td.home {
+.table-mgs > td.home {
   width: 35%;
   background-color: white;
   display: flex;
@@ -258,10 +274,10 @@ tr.active {
   margin-right: 5px;
   gap: 0px;
   overflow-y: scroll;
-  max-height: 100vh;
+  max-height: 80vh;
 }
 
-.table-mgs>td>tr {
+.table-mgs > td > tr {
   /* width: 100%; */
   /* height: 100%; */
   padding: 10px;
@@ -318,14 +334,14 @@ td.home::-webkit-scrollbar {
 }
 
 td.home::-webkit-scrollbar-thumb {
-  background-color: rgb(45, 78, 110);
+  background-color: #047bcb;
   width: 10px !important;
   height: 30px !important;
   border-radius: 100px;
 }
 
 td.home::-webkit-scrollbar-thumb:hover {
-  background-color: rgb(39, 65, 90);
+  background-color: #012441f2;
   cursor: pointer;
 }
 
@@ -403,9 +419,9 @@ td.home::-webkit-scrollbar-thumb:hover {
     width: 100%;
   }
 
-  .table-mgs>td.home {
+  .table-mgs > td.home {
     position: absolute;
-    max-height: 85vh;
+    max-height: 82%;
     z-index: 100;
     width: 50%;
     height: 100%;

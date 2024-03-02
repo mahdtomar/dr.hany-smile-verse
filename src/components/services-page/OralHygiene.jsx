@@ -5,6 +5,7 @@ function OralHygiene() {
   return (
     <>
       <Navbar />
+      <h1>Oral Hygiene</h1>
       <Footer />
     </>
   );

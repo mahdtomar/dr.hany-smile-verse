@@ -9,32 +9,32 @@ import { Link } from "react-router-dom";
 function SidebarDash() {
   const handleDrawer = () => {
     let home = document.querySelector(".table-mgs td.home");
-    home.classList.toggle("drawer");
-    // console.log(home);
+    if (home !== null) home.classList.toggle("drawer");
   };
   const handleClick = (e) => {
     document
       .querySelectorAll(".sidebar-content li")
       .forEach((e) => e.classList.remove("active"));
-    e.target.classList.add("active");
+    // e.classList.add("active");
   };
   return (
     <div className="parent-sidebardash">
       <div className="d-flex">
         <img src={bar_icon} alt="bar" className="bar" />
-        <h1 style={{ color: "#2c3e50" }}>Dr Hany</h1>
+        <h1 style={{ color: "#047bcb" }}>Dr Hany</h1>
       </div>
       <ul className="sidebar-content">
         <Link
           to={"/admin/appointment"}
-          className="active"
+          className="link active "
           onClick={handleClick}
         >
           <img src={appointment_icon} alt="appointment" />
           <p>Appointment</p>
         </Link>
-        <li
-          className="msg-side"
+        <Link
+          to={"/admin/messages"}
+          className="msg-side link"
           onClick={(e) => {
             handleClick(e);
             handleDrawer();
@@ -42,22 +42,22 @@ function SidebarDash() {
         >
           <img src={envelope_icon} alt="envelope" />
           <p>Message</p>
-        </li>
-        <li onClick={handleClick}>
+        </Link>
+        <Link to={"/admin/patient"} onClick={handleClick} className="link">
           <img src={patient_icon} alt="patient" />
           <p>Patient</p>
-        </li>
+        </Link>
       </ul>
       <hr style={{ width: "100%", backgroundColor: "#ddd" }} />
       <ul className="sidebar-content">
-        <li onClick={handleClick}>
+        <Link to={"/admin/settings"} className="link" onClick={handleClick}>
           <img src={settings_icon} alt="settings" />
           <p>Settings</p>
-        </li>
-        <li onClick={handleClick}>
+        </Link>
+        <Link to={"/admin/signout"} className="link" onClick={handleClick}>
           <img src={signout_icon} alt="sign-out" />
           <p>Sign Out</p>
-        </li>
+        </Link>
       </ul>
     </div>
   );
