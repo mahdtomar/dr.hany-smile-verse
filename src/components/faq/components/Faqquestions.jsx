@@ -7,9 +7,10 @@ function Faqquestions() {
   const [ques] = useRecoilState(questions);
   const handleAccord = () => {
     // document.querySelector("accordion button")
+
     document
       .querySelectorAll(".panel")
-      .forEach((e) => e.classList.toggle("active-accord"));
+      .forEach((e) => e.classList.toggle("active-accord")[e.id]);
   };
   return (
     <div className="faq-questions container-faq d-flex justify-between">

@@ -73,12 +73,21 @@
 }
 
 .feedback-form input, .feedback-form textarea {
+    transition: all ease-in 0.20s;
     border: 1px solid #ccc !important;
     border-radius: 4px !important;
     -webkit-border-radius: 4px !important;
     -moz-border-radius: 4px !important;
     -ms-border-radius: 4px !important;
     -o-border-radius: 4px !important;
+    -webkit-transition: all ease-in 0.20s;
+    -moz-transition: all ease-in 0.20s;
+    -ms-transition: all ease-in 0.20s;
+    -o-transition: all ease-in 0.20s;
+}
+
+.feedback-form input:focus, .feedback-form textarea:focus {
+    outline: 3px solid #3498db4d !important;
 }
 
 .feedback-form button {
