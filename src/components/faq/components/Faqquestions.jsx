@@ -3,15 +3,13 @@
 
 import { useRecoilState } from "recoil";
 import questions from "./accord-questions";
+
 function Faqquestions() {
   const [ques] = useRecoilState(questions);
-  const handleAccord = () => {
-    // document.querySelector("accordion button")
-
-    document
-      .querySelectorAll(".panel")
-      .forEach((e) => e.classList.toggle("active-accord"));
+  const handleAccord = (e) => {
+    e.currentTarget.nextElementSibling.classList.toggle("active-accord");
   };
+
   return (
     <div className="faq-questions container-faq d-flex justify-between">
       <div className="faq-content">
@@ -25,15 +23,20 @@ function Faqquestions() {
       <div className="parent-accord">
         {ques.map((e) => (
           <div key={e.id}>
-            <div key={e.id} className="accordion d-flex justify-between">
+            <div
+              key={e.id}
+              className="accordion d-flex justify-between"
+              onClick={handleAccord}
+            >
               <p key={e.id} className="accordion-heading">
                 {e.title_question}
               </p>
-              <button key={e.id} onClick={handleAccord}>
-                +
-              </button>
+              <button key={e.id}>+</button>
             </div>
-            <div key={e.id} className="panel">
+            <div
+              key={e.id}
+              className={`panel ${e.id === 0 ? "active-accord" : ""}`}
+            >
               {e.description}
             </div>
           </div>

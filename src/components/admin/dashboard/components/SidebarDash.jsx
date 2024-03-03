@@ -13,15 +13,17 @@ function SidebarDash() {
   };
   const handleClick = (e) => {
     document
-      .querySelectorAll(".sidebar-content li")
+      .querySelectorAll(".sidebar-content .link")
       .forEach((e) => e.classList.remove("active"));
-    // e.classList.add("active");
+    e.currentTarget.classList.toggle("active");
   };
   return (
     <div className="parent-sidebardash">
       <div className="d-flex">
         <img src={bar_icon} alt="bar" className="bar" />
-        <h1 style={{ color: "#047bcb" }}>Dr Hany</h1>
+        <Link to={"/"} style={{ textDecoration: "none" }}>
+          <h1 style={{ color: "#047bcb" }}>Dr Hany</h1>
+        </Link>
       </div>
       <ul className="sidebar-content">
         <Link

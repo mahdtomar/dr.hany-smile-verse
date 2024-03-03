@@ -1,5 +1,6 @@
 import Footer from "../Footer";
 import Navbar from "../Navbar";
+import CosmeticGallery from "./components/cosmetic-teeth/CosmeticGallery";
 import HeaderCosmetic from "./components/cosmetic-teeth/HeaderCosmetic";
 
 function CosmeticTeeth() {
@@ -7,6 +8,7 @@ function CosmeticTeeth() {
     <>
       <Navbar />
       <HeaderCosmetic />
+      <CosmeticGallery />
       <Footer />
     </>
   );

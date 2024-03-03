@@ -1,188 +1,190 @@
 .container-faq {
-    padding: 8rem 3rem 5rem;
+  padding: 8rem 3rem 5rem;
 }
 
 .d-flex {
-    display: flex;
+  display: flex;
 }
 
 .justify-center {
-    justify-content: center;
+  justify-content: center;
 }
 
 .justify-between {
-    justify-content: space-between;
+  justify-content: space-between;
 }
 
 .items-center {
-    align-items: center;
+  align-items: center;
 }
 
 .mt-5 {
-    margin-top: 5rem;
+  margin-top: 5rem;
 }
 
 /* Faq header */
 .faq-header {
-    background-image: linear-gradient(193deg, #047bcb 30%, #012441f2);
-    /* background-image: url(./assets/imgs/colorful_back.jpg); */
-    padding: 8rem 3rem 5rem;
+  background-image: linear-gradient(193deg, #047bcb 30%, #012441f2);
+  /* background-image: url(./assets/imgs/colorful_back.jpg); */
+  padding: 8rem 3rem 5rem;
 }
 
-
-
 .faq-header h1 {
-    font-size: 4rem;
-    color: white;
-    letter-spacing: 2px;
-    font-family: 'Roboto';
-    font-weight: 500;
+  font-size: 4rem;
+  color: white;
+  letter-spacing: 2px;
+  font-family: "Roboto";
+  font-weight: 500;
 }
 
 .faq-header p {
-    padding: 20px 0;
-    color: #05ffff;
+  padding: 20px 0;
+  color: #05ffff;
 }
 
 .faq-header span {
-    display: block;
-    padding: 30px 0;
-    font-size: 20px;
-    color: #cbcaca;
+  display: block;
+  padding: 30px 0;
+  font-size: 20px;
+  color: #cbcaca;
 }
 
-@media (max-width:767px) {
-    .faq-header {
-        text-align: center;
-        background-image: linear-gradient(193deg, #047bcb 30%, #012441f2);
-        /* background-image: linear-gradient(168deg, #2c3e50 85%, #98abbef2 15%); */
-    }
+@media (max-width: 767px) {
+  .faq-header {
+    text-align: center;
+    background-image: linear-gradient(193deg, #047bcb 30%, #012441f2);
+    /* background-image: linear-gradient(168deg, #2c3e50 85%, #98abbef2 15%); */
+  }
 }
 
 /* Faq header */
 
 /* Faq Feedback */
 .feedback-form .container {
-    width: 80% !important;
-    max-width: 100%;
-    min-width: auto;
+  width: 80% !important;
+  max-width: 100%;
+  min-width: auto;
 }
 
 .feedback-form .container p {
-    font-family: unset !important;
+  font-family: unset !important;
 }
 
-.feedback-form input, .feedback-form textarea {
-    transition: all ease-in 0.20s;
-    border: 1px solid #ccc !important;
-    border-radius: 4px !important;
-    -webkit-border-radius: 4px !important;
-    -moz-border-radius: 4px !important;
-    -ms-border-radius: 4px !important;
-    -o-border-radius: 4px !important;
-    -webkit-transition: all ease-in 0.20s;
-    -moz-transition: all ease-in 0.20s;
-    -ms-transition: all ease-in 0.20s;
-    -o-transition: all ease-in 0.20s;
+.feedback-form input,
+.feedback-form textarea {
+  transition: all ease-in 0.2s;
+  border: 1px solid #ccc !important;
+  border-radius: 4px !important;
+  -webkit-border-radius: 4px !important;
+  -moz-border-radius: 4px !important;
+  -ms-border-radius: 4px !important;
+  -o-border-radius: 4px !important;
+  -webkit-transition: all ease-in 0.2s;
+  -moz-transition: all ease-in 0.2s;
+  -ms-transition: all ease-in 0.2s;
+  -o-transition: all ease-in 0.2s;
 }
 
-.feedback-form input:focus, .feedback-form textarea:focus {
-    outline: 3px solid #3498db4d !important;
+.feedback-form input:focus,
+.feedback-form textarea:focus {
+  outline: 3px solid #3498db4d !important;
 }
 
 .feedback-form button {
-    width: fit-content !important;
-    padding: 15px 25px !important;
-    color: white !important;
+  width: fit-content !important;
+  padding: 15px 25px !important;
+  color: white !important;
 }
 
-@media (max-width:767px) {
-    .feedback-form button {
-        margin: auto !important;
-    }
+@media (max-width: 767px) {
+  .feedback-form button {
+    margin: auto !important;
+  }
 }
 
 /* Faq Feedback */
 
 /* Faq Questions */
 .faq-content {
-    flex: 0.678;
+  flex: 0.678;
 }
 
 .faq-content span {
-    /* color: #2c3e50; */
-    color: #05ffff;
-    font-weight: 700;
-    font-size: 15px;
+  /* color: #2c3e50; */
+  color: #05ffff;
+  font-weight: 700;
+  font-size: 15px;
 }
 
 .faq-content h1 {
-    padding: 15px 0;
-    font-size: 2rem;
-    letter-spacing: 1px;
-    font-family: 'Roboto';
-    font-weight: 500;
+  padding: 15px 0;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  font-family: "Roboto";
+  font-weight: 500;
 }
 
 .faq-content p {
-    color: #00000085;
-    font-size: 15px;
-    font-weight: 600;
+  color: #00000085;
+  font-size: 15px;
+  font-weight: 600;
 }
 
-@media (max-width:767px) {
-    .faq-questions {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        flex-direction: column;
-    }
-}
-
-.active-accord {
-    display: none;
+@media (max-width: 767px) {
+  .faq-questions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    gap: 3rem;
+  }
 }
 
 .faq-questions .accordion-heading {
-    font-size: 20px;
-    padding: 15px 0;
-    font-weight: 600;
+  font-size: 20px;
+  padding: 15px 0;
+  font-weight: 600;
 }
 
 .faq-questions .parent-accord {
-    flex: 1;
+  flex: 1;
 }
 
 .faq-questions button {
-    background: none;
-    color: black;
-    font-size: 25px;
-    font-weight: 500;
+  background: none;
+  color: black;
+  font-size: 25px;
+  font-weight: 500;
 }
 
 .faq-questions .accordion {
-    background-color: #ddd;
-    padding: 2px 15px;
+  background-color: #ddd;
+  padding: 2px 15px;
 }
 
 .faq-questions .panel {
-    padding: 14px;
-    font-size: 15px;
-    line-height: 1.7;
+  display: none;
+  padding: 14px;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.active-accord {
+  display: block !important;
 }
 
 /* Faq Questions */
 
 /* Faq Footer */
 .footer-comp .container .other-links ul a img {
-    filter: brightness(100) !important;
-    -webkit-filter: brightness(100) !important;
+  filter: brightness(100) !important;
+  -webkit-filter: brightness(100) !important;
 }
 
 .footer-comp .container .our-services ul a img {
-    filter: brightness(100) !important;
-    -webkit-filter: brightness(100) !important;
+  filter: brightness(100) !important;
+  -webkit-filter: brightness(100) !important;
 }
 
 /* Faq Footer */

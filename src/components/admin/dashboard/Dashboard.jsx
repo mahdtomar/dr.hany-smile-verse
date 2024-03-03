@@ -1,5 +1,5 @@
 import "./dashmain.css";
-import SidebarDash from "./components/SidebarDash";
+// import SidebarDash from "./components/SidebarDash";
 import BodyDash from "./components/BodyDash";
 // import Message from "./components/Message";
 function Dashboard() {
