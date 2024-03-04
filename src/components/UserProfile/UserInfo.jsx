@@ -15,11 +15,15 @@ const UserInfo = ({ user }) => {
     if (editable) {
       setEditable(false);
       saveBtnRef.current.setAttribute('disabled', true)
-      Array.from(inputFiles).map(input => { input.setAttribute("disabled", 'true') })
+      Array.from(inputFiles).map(input => {
+        input.setAttribute("disabled", 'true');
+        return '';
+      })
     } else {
       setEditable(true);
       Array.from(inputFiles).map((input) => {
-        input.removeAttribute("disabled")
+        input.removeAttribute("disabled");
+        return '';
       })
       saveBtnRef.current.removeAttribute("disabled");
     }
