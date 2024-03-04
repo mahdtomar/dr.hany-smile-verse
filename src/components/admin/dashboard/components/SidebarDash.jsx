@@ -56,7 +56,7 @@ function SidebarDash() {
           <img src={settings_icon} alt="settings" />
           <p>Settings</p>
         </Link>
-        <Link to={"/admin/signout"} className="link" onClick={handleClick}>
+        <Link to={"/"} className="link" onClick={handleClick}>
           <img src={signout_icon} alt="sign-out" />
           <p>Sign Out</p>
         </Link>

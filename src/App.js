@@ -21,9 +21,10 @@ import RootCanel from "./components/services-page/RootCanel";
 import CosmeticTeeth from "./components/services-page/CosmeticTeeth";
 import OralHygiene from "./components/services-page/OralHygiene";
 import LiveAdvisory from "./components/services-page/LiveAdvisory";
-import Dashboard from "./components/admin/dashboard/Dashboard";
 import BodyDash from "./components/admin/dashboard/components/BodyDash";
 import Message from "./components/admin/dashboard/components/Message";
+import Patient from "./components/admin/dashboard/components/Patient";
+import Settings from "./components/admin/dashboard/components/Settings";
 function App() {
   return (
     <div className="App">
@@ -61,6 +62,9 @@ function App() {
         <Route element={<Admin />} path="/admin" />
         <Route element ={<BodyDash/>} path="/admin/appointment"></Route>
         <Route element={<Message/>} path="/admin/messages"></Route>
+        <Route element={<Patient/>} path="/admin/patient"></Route>
+        <Route element ={<Settings/>}path="/admin/settings"></Route>
+        
         <Route element={<UnAuthorized />} path="/unAuthorized" />
         <Route element={<Faq />} path="/faq"></Route>
       </Routes>
