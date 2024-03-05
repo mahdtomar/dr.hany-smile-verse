@@ -1,102 +1,101 @@
 .container-faq:has(.cosmetichead-content) {
-    padding-top: 4.5rem !important;
+  /* padding-top: 4.5rem !important; */
+  padding: 0px; /* omar edit */
 }
 
 /* Header */
 .cosmetichead-content h1 {
-    font-family: unset;
-    font-size: 40px;
+  font-family: unset;
+  font-size: 40px;
 }
 
 .cosmetichead-content p {
-    font-size: 18px;
-    color: gray;
+  font-size: 18px;
+  color: gray;
 }
 
 .cosmetic-path {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-    flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .cosmetic-path p {
-    font-weight: bold;
+  font-weight: bold;
+  text-align: center;
+  width: fit-content;
+  border-bottom: 2px solid var(--main-color);
+  padding: 15px;
+  margin: 0 0 40px 0;
+  color: var(--main-color);
+}
+
+@media (max-width: 992px) {
+  .cosmetic-parent {
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 30px;
+    align-items: center;
     text-align: center;
-    width: fit-content;
-    border-bottom: 2px solid var(--main-color);
-    padding: 15px;
-    margin: 0 0 40px 0;
-    color: var(--main-color);
+  }
+
+  .cosmetic-parent img {
+    width: 100% !important;
+  }
+
+  .cosmetichead-content p {
+    font-size: 14px;
+  }
 }
 
-@media (max-width:992px) {
-    .cosmetic-parent {
-        flex-direction: column;
-        justify-content: space-around;
-        gap: 30px;
-        align-items: center;
-        text-align: center;
-    }
+@media (max-width: 767px) {
+  .cosmetic-path {
+    gap: 0;
+    justify-content: center;
+  }
 
-    .cosmetic-parent img {
-        width: 100% !important;
-    }
-
-    .cosmetichead-content p {
-        font-size: 14px;
-    }
-}
-
-@media (max-width:767px) {
-    .cosmetic-path {
-        gap: 0;
-        justify-content: center;
-    }
-
-    .cosmetic-path p {
-        margin: 0 0 20px 0;
-    }
+  .cosmetic-path p {
+    margin: 0 0 20px 0;
+  }
 }
 
 /* Header */
 
 /* Cosmetic Gallery */
 .cosmeticgall-parent {
-    margin: 20px 0;
-    padding: 20px
+  margin: 20px 0;
+  padding: 20px;
 }
 
 .cosmeticgall-parent h2 {
-    margin: 20px auto;
-    text-align: center;
-    font-size: 30px;
-    font-family: unset;
-    color: var(--main-color);
-    text-wrap: wrap;
+  margin: 20px auto;
+  text-align: center;
+  font-size: 30px;
+  font-family: unset;
+  color: var(--main-color);
+  text-wrap: wrap;
 }
 
 .cosmetic-gallery {
-    margin: auto;
-    max-width: 80%;
-    display: flex;
-    justify-content: space-evenly;
-    gap: 30px;
-    flex-wrap: wrap;
-    align-items: center;
+  margin: auto;
+  max-width: 80%;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 30px;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .cosmetic-gallery img {
-    max-width: 100%;
-    width: 200px;
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
+  max-width: 100%;
+  width: 200px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
-
-
 
 /* Cosmetic Gallery */

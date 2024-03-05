@@ -3,10 +3,6 @@ import cosmetic_image from "./assets/imgs/cosmitic.jpeg";
 function HeaderCosmetic() {
   return (
     <div className="container-faq">
-      <div className="cosmetic-path">
-        <p>Cosmetic Teeth</p>
-        <p>Services / Cosmetic Teeth</p>
-      </div>
       <div className="d-flex justify-between cosmetic-parent">
         <div className="cosmetichead-content">
           <h1>Cosmetic Teeth</h1>

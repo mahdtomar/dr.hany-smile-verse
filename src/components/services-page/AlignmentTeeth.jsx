@@ -2,7 +2,6 @@ import React from "react";
 import "./sass/AlignmentTeeth.css";
 import ServiceHeader from "./ServiceHeader";
 import ServicesDisplay from "./ServicesDisplay";
-import { Link } from "react-router-dom";
 import AppointmentBtn from "../AppointmentBtn";
 // images & pdf
 import pdf1 from "../../files/file.pdf";
@@ -12,32 +11,14 @@ import serviceDisplay from "../../images/dentalia-demo-consultation-3-1.jpg";
 import syring from "../../icons/Syringe.svg";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
+import ServicesSideBar from "./ServicesSideBar";
 const AlignmentTeeth = () => {
   return (
     <>
       <Navbar />
       <div className="AlignmentTeeth-comp">
         <div className="container">
-          <div className="sidebar">
-            <ul>
-              <li>
-                <Link className="active">Service 1</Link>
-              </li>
-              <li>
-                <Link>Service 2</Link>
-              </li>
-              <li>
-                <Link>Service 3</Link>
-              </li>
-              <li>
-                <Link>Service 4</Link>
-              </li>
-            </ul>
-            <div className="callus">
-              <p className="title">If You Need Any Help Contact With Us</p>
-              <span>+91 111 3216 745</span>
-            </div>
-          </div>
+          <ServicesSideBar />
           <main>
             <ServiceHeader servicename={"Alignment Teeth"} />
             <section className="header">
