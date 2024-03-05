@@ -1,0 +1,81 @@
+.mt-3 {
+    margin-top: 3rem;
+}
+
+/* Header */
+.header-live {
+    margin-top: 1rem;
+    border-top: 30px solid white;
+    background-color: white;
+}
+
+.header-live .content h1 {
+    font-family: unset;
+    font-size: 40px;
+    letter-spacing: 1px;
+}
+
+.header-live .content p {
+    color: #00000085;
+    font-size: 15px;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.header-live .content button {
+    background-color: var(--main-color);
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    margin: 20px 0;
+    transition: all ease-in-out 0.5s;
+    -webkit-transition: all ease-in-out 0.5s;
+    -moz-transition: all ease-in-out 0.5s;
+    -ms-transition: all ease-in-out 0.5s;
+    -o-transition: all ease-in-out 0.5s;
+}
+
+.header-live .content button a {
+    color: white;
+}
+
+.header-live .content button:hover {
+    background-color: var(--secondary-color);
+}
+
+.header-live img {
+    width: 400px;
+    height: 400px;
+    max-width: 100%;
+}
+
+@media (max-width:767px) {
+    .header-live {
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .header-live img {
+        width: 95%;
+        height: 95%;
+    }
+}
+
+/* Header */
+
+/* Book Live */
+.book-live {
+    background-color: var(--main-color);
+}
+
+.book-live h1 {
+    color: white;
+
+}
+
+/* Book Live */

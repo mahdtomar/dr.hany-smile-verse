@@ -2,6 +2,18 @@ import axios from "axios";
 import React, { useRef, useState } from "react";
 import "./scss/signupform.css";
 import { Link } from "react-router-dom";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../admin/dashboard/firebase";
+// if user will add image
+// import {
+//   getStorage,
+//   ref,
+//   uploadBytesResumable,
+//   getDownloadURL,
+// } from "firebase/storage";
+import { doc, setDoc } from "firebase/firestore";
+import { db } from "../admin/dashboard/firebase";
+import Message from "../admin/dashboard/components/Message";
 const SignupForm = () => {
   const [userName, setUserName] = useState("");
   const [email, setEmail] = useState("");
@@ -100,6 +112,8 @@ const SignupForm = () => {
         age: age,
         address: address,
       };
+      <Message key={data} props={data} />;
+
       console.log(data);
       // const config = {
       //   headers: {
@@ -109,6 +123,68 @@ const SignupForm = () => {
       // };
       // axios.post("url", data, config);
     }
+    try {
+      const res = await createUserWithEmailAndPassword(auth, email, password);
+      console.log(res);
+      await setDoc(doc(db, "users", res.user.uid), {
+        userName,
+        email,
+        phoneNumber,
+        age,
+        address,
+      });
+      // if user  add image
+      // const storage = getStorage();
+      // const storageRef = ref(storage, "images/rivers.jpg");
+
+      // const uploadTask = uploadBytesResumable(storageRef, file);
+
+      // Register three observers:
+      // 1. 'state_changed' observer, called any time the state changes
+      // 2. Error observer, called on failure
+      // 3. Completion observer, called on successful completion
+      // uploadTask.on(
+      // "state_changed",
+      // (snapshot) => {
+      // Observe state change events such as progress, pause, and resume
+      // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
+      // const progress =
+      // (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+      // console.log("Upload is " + progress + "% done");
+      // switch (snapshot.state) {
+      // case "paused":
+      // console.log("Upload is paused");
+      // break;
+      // case "running":
+      // console.log("Upload is running");
+      // break;
+      // }
+      // },
+      // (error) => {
+      // Handle unsuccessful uploads
+      // },
+      // () => {
+      // Handle successful uploads on complete
+      // For instance, get the download URL: https://firebasestorage.googleapis.com/...
+      // getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
+      // console.log("File available at", downloadURL);
+      // });
+      // }
+      // );
+    } catch (err) {
+      console.log(err);
+    }
+    // .then((userCredential) => {
+    //   // Signed up
+    //   const user = userCredential.user;
+    //   console.log(user);
+    //   // ...
+    // })
+    // .catch((error) => {
+    //   const errorCode = error.code;
+    //   const errorMessage = error.message;
+    //   // ..
+    // });
   };
   return (
     // Sara Edit Here

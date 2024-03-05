@@ -2,9 +2,14 @@ import SidebarDash from "./SidebarDash";
 
 function Settings() {
   return (
-    <div>
+    <div style={{ display: "flex", flex: 1 }}>
       <SidebarDash />
-      <h1>Settings</h1>
+      <div className="bodydash flex-1 settings">
+        <h1 className="heading-dash">Settings</h1>
+        <div className="content-settings">
+          <table></table>
+        </div>
+      </div>
     </div>
   );
 }

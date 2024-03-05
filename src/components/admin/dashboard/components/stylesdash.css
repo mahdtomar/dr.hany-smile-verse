@@ -449,3 +449,10 @@ td.home::-webkit-scrollbar-thumb:hover {
 /* inbox */
 
 /* Messages */
+
+/* Settings */
+.settings .heading-dash::before {
+  left: 27px;
+  width: 13%;
+}
+/* Settings */

@@ -4,14 +4,14 @@ import textState from "./user-atom";
 import send_icons from "../assets/icons/send_icon.svg";
 import { useState } from "react";
 import SidebarDash from "./SidebarDash";
-function Message() {
+function Message(props) {
   const [msg, setMsg] = useState("");
   // console.log(
   // document.querySelector(".table-mgs td tr").classList.add("active");
   // );
 
   const [data] = useRecoilState(textState);
-
+  // console.log(props.props);
   const handleClickMsg = (e) => {
     document
       .querySelectorAll(".table-mgs td tr")
