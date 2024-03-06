@@ -17,7 +17,7 @@ function HeaderLive() {
             spy={true}
             smooth={true}
             offset={-45}
-            duration={300}
+            duration={500}
           >
             Book Now
           </Link>

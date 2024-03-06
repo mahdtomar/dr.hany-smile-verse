@@ -112,7 +112,7 @@ const SignupForm = () => {
         age: age,
         address: address,
       };
-      <Message key={data} props={data} />;
+      // <Message key={data} props={data} >;
 
       console.log(data);
       // const config = {

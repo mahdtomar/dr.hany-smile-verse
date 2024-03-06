@@ -1,5 +1,5 @@
 .container-faq {
-  padding: 3rem 5rem;
+  padding: 3rem 2rem;
 }
 
 .d-flex {
@@ -26,7 +26,7 @@
 .faq-header {
   background-image: linear-gradient(193deg, #047bcb 30%, #012441f2);
   /* background-image: url(./assets/imgs/colorful_back.jpg); */
-  padding: 3rem 5rem;
+  padding: 4rem 2rem;
 }
 
 .faq-header h1 {
@@ -73,6 +73,7 @@
 
 .feedback-form .container p {
   font-family: unset !important;
+  font-size: 26px;
 }
 
 .feedback-form input,
@@ -146,33 +147,36 @@
   }
 }
 
-.faq-questions .accordion-heading {
-  font-size: 20px;
+.accordion-heading {
+  font-size: 17px;
   padding: 15px 0;
   font-weight: 600;
+  text-align: start;
 }
 
-.faq-questions .parent-accord {
+.parent-accord {
   flex: 1;
+  width: 100%;
 }
 
-.faq-questions button {
+.parent-accord button {
   background: none;
   color: black;
   font-size: 25px;
   font-weight: 500;
 }
 
-.faq-questions .accordion {
+.parent-accord .accordion {
   background-color: #ddd;
   padding: 2px 15px;
 }
 
-.faq-questions .panel {
+.parent-accord .panel {
   display: none;
   padding: 14px;
   font-size: 15px;
   line-height: 1.7;
+  text-align: justify;
 }
 
 .active-accord {

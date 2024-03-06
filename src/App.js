@@ -25,6 +25,8 @@ import BodyDash from "./components/admin/dashboard/components/BodyDash";
 import Message from "./components/admin/dashboard/components/Message";
 import Patient from "./components/admin/dashboard/components/Patient";
 import Settings from "./components/admin/dashboard/components/Settings";
+// ionic
+
 function App() {
   return (
     <div className="App">
