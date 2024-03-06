@@ -29,4 +29,44 @@
 .oralhygiene.container main header img {
   border-radius: 20px;
   max-width: 50%;
+}
+.oralhygiene.container main .Our-Oral-Hygiene .oral-cards .container {
+  align-items: flex-start;
+  gap: 20px;
+}
+.oralhygiene.container main .Our-Oral-Hygiene .oral-cards .card-comp {
+  gap: 10px;
+  min-height: 500px;
+}
+.oralhygiene.container main .Our-Oral-Hygiene .oral-cards .card-comp h3 {
+  font-size: 30px;
+  text-align: center;
+}
+.oralhygiene.container main .bad-hygiene-results .flex-2 {
+  gap: 20px;
+  align-items: flex-start;
+}
+.oralhygiene.container main .bad-hygiene-results .flex-2 .feature-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.oralhygiene.container main .bad-hygiene-results .flex-2 .feature-box:nth-child(2) img, .oralhygiene.container main .bad-hygiene-results .flex-2 .feature-box:nth-child(3) img {
+  border-radius: 50%;
+}
+.oralhygiene.container main .bad-hygiene-results .flex-2 .feature-box .image-container {
+  background-color: var(--main-color);
+  border-radius: 50%;
+}
+.oralhygiene.container main .bad-hygiene-results .flex-2 .feature-box img {
+  display: block;
+  max-width: 100%;
+  width: 150px;
+  height: 150px;
+  aspect-ratio: 1;
+  padding: 20px;
+}
+.oralhygiene.container main .bad-hygiene-results .flex-2 .feature-box h3 {
+  margin: 10px 0px;
+  text-align: center;
 }/*# sourceMappingURL=oralhygiene.css.map */

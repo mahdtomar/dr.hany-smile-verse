@@ -103,14 +103,6 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-      <div className="cards">
-        <div className="container flex-2">
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-        </div>
-      </div>
       <section className="why-us">
         <div className="container">
           <div className="flex-2">
