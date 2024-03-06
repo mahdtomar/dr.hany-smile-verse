@@ -11,7 +11,7 @@ function EndLive() {
       className="d-flex container-faq end-live"
       style={{ flexDirection: "column", margin: "20px", textAlign: "center" }}
     >
-      <h1>Here are a few important reminders for your visit:</h1>
+      <h1>Here are a few important reminders for your Live Advisory:</h1>
       <div className="parent-accord" style={{ width: "100%" }}>
         {instructions.map((e) => (
           <div key={e.id}>
