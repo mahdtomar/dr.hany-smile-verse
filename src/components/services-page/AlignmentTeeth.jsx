@@ -12,15 +12,18 @@ import syring from "../../icons/Syringe.svg";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
 import ServicesSideBar from "./ServicesSideBar";
+import Callus from "./Callus";
 const AlignmentTeeth = () => {
   return (
     <>
       <Navbar />
       <div className="AlignmentTeeth-comp">
+        {/* <div className="container"> */}
         <div className="container">
-          <ServicesSideBar />
           <main>
             <ServiceHeader servicename={"Alignment Teeth"} />
+            <ServicesSideBar />
+
             <section className="header">
               <div className="container flex-2">
                 <article>
@@ -133,6 +136,7 @@ const AlignmentTeeth = () => {
           </main>
         </div>
       </div>
+      <Callus />
       <Footer />
     </>
   );

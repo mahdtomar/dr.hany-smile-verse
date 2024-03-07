@@ -31,7 +31,9 @@
   margin: 0 0 40px 0;
   color: var(--main-color);
 }
-
+.cosmetic-parent {
+  padding: 20px;
+}
 @media (max-width: 992px) {
   .cosmetic-parent {
     flex-direction: column;

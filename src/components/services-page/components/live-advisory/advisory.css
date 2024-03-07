@@ -187,6 +187,7 @@
   .end-live h1 {
     font-size: 28px;
   }
+
   .end-live .thank-comp p {
     font-size: 14px;
     line-height: 1.5;
@@ -194,3 +195,53 @@
 }
 
 /* End Live */
+
+/* Details */
+.AlignmentTeeth-comp>.container {
+  display: block !important;
+}
+
+.sidebar ul {
+  display: flex;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 20px auto;
+  list-style-type: none;
+  margin-top: 0px !important;
+  justify-content: center;
+  gap: 20px;
+  border-bottom: 2px solid var(--main-color);
+}
+
+.sidebar ul li {
+  text-align: left;
+  margin: 0;
+}
+
+.sidebar ul li a {
+  margin-bottom: -2.01px;
+  z-index: 2 !important;
+  border-bottom-color: white !important;
+  border-radius: 9px 9px 0 0;
+  color: var(--main-color);
+  border: 2px solid var(--main-color);
+  display: block;
+  text-decoration: none;
+  padding: 12px;
+  font-weight: 1000;
+  transition: color 0.3s linear, border 0.2s ease-in-out;
+  position: relative;
+  background: white;
+}
+
+@media (max-width:470px) {
+  .sidebar ul {
+    gap: 10px;
+  }
+
+  .sidebar ul li a {
+    font-size: 12px;
+    padding: 5px;
+    margin-bottom: -2px;
+  }
+}

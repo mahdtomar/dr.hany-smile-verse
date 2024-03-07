@@ -1,19 +1,16 @@
 import axios from "axios";
 import React, { useRef, useState } from "react";
 import "./scss/signupform.css";
+import add_img from "./assets/imgs/addAvatar.png";
 import { Link } from "react-router-dom";
-import { createUserWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../admin/dashboard/firebase";
+import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
+import { auth, storage } from "../admin/dashboard/firebase";
 // if user will add image
-// import {
-//   getStorage,
-//   ref,
-//   uploadBytesResumable,
-//   getDownloadURL,
-// } from "firebase/storage";
+import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { doc, setDoc } from "firebase/firestore";
 import { db } from "../admin/dashboard/firebase";
-import Message from "../admin/dashboard/components/Message";
+
+// import Message from "../admin/dashboard/components/Message";
 const SignupForm = () => {
   const [userName, setUserName] = useState("");
   const [email, setEmail] = useState("");
@@ -21,6 +18,9 @@ const SignupForm = () => {
   const [age, setAge] = useState("");
   const [password, setPassword] = useState("");
   const [address, setAddress] = useState("");
+  const [file, setFile] = useState(add_img);
+  // img
+  // const file = add_img;
   const userNameRef = useRef(null);
   const emailRef = useRef(null);
   const phoneNumberRef = useRef(null);
@@ -104,6 +104,7 @@ const SignupForm = () => {
   };
   const submitForm = async (e) => {
     e.preventDefault();
+    console.log(file);
     if (validateInputs()) {
       const data = {
         userName: userName,
@@ -112,8 +113,46 @@ const SignupForm = () => {
         age: age,
         address: address,
       };
+      console.log(address.target);
       // <Message key={data} props={data} >;
+      try {
+        const res = await createUserWithEmailAndPassword(auth, email, password);
+        const storageRef = ref(storage, userName);
 
+        const uploadTask = uploadBytesResumable(storageRef, file);
+
+        uploadTask.on(
+          (error) => {
+            console.log(error);
+          },
+          () => {
+            getDownloadURL(uploadTask.snapshot.ref).then(
+              async (downloadURL) => {
+                // console.log("File available at", downloadURL);
+                await updateProfile(res.user, {
+                  userName,
+                  photoURL: downloadURL,
+                });
+                await setDoc(doc(db, "users", res.user.uid), {
+                  uid: res.user.uid,
+                  userName,
+                  email,
+                  phoneNumber,
+                  age,
+                  address,
+                  photoURL: downloadURL,
+                });
+                console.log(downloadURL);
+              }
+            );
+            console.log(res);
+          }
+        );
+
+        // if user  add image
+      } catch (err) {
+        console.log(err);
+      }
       console.log(data);
       // const config = {
       //   headers: {
@@ -123,57 +162,7 @@ const SignupForm = () => {
       // };
       // axios.post("url", data, config);
     }
-    try {
-      const res = await createUserWithEmailAndPassword(auth, email, password);
-      console.log(res);
-      await setDoc(doc(db, "users", res.user.uid), {
-        userName,
-        email,
-        phoneNumber,
-        age,
-        address,
-      });
-      // if user  add image
-      // const storage = getStorage();
-      // const storageRef = ref(storage, "images/rivers.jpg");
 
-      // const uploadTask = uploadBytesResumable(storageRef, file);
-
-      // Register three observers:
-      // 1. 'state_changed' observer, called any time the state changes
-      // 2. Error observer, called on failure
-      // 3. Completion observer, called on successful completion
-      // uploadTask.on(
-      // "state_changed",
-      // (snapshot) => {
-      // Observe state change events such as progress, pause, and resume
-      // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
-      // const progress =
-      // (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-      // console.log("Upload is " + progress + "% done");
-      // switch (snapshot.state) {
-      // case "paused":
-      // console.log("Upload is paused");
-      // break;
-      // case "running":
-      // console.log("Upload is running");
-      // break;
-      // }
-      // },
-      // (error) => {
-      // Handle unsuccessful uploads
-      // },
-      // () => {
-      // Handle successful uploads on complete
-      // For instance, get the download URL: https://firebasestorage.googleapis.com/...
-      // getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
-      // console.log("File available at", downloadURL);
-      // });
-      // }
-      // );
-    } catch (err) {
-      console.log(err);
-    }
     // .then((userCredential) => {
     //   // Signed up
     //   const user = userCredential.user;
@@ -292,6 +281,13 @@ const SignupForm = () => {
           password should containt at least one capital letter, small letter,
           number and a spacial character.
         </p>
+      </label>
+      <input required style={{ display: "none" }} type="file" id="file" />{" "}
+      <label htmlFor="file">
+        <img src={add_img} alt="add" />
+        {/* {(e) => file(e.target)} */}
+
+        <span>Add an avatar</span>
       </label>
       <button onClick={(e) => submitForm(e)}>Sign Up</button>
       <p>
