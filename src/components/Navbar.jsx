@@ -1,10 +1,14 @@
-import React, { useRef } from "react";
+import React, { useContext, useRef } from "react";
 import Logo from "./Logo";
 import "./sass/navbar.css";
 import { Link } from "react-router-dom";
 import globe from "../icons/Globe.svg";
 import list from "../icons/List.svg";
+import AuthContext from "../context/AuthContext";
 const Navbar = () => {
+  const { currentuser } = useContext(AuthContext);
+  // console.log(currentuser.email);
+
   const links = [
     {
       id: 0,
@@ -121,6 +125,7 @@ const Navbar = () => {
           </div>
         </ul>
       </div>
+      <div>{/* <p>{currentuser.email}</p>{" "} */}</div>
     </div>
   );
 };

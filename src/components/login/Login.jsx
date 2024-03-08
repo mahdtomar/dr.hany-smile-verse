@@ -1,7 +1,9 @@
 import axios from "axios";
 import React, { useRef, useState } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
+import { signInWithEmailAndPassword } from "firebase/auth";
 import "./scss/loginform.css";
+import { auth } from "./firebase";
 const Login = () => {
   const emailRef = useRef(null);
   const passwordRef = useRef(null);
@@ -13,7 +15,12 @@ const Login = () => {
   const from = location.state?.from?.pathname || "/";
   const submit = async (e) => {
     e.preventDefault();
-
+    try {
+      await signInWithEmailAndPassword(auth, email, password);
+      navigate("/");
+    } catch (err) {
+      console.log(err);
+    }
     const config = {
       headers: {
         "Content-Type": "application/json",

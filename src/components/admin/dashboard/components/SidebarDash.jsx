@@ -6,6 +6,8 @@ import settings_icon from "../assets/icons/settings_icon.svg";
 import signout_icon from "../assets/icons/signout_icon.svg";
 import bar_icon from "../assets/icons/bar_icon.svg";
 import { Link } from "react-router-dom";
+import { signOut } from "firebase/auth";
+import { auth } from "../../../login/firebase";
 function SidebarDash() {
   const handleDrawer = () => {
     let home = document.querySelector(".table-mgs td.home");
@@ -56,10 +58,20 @@ function SidebarDash() {
           <img src={settings_icon} alt="settings" />
           <p>Settings</p>
         </Link>
-        <Link to={"/"} className="link" onClick={handleClick}>
-          <img src={signout_icon} alt="sign-out" />
-          <p>Sign Out</p>
-        </Link>
+        <button onClick={() => signOut(auth)} className="link">
+          <Link
+            to={"/"}
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              gap: "15px",
+              textDecoration: "none",
+            }}
+          >
+            <img src={signout_icon} alt="sign-out" />
+            <p>Sign Out</p>
+          </Link>
+        </button>
       </ul>
     </div>
   );

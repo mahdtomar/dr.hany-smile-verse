@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes,Navigate } from "react-router-dom";
 import "./App.css";
 import Logo from "./components/Logo";
 import HomePage from "./pages/HomePage";
@@ -25,13 +25,25 @@ import BodyDash from "./components/admin/dashboard/components/BodyDash";
 import Message from "./components/admin/dashboard/components/Message";
 import Patient from "./components/admin/dashboard/components/Patient";
 import Settings from "./components/admin/dashboard/components/Settings";
+import { useContext } from "react";
+import AuthContext from "./context/AuthContext";
 // ionic
 
 function App() {
+  const {currentuser} = useContext(AuthContext);
+  console.log(currentuser)
+  const Protectedroute = ({children})=>{
+    if(!currentuser){
+      return <Navigate to ="/login"/>
+    }
+return children
+  }
   return (
     <div className="App">
       <Routes>
-        <Route element={<HomePage />} path="/" />
+        <Route element={
+          <HomePage />
+        } path="/" />
         <Route element={<Logo />} path="/logo" />
         <Route element={<Services />} path="/services" />
         <Route element={<AlignmentTeeth />} path="/services/Alignment-teeth" />
@@ -39,23 +51,36 @@ function App() {
         <Route element = {<CosmeticTeeth/>} path="/services/cosmetic-teeth"></Route>
         <Route element ={<OralHygiene/>} path="/services/oral-hygiene"></Route>
         <Route element={<LiveAdvisory/>} path="/services/live-advisory"></Route>
-        <Route element={<ProtectedRoutes allowedRoles={[1, 2, 3]} />}>
+        {/* <Route element={<ProtectedRoutes allowedRoles={[1, 2, 3]} />}> */}
           <Route
-            element={<BookingAppointment content={<PatientType />} />}
+            element={
+        <Protectedroute>
+        <BookingAppointment content={<PatientType />} />
+        </Protectedroute>
+        }
             path="/Appointment"
           />
-        </Route>
+        {/* </Route> */}
         <Route
-          element={<BookingAppointment content={<NewPatient />} />}
+          element={
+        <BookingAppointment content={<NewPatient />} 
+        />
+        }
           path="/Appointment/New"
         />
-        <Route element={<UserProfile content={"info"} />} path="/profile" />
+        <Route element={
+        <Protectedroute>
+        <UserProfile content={"info"} />
+        </Protectedroute>
+        } path="/profile" />
         <Route
           element={<ConfortAndTechnology />}
           path="/comfort-and-technology"
         />
         <Route
-          element={<UserProfile content={"insurance"} />}
+          element={
+        <UserProfile content={"insurance"} />  
+      }
           path="/profile/insurance"
         />
         <Route element={<AboutUs />} path="/about-us" />

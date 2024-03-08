@@ -4,23 +4,23 @@ import "./scss/signupform.css";
 import add_img from "./assets/imgs/addAvatar.png";
 import { Link } from "react-router-dom";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
-import { auth, storage } from "../admin/dashboard/firebase";
+import { auth, storage, db } from "./firebase";
 // if user will add image
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { doc, setDoc } from "firebase/firestore";
-import { db } from "../admin/dashboard/firebase";
-
+import { useNavigate } from "react-router-dom";
 // import Message from "../admin/dashboard/components/Message";
 const SignupForm = () => {
-  const [userName, setUserName] = useState("");
+  const [displayName, setUserName] = useState("");
   const [email, setEmail] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [age, setAge] = useState("");
   const [password, setPassword] = useState("");
   const [address, setAddress] = useState("");
-  const [file, setFile] = useState(add_img);
+  const navigate = useNavigate();
   // img
-  // const file = add_img;
+
+  const file = document.getElementById("img-form"); // const file = add_img;
   const userNameRef = useRef(null);
   const emailRef = useRef(null);
   const phoneNumberRef = useRef(null);
@@ -35,6 +35,7 @@ const SignupForm = () => {
   const phonePattern = /^[+]?[(]?[0-9]{3}[)]?[-\s.]?[0-9]{3}[-\s.]?[0-9]{4,6}$/;
   const agePattern = /^\d{1,2}$/;
   const userNamePattern = /^[a-zA-Z\s]{3,30}$/;
+
   const emailValidation = () => {
     if (!emailPattern.test(email)) {
       emailRef.current.classList.add("visible");
@@ -77,11 +78,11 @@ const SignupForm = () => {
     }
   };
   const userNameValidation = () => {
-    const test = userNamePattern.test(userName);
-    const filterdUserName = userName.split(" ").filter((str) => str !== "");
+    const test = userNamePattern.test(displayName);
+    const filterdUserName = displayName.split(" ").filter((str) => str !== "");
     setUserName(filterdUserName.join(" "));
     if (!test) {
-      if (userName.length >= 30) {
+      if (displayName.length >= 30) {
         userNameErr.current.innerHTML = `max length is 30 characters`;
       } else {
         userNameErr.current.innerHTML = `user name shouldn't contain numbers or special letters`;
@@ -104,52 +105,44 @@ const SignupForm = () => {
   };
   const submitForm = async (e) => {
     e.preventDefault();
-    console.log(file);
+    // console.log(file);
     if (validateInputs()) {
       const data = {
-        userName: userName,
+        userName: displayName,
         email: email,
         phoneNumber: phoneNumber,
         age: age,
         address: address,
       };
-      console.log(address.target);
+      // console.log(address.target);
       // <Message key={data} props={data} >;
       try {
         const res = await createUserWithEmailAndPassword(auth, email, password);
-        const storageRef = ref(storage, userName);
-
-        const uploadTask = uploadBytesResumable(storageRef, file);
-
-        uploadTask.on(
-          (error) => {
-            console.log(error);
-          },
-          () => {
-            getDownloadURL(uploadTask.snapshot.ref).then(
-              async (downloadURL) => {
-                // console.log("File available at", downloadURL);
-                await updateProfile(res.user, {
-                  userName,
-                  photoURL: downloadURL,
-                });
-                await setDoc(doc(db, "users", res.user.uid), {
-                  uid: res.user.uid,
-                  userName,
-                  email,
-                  phoneNumber,
-                  age,
-                  address,
-                  photoURL: downloadURL,
-                });
-                console.log(downloadURL);
-              }
-            );
-            console.log(res);
-          }
-        );
-
         // if user  add image
+        // const storageRef = ref(storage, userName);
+
+        // const uploadTask = uploadBytesResumable(storageRef, file);
+
+        // Register three observers:
+        // 1. 'state_changed' observer, called any time the state changes
+        // 2. Error observer, called on failure
+        // 3. Completion observer, called on successful completion
+        // uploadTask.on(
+        //   getDownloadURL(uploadTask.snapshot.ref).then(async (downloadURL) => {
+        //     await updateProfile(res.user, {
+        //       userName,
+        //       photoURL: downloadURL,
+        //     });
+        await setDoc(doc(db, "users", res.user.uid), {
+          uid: res.user.uid,
+          displayName,
+          email,
+          // photoURL: downloadURL,
+        });
+        await setDoc(doc(db, "userChats", res.user.uid, {}));
+        navigate("/");
+        // })
+        // );
       } catch (err) {
         console.log(err);
       }
@@ -175,6 +168,10 @@ const SignupForm = () => {
     //   // ..
     // });
   };
+  // const handlefile = (e) => {
+  //   file = e.target[6].files[0];
+  //   // console.log(file);
+  // };
   return (
     // Sara Edit Here
     <form className="signupform">
@@ -184,7 +181,7 @@ const SignupForm = () => {
           id="userName"
           autoComplete="no"
           ref={userNameRef}
-          value={userName}
+          value={displayName}
           required
           onChange={(e) => {
             e.target.classList.remove("visible");
@@ -282,13 +279,16 @@ const SignupForm = () => {
           number and a spacial character.
         </p>
       </label>
-      <input required style={{ display: "none" }} type="file" id="file" />{" "}
-      <label htmlFor="file">
-        <img src={add_img} alt="add" />
-        {/* {(e) => file(e.target)} */}
+      <input
+        required
+        type="file"
+        id="file"
+        onClick={(e) => console.log(e.target.files)}
+      />
+      <img src={add_img} alt="add" id="img-form" />
+      {/* {(e) => console.log(e.target)} */}
 
-        <span>Add an avatar</span>
-      </label>
+      <span>Add an avatar</span>
       <button onClick={(e) => submitForm(e)}>Sign Up</button>
       <p>
         Do You Have An Account Already?<Link to={"/login"}>Log in</Link>

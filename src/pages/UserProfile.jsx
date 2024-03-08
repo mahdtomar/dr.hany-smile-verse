@@ -10,23 +10,23 @@ const UserProfile = ({ content }) => {
   const isAuth = useAuth();
   console.log(isAuth.user);
 
-  if (!isAuth.user) {
-    return <UnAuthorized />;
-  } else {
-    return (
-      <div>
-        <div className="user-profile-comp">
-          <Navbar />
-          <div className="container main flex-2">
-            <SideBar user={isAuth.user} />
-            <InfoContainer user={isAuth.user} content={content} />
-          </div>
-          <Footer />
+  // if (!isAuth.user) {
+  //   return <UnAuthorized />;
+  // } else {
+  return (
+    <div>
+      <div className="user-profile-comp">
+        <Navbar />
+        <div className="container main flex-2">
+          <SideBar user={isAuth.user} />
+          <InfoContainer user={isAuth.user} content={content} />
         </div>
-        <div>login first</div>
+        <Footer />
       </div>
-    );
-  }
+      <div>login first</div>
+    </div>
+  );
+  // }
 };
 
 export default UserProfile;
