@@ -1,0 +1,76 @@
+.root-canal-component {
+  margin-top: 50px;
+  main {
+    header {
+      figure {
+        gap: 20px;
+        flex-direction: column;
+        figcaption {
+          //   width: 50%;
+          h1 {
+            margin: 20px 0px;
+          }
+          p {
+            line-height: 150%;
+            margin: 10px;
+          }
+        }
+        img {
+          display: block;
+          width: 100%;
+          border-radius: 20px;
+        }
+      }
+    }
+    .when-is-required {
+      figure {
+        gap: 20px;
+        figcaption {
+          h2 {
+            margin: 20px 0px;
+          }
+          p {
+            margin: 10px;
+            line-height: 150%;
+          }
+        }
+        img {
+          width: 50%;
+        }
+      }
+    }
+    .how-we-do-it {
+      p {
+        margin: 20px 0px;
+      }
+      ul {
+        margin-top: 20px;
+        display: flex;
+        gap: 20px;
+        li {
+          gap: 20px;
+          display: flex;
+          justify-content: flex-start;
+          align-items: flex-start;
+          flex-direction: column;
+          border-bottom: 5px solid var(--main-color);
+          height: fit-content;
+          box-shadow: 0px 0px 5px 2px lightgray;
+          padding: 20px;
+
+          span {
+            display: block;
+            font-weight: bold;
+            font-size: 25px;
+          }
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+    section {
+      margin: 40px auto;
+    }
+  }
+}
