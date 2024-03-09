@@ -4,14 +4,17 @@ import UserImageAndName from "./UserImageAndName";
 // import { useParams } from "react-router-dom";
 import UserAppointments from "./UserAppointments";
 import "./scss/sidebar.css";
+import { useContext } from "react";
+import AuthContext from "../../context/AuthContext";
 const SideBar = ({ user }) => {
+  const currentUser = useContext(AuthContext);
   // const [user, setUser] = useState(undefined);
   // const { id } = useParams();
 
   // useEffect(() => {
   //   const fetchData = async () => {
   //     try {
-  //       const currentUser = users.find((user) => +user.id === +id);
+  //       // const currentUser = users.find((user) => +user.id === +id);
   //       console.log(currentUser);
   //       setUser(currentUser);
   //     } catch (error) {
@@ -21,15 +24,16 @@ const SideBar = ({ user }) => {
 
   //   fetchData();
   // }, [id]);
-  console.log(user.FirstName);
+  // console.log(user.FirstName);
 
   return (
     <div className="sidebar-comp">
       <UserImageAndName
-        imageUrl={user.Image}
-        userName={`${user.FirstName} ${user.LastName}`}
+        // imageUrl={user.Image}
+        // userName={`${user.FirstName} ${user.LastName}`}
+        userName={currentUser.displayName}
       />
-      <UserAppointments Appointments={user.Appointments} />
+      {/* <UserAppointments Appointments={user.Appointments} /> */}
     </div>
   );
 };

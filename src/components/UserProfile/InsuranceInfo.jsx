@@ -6,7 +6,7 @@ const InsuranceInfo = ({ user }) => {
     <div className="insurance-info">
       <label htmlFor="userName">
         <span>User Name</span>
-        <input type="text" value={user.userName} />
+        <input type="text" value={user.displayName} />
       </label>
       <label htmlFor="phone">
         <span>Phone Number</span>
@@ -27,7 +27,7 @@ const InsuranceInfo = ({ user }) => {
           id="userEmail"
           //   placeholder=""
           required
-          placeholder={user.Email}
+          placeholder={user.email}
         />
       </label>
       <label htmlFor="city">

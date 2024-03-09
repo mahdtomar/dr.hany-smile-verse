@@ -4,6 +4,7 @@ import Callus from "./Callus";
 import ServiceHeader from "./ServiceHeader";
 import ServicesSideBar from "./ServicesSideBar";
 import CosmeticGallery from "./components/cosmetic-teeth/CosmeticGallery";
+import CosmeticInfo from "./components/cosmetic-teeth/CosmeticInfo";
 import HeaderCosmetic from "./components/cosmetic-teeth/HeaderCosmetic";
 import "./sass/CosmeticTeeth.css";
 function CosmeticTeeth() {
@@ -16,6 +17,8 @@ function CosmeticTeeth() {
           <ServiceHeader servicename={"Cosmetic Teeth"} />
           <ServicesSideBar />
           <HeaderCosmetic />
+          <CosmeticInfo />
+
           <CosmeticGallery />
         </main>
       </div>

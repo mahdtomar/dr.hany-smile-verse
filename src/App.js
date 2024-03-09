@@ -34,7 +34,7 @@ function App() {
   console.log(currentuser)
   const Protectedroute = ({children})=>{
     if(!currentuser){
-      return <Navigate to ="/login"/>
+      return <Navigate to ="/signup"/>
     }
 return children
   }

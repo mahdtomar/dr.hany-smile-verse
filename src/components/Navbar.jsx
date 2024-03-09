@@ -5,10 +5,11 @@ import { Link } from "react-router-dom";
 import globe from "../icons/Globe.svg";
 import list from "../icons/List.svg";
 import AuthContext from "../context/AuthContext";
+// import { db } from "./login/firebase";
 const Navbar = () => {
   const { currentuser } = useContext(AuthContext);
-  // console.log(currentuser.email);
-
+  // console.log(currentuser.displayName);
+  // console.log(db._authCredentials);
   const links = [
     {
       id: 0,
@@ -125,7 +126,7 @@ const Navbar = () => {
           </div>
         </ul>
       </div>
-      <div>{/* <p>{currentuser.email}</p>{" "} */}</div>
+      <div>{/* <p>{currentuser.displayName}</p> */}</div>
     </div>
   );
 };

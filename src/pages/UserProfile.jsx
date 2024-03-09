@@ -6,20 +6,22 @@ import InfoContainer from "../components/UserProfile/InfoContainer";
 import "./sass/userProfile.css";
 import useAuth from "../hooks/useAuth";
 import UnAuthorized from "../routes/UnAuthorized";
+import AuthContext from "../context/AuthContext";
 const UserProfile = ({ content }) => {
-  const isAuth = useAuth();
-  console.log(isAuth.user);
-
+  // const isAuth = useAuth();
+  // console.log(isAuth.user);
+  const currentUser = useContext(AuthContext);
   // if (!isAuth.user) {
   //   return <UnAuthorized />;
   // } else {
+  console.log(currentUser.currentuser);
   return (
     <div>
       <div className="user-profile-comp">
         <Navbar />
         <div className="container main flex-2">
-          <SideBar user={isAuth.user} />
-          <InfoContainer user={isAuth.user} content={content} />
+          <SideBar user={currentUser.currentuser} />
+          <InfoContainer user={currentUser.currentuser} content={content} />
         </div>
         <Footer />
       </div>

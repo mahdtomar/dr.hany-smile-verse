@@ -20,7 +20,14 @@ const SignupForm = () => {
   const navigate = useNavigate();
   // img
 
-  const file = document.getElementById("img-form"); // const file = add_img;
+  const [file, setFile] = useState(document.getElementById("img-form"));
+  console.log(file);
+  // const file = fle.src.split(":").pop().split(";")[0];
+  // .src.split(":")
+  // .pop()
+  // .split(";")[0];
+  // .split(";")[0]; // const file = add_img;
+  // console.log(file.src.split(":").pop().split(";")[0]);
   const userNameRef = useRef(null);
   const emailRef = useRef(null);
   const phoneNumberRef = useRef(null);
@@ -106,9 +113,11 @@ const SignupForm = () => {
   const submitForm = async (e) => {
     e.preventDefault();
     // console.log(file);
+    setFile(file.src.split(":").pop().split(";")[0]);
+
     if (validateInputs()) {
       const data = {
-        userName: displayName,
+        displayName: displayName,
         email: email,
         phoneNumber: phoneNumber,
         age: age,
@@ -119,30 +128,35 @@ const SignupForm = () => {
       try {
         const res = await createUserWithEmailAndPassword(auth, email, password);
         // if user  add image
-        // const storageRef = ref(storage, userName);
+        const storageRef = ref(storage, displayName);
 
-        // const uploadTask = uploadBytesResumable(storageRef, file);
+        const uploadTask = uploadBytesResumable(storageRef, file);
+        console.log(file);
 
         // Register three observers:
         // 1. 'state_changed' observer, called any time the state changes
         // 2. Error observer, called on failure
         // 3. Completion observer, called on successful completion
-        // uploadTask.on(
-        //   getDownloadURL(uploadTask.snapshot.ref).then(async (downloadURL) => {
-        //     await updateProfile(res.user, {
-        //       userName,
-        //       photoURL: downloadURL,
-        //     });
-        await setDoc(doc(db, "users", res.user.uid), {
-          uid: res.user.uid,
-          displayName,
-          email,
-          // photoURL: downloadURL,
-        });
-        await setDoc(doc(db, "userChats", res.user.uid, {}));
-        navigate("/");
-        // })
-        // );
+        uploadTask.on(
+          getDownloadURL(uploadTask.snapshot.ref).then(async (downloadURL) => {
+            await updateProfile(res.user, {
+              displayName,
+              photoURL: downloadURL,
+            });
+            await setDoc(doc(db, "users", res.user.uid), {
+              uid: res.user.uid,
+              displayName,
+              email,
+              phoneNumber,
+              photoURL: downloadURL,
+              age,
+              address,
+            });
+            console.log(downloadURL);
+            await setDoc(doc(db, "userChats", res.user.uid, {}));
+            navigate("/");
+          })
+        );
       } catch (err) {
         console.log(err);
       }
@@ -280,7 +294,7 @@ const SignupForm = () => {
         </p>
       </label>
       <input
-        required
+        // required
         type="file"
         id="file"
         onClick={(e) => console.log(e.target.files)}

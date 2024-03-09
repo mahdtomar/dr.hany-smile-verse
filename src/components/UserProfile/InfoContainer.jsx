@@ -1,22 +1,26 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./scss/infocontainer.css";
 import { Link } from "react-router-dom";
 import UserInfo from "./UserInfo";
 import InsuranceInfo from "./InsuranceInfo";
+import AuthContext from "../../context/AuthContext";
 const InfoContainer = ({ user, content }) => {
   const [data, setdata] = useState("");
+  const currentUser = useContext(AuthContext);
+  // user = currentUser;
+  console.log(currentUser.currentuser);
   useEffect(() => {
     switch (content) {
       case "info":
-        setdata(<UserInfo user={user} />);
+        setdata(<UserInfo user={currentUser.currentuser} />);
         break;
       case "insurance":
-        setdata(<InsuranceInfo user={user} />);
+        setdata(<InsuranceInfo user={currentUser.currentuser} />);
         break;
       default:
         break;
     }
-  }, [content, user]);
+  }, [content, currentUser.currentuser, user]);
   function setActive(link) {
     let menu = document.querySelector(".menu");
     Array.from(menu.children).map((child) => {
