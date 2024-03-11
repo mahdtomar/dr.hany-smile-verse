@@ -1,3 +1,4 @@
+import AppointmentsTable from "./AppointmentsTable";
 import SidebarDash from "./SidebarDash";
 
 function BodyDash() {
@@ -48,6 +49,7 @@ function BodyDash() {
             </summary>
           </div>
         </div>
+        <AppointmentsTable />
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-import "./stylesdash.css";
+import "./scss/stylesdash.css";
 import appointment_icon from "../assets/icons/appointment-icon.svg";
 import envelope_icon from "../assets/icons/envelope_icon.svg";
 import patient_icon from "../assets/icons/patient_icon.svg";

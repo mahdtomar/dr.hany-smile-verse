@@ -1,0 +1,18 @@
+.appointments-table-comp table {
+  text-align: center;
+  margin: auto;
+}
+.appointments-table-comp table th,
+.appointments-table-comp table td,
+.appointments-table-comp table tr {
+  padding: 10px;
+}
+.appointments-table-comp table thead {
+  background-color: var(--main-color);
+}
+.appointments-table-comp table thead th {
+  background-color: var(--main-color);
+}
+.appointments-table-comp table tbody tr {
+  border-bottom: 1px solid red;
+}/*# sourceMappingURL=appointmentsTable.css.map */

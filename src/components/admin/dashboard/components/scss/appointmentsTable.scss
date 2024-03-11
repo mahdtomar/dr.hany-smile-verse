@@ -1,0 +1,22 @@
+.appointments-table-comp {
+  table {
+    text-align: center;
+    margin: auto;
+    th,
+    td,
+    tr {
+      padding: 10px;
+    }
+    thead {
+      background-color: var(--main-color);
+      th {
+        background-color: var(--main-color);
+      }
+    }
+    tbody {
+      tr {
+        border-bottom: 1px solid red;
+      }
+    }
+  }
+}

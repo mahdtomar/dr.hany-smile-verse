@@ -1,22 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./sass/ServicesSideBar.css";
+import { services } from './../../Data';
 const ServicesSideBar = () => {
   return (
     <div className="sidebar">
       <ul>
-        <li>
-          <Link className="active">Service 1</Link>
-        </li>
-        <li>
-          <Link>Service 2</Link>
-        </li>
-        <li>
-          <Link>Service 3</Link>
-        </li>
-        <li>
-          <Link>Service 4</Link>
-        </li>
+        {services.map(service => {
+          return <li><Link to={service.link}>{service.Name}</Link></li>
+        })}
       </ul>
     </div>
   );

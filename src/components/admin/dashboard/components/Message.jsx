@@ -1,4 +1,4 @@
-import "./stylesdash.css";
+import "./scss/stylesdash.css";
 import { useRecoilState } from "recoil";
 import textState from "./user-atom";
 import send_icons from "../assets/icons/send_icon.svg";
