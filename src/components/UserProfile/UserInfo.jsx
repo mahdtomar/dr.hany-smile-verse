@@ -40,6 +40,7 @@ const UserInfo = ({ user }) => {
     displayName: user.displayName,
     PhoneNumber: user.phoneNumber,
     email: user.email,
+    
     // State_Country: state,
     // City: city,
     // Postcode: postcode,

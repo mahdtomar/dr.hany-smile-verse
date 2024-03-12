@@ -12,7 +12,7 @@ const InfoContainer = ({ user, content }) => {
   useEffect(() => {
     switch (content) {
       case "info":
-        setdata(<UserInfo user={currentUser.currentuser} />);
+        setdata(<UserInfo user={currentUser.currentuser}  />);
         break;
       case "insurance":
         setdata(<InsuranceInfo user={currentUser.currentuser} />);

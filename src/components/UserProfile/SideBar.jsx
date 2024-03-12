@@ -25,15 +25,16 @@ const SideBar = ({ user }) => {
   //   fetchData();
   // }, [id]);
   // console.log(user.FirstName);
-
+console.log(currentUser)
   return (
     <div className="sidebar-comp">
       <UserImageAndName
-        // imageUrl={user.Image}
+        imageUrl={currentUser.currentuser.photoURL}
         // userName={`${user.FirstName} ${user.LastName}`}
-        userName={currentUser.displayName}
+        userName={currentUser.currentuser.displayName}
       />
       {/* <UserAppointments Appointments={user.Appointments} /> */}
+      <UserAppointments />
     </div>
   );
 };

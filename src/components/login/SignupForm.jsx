@@ -3,11 +3,11 @@ import React, { useRef, useState } from "react";
 import "./scss/signupform.css";
 import add_img from "./assets/imgs/addAvatar.png";
 import { Link } from "react-router-dom";
-import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
+import { createUserWithEmailAndPassword,PhoneAuthProvider, updateProfile } from "firebase/auth";
 import { auth, storage, db } from "./firebase";
 // if user will add image
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
-import { doc, setDoc } from "firebase/firestore";
+import { doc, setDoc,updateDoc } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
 // import Message from "../admin/dashboard/components/Message";
 const SignupForm = () => {
@@ -19,9 +19,8 @@ const SignupForm = () => {
   const [address, setAddress] = useState("");
   const navigate = useNavigate();
   // img
+  const file= document.getElementById("file");
 
-  const [file, setFile] = useState(document.getElementById("img-form"));
-  console.log(file);
   // const file = fle.src.split(":").pop().split(";")[0];
   // .src.split(":")
   // .pop()
@@ -112,8 +111,9 @@ const SignupForm = () => {
   };
   const submitForm = async (e) => {
     e.preventDefault();
+    // file += file.files[0].type
     // console.log(file);
-    setFile(file.src.split(":").pop().split(";")[0]);
+    // console.log(file.files[0].type);
 
     if (validateInputs()) {
       const data = {
@@ -125,34 +125,42 @@ const SignupForm = () => {
       };
       // console.log(address.target);
       // <Message key={data} props={data} >;
+      
       try {
         const res = await createUserWithEmailAndPassword(auth, email, password);
+        // phoneNumberValidation(true)
+        // PhoneAuthProvider()
         // if user  add image
         const storageRef = ref(storage, displayName);
 
-        const uploadTask = uploadBytesResumable(storageRef, file);
-        console.log(file);
+        const uploadTask = uploadBytesResumable(storageRef, file.files[0]);
+        // console.log(file);
 
-        // Register three observers:
-        // 1. 'state_changed' observer, called any time the state changes
-        // 2. Error observer, called on failure
-        // 3. Completion observer, called on successful completion
+        // // Register three observers:
+        // // 1. 'state_changed' observer, called any time the state changes
+        // // 2. Error observer, called on failure
+        // // 3. Completion observer, called on successful completion
         uploadTask.on(
           getDownloadURL(uploadTask.snapshot.ref).then(async (downloadURL) => {
-            await updateProfile(res.user, {
+// error in image update here
+// object object (display name)
+// then try again n.Ofindex()
+          await updateProfile(res.user, {
               displayName,
+              // phoneNumber,
               photoURL: downloadURL,
             });
-            await setDoc(doc(db, "users", res.user.uid), {
+             await setDoc(doc(db, "users", res.user.uid), {
               uid: res.user.uid,
               displayName,
               email,
               phoneNumber,
               photoURL: downloadURL,
-              age,
-              address,
+              // age,
+              // address,
             });
-            console.log(downloadURL);
+         
+        //     console.log(downloadURL);
             await setDoc(doc(db, "userChats", res.user.uid, {}));
             navigate("/");
           })
@@ -188,7 +196,7 @@ const SignupForm = () => {
   // };
   return (
     // Sara Edit Here
-    <form className="signupform">
+    <form className="signupform" >
       <label htmlFor="userName">
         <input
           type="text"
