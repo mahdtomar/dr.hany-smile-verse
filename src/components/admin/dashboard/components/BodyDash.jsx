@@ -1,3 +1,4 @@
+import { appointments } from "../../../../Data";
 import AppointmentsTable from "./AppointmentsTable";
 import SidebarDash from "./SidebarDash";
 
@@ -49,7 +50,14 @@ function BodyDash() {
             </summary>
           </div>
         </div>
-        <AppointmentsTable />
+        {/* <th>ID</th>
+                        <th>Doctor</th>
+                        <th>Patient</th>
+                        <th>Date</th>
+                        <th>Service</th>
+                        <th>Status</th>
+                        <th>Location</th> */}
+        <AppointmentsTable list={appointments} count={7} headerList={["ID", "Doctors", "Patient", "Date", "Service", "Status", "location"]} />
       </div>
     </div>
   );

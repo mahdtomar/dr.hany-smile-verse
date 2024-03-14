@@ -17,6 +17,9 @@ p {
   --background-color: #f9f7f3;
   --CTA-color: #e74c3c;
   --mobile-view: 450px;
+  --queued-color: #fabf13;
+  --done-color: #3eb370;
+  --canceled-color:#eddbd8;
 }
 body {
   background: #f8f8f8;

@@ -109,23 +109,23 @@ const HomePage = () => {
             <article>
               <p>why us?</p>
               <FeatureTile
-                title="this is title"
-                description="this is a tile feature description this is a tile feature description this is a tile feature description "
+                title="Expertise and Experience:"
+                description="Our skilled team led by Dr. Jhon brings years of experience and expertise to every procedure. Trust us for top-notch care and optimal outcomes."
                 img={syring}
               />
               <FeatureTile
-                title="this is title"
-                description="this is a tile feature description this is a tile feature description this is a tile feature description "
+                title="Patient-Centered Care:"
+                description="Your comfort is our priority. From a warm welcome to clear explanations, we're dedicated to making your experience as pleasant as possible."
                 img={syring}
               />
               <FeatureTile
-                title="this is title"
-                description="this is a tile feature description this is a tile feature description this is a tile feature description "
+                title="State-of-the-Art Technology:"
+                description="Equipped with the latest tools and innovations, we ensure efficient, accurate, and comfortable treatments for our patients."
                 img={syring}
               />
               <FeatureTile
-                title="this is title"
-                description="this is a tile feature description this is a tile feature description this is a tile feature description "
+                title="Comprehensive Services:"
+                description="From routine cleanings to complex procedures like root canals, we offer a full range of services for patients of all ages under one roof."
                 img={syring}
               />
             </article>
