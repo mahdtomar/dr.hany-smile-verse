@@ -11,8 +11,8 @@ function Message(props) {
   // document.querySelector(".table-mgs td tr").classList.add("active");
   // );
 
-  // const [data] = useRecoilState(textState);
-  const data = useContext(AuthContext);
+  const [data] = useRecoilState(textState);
+  // const data = useContext(AuthContext);
   console.log(data);
   // console.log(props.props);
   const handleClickMsg = (e) => {
@@ -39,7 +39,7 @@ function Message(props) {
         </h1>
         <table className="table-mgs" style={{ display: "flex" }}>
           <td className="home">
-            {/* {data.map((e) => (
+            {data.map((e) => (
               <tr key={e.id} className="side " onClick={handleClickMsg}>
                 <img src={e.src} alt={e.alt} />
                 <div className="head">
@@ -47,15 +47,68 @@ function Message(props) {
                   <p>{e.description}</p>
                 </div>
               </tr>
-            ))} */}
+            ))}
           </td>
           <td className="msg-body flex-1">
             <tr className="home-inbox">
               <div className="inbox-head">
-                {/* <img src={data[0].src} alt={data[0].alt} /> */}
-                <h2>{data.currentuser.displayName}</h2>
+                <img src={data[0].src} alt={data[0].alt} />
+                {/* <h2>{data.currentuser.displayName}</h2> */}
+                <h2>{data[0].name}</h2>
               </div>
             </tr>
+            <td className="inbox" style={{flex: "1"
+    ,maxHeight: "50vh"
+    ,overflowY: "scroll"}}>
+              <div >
+                <div className="user" >
+                  <div className="msg">
+                    <p >hello</p>
+                  <img src={data[0].src} alt="" />
+
+                  </div>
+                </div>
+                <br />
+                <div className="another-user">
+                <div className="msg">
+                    <p >hello</p>
+                  <img src={data[1].src} alt="" />
+
+                  </div>
+                  
+                </div>
+                <div className="user" >
+                  <div className="msg">
+                    <p >hello</p>
+                  <img src={data[0].src} alt="" />
+
+                  </div>
+                  </div>
+                  <div className="another-user">
+                <div className="msg">
+                    <p >hello ahmed , i wanna book live advisory can you help me in theid ddjs;jfsdjflksdjfsdjklsdfl</p>
+                  <img src={data[1].src} alt="" />
+
+                  </div>
+                  
+                </div>
+                <div className="another-user">
+                <div className="msg">
+                    <p >hello ahmed , i wanna book live advisory can you help me in theid ddjs;jfsdjflksdjfsdjklsdfl</p>
+                  <img src={data[1].src} alt="" />
+
+                  </div>
+                  
+                </div><div className="another-user">
+                <div className="msg">
+                    <p >hello ahmed , i wanna book live advisory can you help me in theid ddjs;jfsdjflksdjfsdjklsdfl</p>
+                  <img src={data[1].src} alt="" />
+
+                  </div>
+                  
+                </div>
+              </div>
+            </td>
             <div className="send-mgs">
               <input
                 type="text"

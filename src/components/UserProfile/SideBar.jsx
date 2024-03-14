@@ -8,6 +8,7 @@ import { useContext } from "react";
 import AuthContext from "../../context/AuthContext";
 const SideBar = ({ user }) => {
   const currentUser = useContext(AuthContext);
+  
   // const [user, setUser] = useState(undefined);
   // const { id } = useParams();
 

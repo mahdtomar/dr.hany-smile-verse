@@ -6,8 +6,8 @@ import { Link } from "react-router-dom";
 import { createUserWithEmailAndPassword,PhoneAuthProvider, updateProfile } from "firebase/auth";
 import { auth, storage, db } from "./firebase";
 // if user will add image
-import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
-import { doc, setDoc,updateDoc } from "firebase/firestore";
+import { ref, uploadBytesResumable, getDownloadURL, uploadBytes } from "firebase/storage";
+import { addDoc, collection, doc, setDoc,updateDoc } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
 // import Message from "../admin/dashboard/components/Message";
 const SignupForm = () => {
@@ -17,9 +17,10 @@ const SignupForm = () => {
   const [age, setAge] = useState("");
   const [password, setPassword] = useState("");
   const [address, setAddress] = useState("");
+  const [image,setImage] = useState(null)
   const navigate = useNavigate();
   // img
-  const file= document.getElementById("file");
+  // const file= document.getElementById("file");
 
   // const file = fle.src.split(":").pop().split(";")[0];
   // .src.split(":")
@@ -114,60 +115,64 @@ const SignupForm = () => {
     // file += file.files[0].type
     // console.log(file);
     // console.log(file.files[0].type);
-
+// const file = e.target[6].files[0]
     if (validateInputs()) {
+      const res = await createUserWithEmailAndPassword(auth, email, password);
+
       const data = {
+        uid: res.user.uid,
         displayName: displayName,
         email: email,
-        phoneNumber: phoneNumber,
-        age: age,
-        address: address,
+        // phoneNumber: phoneNumber,
+        // age: age,
+        // address: address,
       };
       // console.log(address.target);
       // <Message key={data} props={data} >;
       
-      try {
-        const res = await createUserWithEmailAndPassword(auth, email, password);
+      // try {
         // phoneNumberValidation(true)
         // PhoneAuthProvider()
         // if user  add image
-        const storageRef = ref(storage, displayName);
+        // const storageRef = ref(storage, displayName,email,file.files[0]);
+        const imageRef = ref(storage,displayName);
+        await uploadBytes(imageRef,image).then(alert("done"));
+        await setDoc(doc(db,"users",res.user.uid),data)
 
-        const uploadTask = uploadBytesResumable(storageRef, file.files[0]);
+        // const uploadTask = uploadBytes(imageRef,image);
+        // const uploadTask = uploadBytesResumable(storageRef, file.files[0]);
         // console.log(file);
 
         // // Register three observers:
         // // 1. 'state_changed' observer, called any time the state changes
         // // 2. Error observer, called on failure
         // // 3. Completion observer, called on successful completion
-        uploadTask.on(
-          getDownloadURL(uploadTask.snapshot.ref).then(async (downloadURL) => {
-// error in image update here
-// object object (display name)
-// then try again n.Ofindex()
-          await updateProfile(res.user, {
-              displayName,
-              // phoneNumber,
-              photoURL: downloadURL,
-            });
-             await setDoc(doc(db, "users", res.user.uid), {
-              uid: res.user.uid,
-              displayName,
-              email,
-              phoneNumber,
-              photoURL: downloadURL,
-              // age,
-              // address,
-            });
-         
-        //     console.log(downloadURL);
-            await setDoc(doc(db, "userChats", res.user.uid, {}));
-            navigate("/");
-          })
-        );
-      } catch (err) {
-        console.log(err);
-      }
+      //   uploadTask.on(
+      //     (error) => {
+      //       console.log(error);
+      //     },
+      //     () =>  {
+      //       getDownloadURL(uploadTask.snapshot.ref).then(async (downloadURL) => {
+      //         await updateProfile(res.user, {
+      //           displayName,
+      //           photoURL:downloadURL
+      //         });
+      //         await setDoc(doc(db, "users"), {
+      //           uid: res.user.uid,
+      //           // data,
+      //           displayName,
+      //           email,
+      //           photoURL:downloadURL
+      //         });
+      //         await addDoc(collection(db, "userChats", res.user.uid, {}));
+      //       navigate("/");
+      //       });
+      //     }
+      //   );
+       
+      // } catch (err) {
+      //   console.log(err);
+      // }
       console.log(data);
       // const config = {
       //   headers: {
@@ -301,17 +306,20 @@ const SignupForm = () => {
           number and a spacial character.
         </p>
       </label>
+      <label htmlFor="file">
       <input
         // required
         type="file"
         id="file"
-        onClick={(e) => console.log(e.target.files)}
+        onChange={(e) => setImage(e.target.files[0])}
       />
-      <img src={add_img} alt="add" id="img-form" />
+      {/* <img src={add_img} alt="add" id="img-form" /> */}
       {/* {(e) => console.log(e.target)} */}
 
       <span>Add an avatar</span>
+      </label>
       <button onClick={(e) => submitForm(e)}>Sign Up</button>
+      {/* <button >Sign Up</button> */}
       <p>
         Do You Have An Account Already?<Link to={"/login"}>Log in</Link>
       </p>

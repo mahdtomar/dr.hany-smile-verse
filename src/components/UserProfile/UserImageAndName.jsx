@@ -10,7 +10,7 @@ const UserImageAndName = ({ imageUrl, userName }) => {
         console.log(imageUrl);
         // const parsedImage = await require(imageUrl);
         // console.log(parsedImage);
-        if(current.photoURL === ""){
+        if(current.photoURL === null){
           setImageSrc(defaultImage)
         }
       else{
