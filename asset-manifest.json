@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/dr.hany-smile-verse/static/css/main.96f6b52a.css",
-    "main.js": "/dr.hany-smile-verse/static/js/main.e559d2bf.js",
+    "main.css": "/dr.hany-smile-verse/static/css/main.796c02f2.css",
+    "main.js": "/dr.hany-smile-verse/static/js/main.39f07e4e.js",
     "static/js/787.ecf2124a.chunk.js": "/dr.hany-smile-verse/static/js/787.ecf2124a.chunk.js",
     "static/media/imgOne.png": "/dr.hany-smile-verse/static/media/imgOne.f63529b6470b755eff76.png",
     "static/media/file.pdf": "/dr.hany-smile-verse/static/media/file.de0d5fd0ab46a680db23.pdf",
@@ -23,7 +23,7 @@
     "static/media/complementary-consultant.jpg": "/dr.hany-smile-verse/static/media/complementary-consultant.b8da5f0b1ef3fcb9b94b.jpg",
     "static/media/friendly dentist.jpg": "/dr.hany-smile-verse/static/media/friendly dentist.cae918ceb7b5c151b334.jpg",
     "static/media/rootcanalsonar.webp": "/dr.hany-smile-verse/static/media/rootcanalsonar.6154adaeaf3be10eb503.webp",
-    "static/media/teethbih.svg": "/dr.hany-smile-verse/static/media/teethbih.66be50a66c2b17f25f3dce4246a170e3.svg",
+    "static/media/teethbih.svg": "/dr.hany-smile-verse/static/media/teethbih.e0c8d025c5b7c1ecec0ffba447c5e335.svg",
     "static/media/Dental-X-Ray.jpg": "/dr.hany-smile-verse/static/media/Dental-X-Ray.8a5964b26f791549df35.jpg",
     "static/media/rootcanal.svg": "/dr.hany-smile-verse/static/media/rootcanal.db660edf653f35ee1cfd92e77dfee019.svg",
     "static/media/dentist-kl.jpg": "/dr.hany-smile-verse/static/media/dentist-kl.1d52a65d1919f509448c.jpg",
@@ -44,8 +44,8 @@
     "static/media/hospital.jpeg": "/dr.hany-smile-verse/static/media/hospital.7eaf6cd6e34dc542cc35.jpeg",
     "static/media/man_user_logo.svg": "/dr.hany-smile-verse/static/media/man_user_logo.6d45c3fd3e5cae9c9d17d4b8177ff37b.svg",
     "static/media/settings_icon.svg": "/dr.hany-smile-verse/static/media/settings_icon.0cbcb6a078454e722edf74ec038237f6.svg",
-    "static/media/Cavity teeth.svg": "/dr.hany-smile-verse/static/media/Cavity teeth.63fce90ffb6fce2d3630fa3c190fb2d3.svg",
-    "static/media/teeth sensetivity.svg": "/dr.hany-smile-verse/static/media/teeth sensetivity.904e00cf02a400fa988b6aa6f5c327a3.svg",
+    "static/media/Cavity teeth.svg": "/dr.hany-smile-verse/static/media/Cavity teeth.f5ce651539c12fc82048ff3e0fe38f14.svg",
+    "static/media/teeth sensetivity.svg": "/dr.hany-smile-verse/static/media/teeth sensetivity.a96574f4d1f38850da1879796013a292.svg",
     "static/media/patient_icon.svg": "/dr.hany-smile-verse/static/media/patient_icon.753fd5727fe4f8515010c09510c67be4.svg",
     "static/media/PhoneCall.svg": "/dr.hany-smile-verse/static/media/PhoneCall.9f774dcaa4caa852e4a8a1c70ff9f1d0.svg",
     "static/media/pen&paper.svg": "/dr.hany-smile-verse/static/media/pen&paper.7abe8c74587f573e0c9c1c6cb3633bdf.svg",
@@ -57,21 +57,23 @@
     "static/media/LiveAdvisory.svg": "/dr.hany-smile-verse/static/media/LiveAdvisory.1fde961b200c7255b2becf97cb78a4d4.svg",
     "index.html": "/dr.hany-smile-verse/index.html",
     "static/media/envelope_icon.svg": "/dr.hany-smile-verse/static/media/envelope_icon.1aa6c72785ac7c4d9e5f0b44f040b038.svg",
-    "static/media/Globe.svg": "/dr.hany-smile-verse/static/media/Globe.280e29c781d12fd86d07d76e646965fc.svg",
+    "static/media/Globe.svg": "/dr.hany-smile-verse/static/media/Globe.dfc4587b0e3a76c80390c852605b0603.svg",
     "static/media/MapPinLine.svg": "/dr.hany-smile-verse/static/media/MapPinLine.1b01a1806a74bee4bac4c324ffade19c.svg",
     "static/media/message.svg": "/dr.hany-smile-verse/static/media/message.31d3442e82966b23ad7a9c149ba9d1de.svg",
-    "static/media/ArrowLineDown.svg": "/dr.hany-smile-verse/static/media/ArrowLineDown.35b7854551fbb5225e82c504645ad9a2.svg",
+    "static/media/CaretCircleRight.svg": "/dr.hany-smile-verse/static/media/CaretCircleRight.ad1827d0ada73bc36cbb8f1dee824d62.svg",
+    "static/media/ArrowLineDown.svg": "/dr.hany-smile-verse/static/media/ArrowLineDown.814ae90be8d287d41c89963ce7665611.svg",
     "static/media/appointment-icon.svg": "/dr.hany-smile-verse/static/media/appointment-icon.df7b8b67911320a7d310f1fe8277da2e.svg",
-    "static/media/List.svg": "/dr.hany-smile-verse/static/media/List.8c6717445f54785c0a135d6c2a656161.svg",
+    "static/media/List.svg": "/dr.hany-smile-verse/static/media/List.b1b171b371daaeeab1263a691deee0f3.svg",
+    "static/media/CaretCircleLeft.svg": "/dr.hany-smile-verse/static/media/CaretCircleLeft.0ebe652265f2f9f437769ba1096b027d.svg",
     "static/media/Clock.svg": "/dr.hany-smile-verse/static/media/Clock.26c0592f0c80fc0914342afda876bae2.svg",
     "static/media/bar_icon.svg": "/dr.hany-smile-verse/static/media/bar_icon.57b7c9b31afd438fa90924b785cdf311.svg",
     "static/media/Plus.svg": "/dr.hany-smile-verse/static/media/Plus.0124a9b7189e157122eadaa761fec78a.svg",
-    "main.96f6b52a.css.map": "/dr.hany-smile-verse/static/css/main.96f6b52a.css.map",
-    "main.e559d2bf.js.map": "/dr.hany-smile-verse/static/js/main.e559d2bf.js.map",
+    "main.796c02f2.css.map": "/dr.hany-smile-verse/static/css/main.796c02f2.css.map",
+    "main.39f07e4e.js.map": "/dr.hany-smile-verse/static/js/main.39f07e4e.js.map",
     "787.ecf2124a.chunk.js.map": "/dr.hany-smile-verse/static/js/787.ecf2124a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.96f6b52a.css",
-    "static/js/main.e559d2bf.js"
+    "static/css/main.796c02f2.css",
+    "static/js/main.39f07e4e.js"
   ]
 }
