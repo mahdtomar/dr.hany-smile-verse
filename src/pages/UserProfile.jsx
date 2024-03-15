@@ -20,7 +20,7 @@ const UserProfile = ({ content }) => {
       <div className="user-profile-comp">
         <Navbar />
         <div className="container main flex-2">
-          <SideBar user={currentUser.currentuser}  />
+          <SideBar user={currentUser.currentuser} />
           <InfoContainer user={currentUser.currentuser} content={content} />
         </div>
         <Footer />

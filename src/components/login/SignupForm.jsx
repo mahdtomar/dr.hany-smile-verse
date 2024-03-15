@@ -1,14 +1,16 @@
 import axios from "axios";
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useContext } from "react";
 import "./scss/signupform.css";
 import add_img from "./assets/imgs/addAvatar.png";
 import { Link } from "react-router-dom";
-import { createUserWithEmailAndPassword,PhoneAuthProvider, updateProfile } from "firebase/auth";
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword, PhoneAuthProvider, updateProfile, signOut } from "firebase/auth";
 import { auth, storage, db } from "./firebase";
 // if user will add image
 import { ref, uploadBytesResumable, getDownloadURL, uploadBytes } from "firebase/storage";
-import { addDoc, collection, doc, setDoc,updateDoc } from "firebase/firestore";
+import { addDoc, collection, doc, setDoc, updateDoc } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
+import { Profiler } from "react";
+import AuthContext from "../../context/AuthContext";
 // import Message from "../admin/dashboard/components/Message";
 const SignupForm = () => {
   const [displayName, setUserName] = useState("");
@@ -17,7 +19,7 @@ const SignupForm = () => {
   const [age, setAge] = useState("");
   const [password, setPassword] = useState("");
   const [address, setAddress] = useState("");
-  const [image,setImage] = useState(null)
+  const [image, setImage] = useState(null)
   const navigate = useNavigate();
   // img
   // const file= document.getElementById("file");
@@ -110,43 +112,52 @@ const SignupForm = () => {
       userNameValidation()
     );
   };
+  const { currentuser, setCurrentUser } = useContext(AuthContext);
   const submitForm = async (e) => {
     e.preventDefault();
     // file += file.files[0].type
     // console.log(file);
     // console.log(file.files[0].type);
-// const file = e.target[6].files[0]
+    // const file = e.target[6].files[0]
     if (validateInputs()) {
-      const res = await createUserWithEmailAndPassword(auth, email, password);
-
       const data = {
-        uid: res.user.uid,
         displayName: displayName,
         email: email,
-        // phoneNumber: phoneNumber,
-        // age: age,
-        // address: address,
+        phoneNumber: phoneNumber,
+        age: age,
+        address: address,
       };
+      try {
+        const res = await createUserWithEmailAndPassword(auth, email, password)
+        await updateProfile(res.user, data)
+        const imageRef = ref(storage, displayName);
+        await uploadBytes(imageRef, image).then(alert("done"));
+        await setDoc(doc(db, "users", res.user.uid), data).then(() => { setCurrentUser(currentuser) })
+        console.log(res.user)
+
+        navigate("/profile")
+      } catch (error) {
+        console.error(error)
+      }
+
       // console.log(address.target);
       // <Message key={data} props={data} >;
-      
+
       // try {
-        // phoneNumberValidation(true)
-        // PhoneAuthProvider()
-        // if user  add image
-        // const storageRef = ref(storage, displayName,email,file.files[0]);
-        const imageRef = ref(storage,displayName);
-        await uploadBytes(imageRef,image).then(alert("done"));
-        await setDoc(doc(db,"users",res.user.uid),data)
+      // phoneNumberValidation(true)
+      // PhoneAuthProvider()
+      // if user  add image
+      // const storageRef = ref(storage, displayName,email,file.files[0]);
 
-        // const uploadTask = uploadBytes(imageRef,image);
-        // const uploadTask = uploadBytesResumable(storageRef, file.files[0]);
-        // console.log(file);
 
-        // // Register three observers:
-        // // 1. 'state_changed' observer, called any time the state changes
-        // // 2. Error observer, called on failure
-        // // 3. Completion observer, called on successful completion
+      // const uploadTask = uploadBytes(imageRef,image);
+      // const uploadTask = uploadBytesResumable(storageRef, file.files[0]);
+      // console.log(file);
+
+      // // Register three observers:
+      // // 1. 'state_changed' observer, called any time the state changes
+      // // 2. Error observer, called on failure
+      // // 3. Completion observer, called on successful completion
       //   uploadTask.on(
       //     (error) => {
       //       console.log(error);
@@ -169,7 +180,7 @@ const SignupForm = () => {
       //       });
       //     }
       //   );
-       
+
       // } catch (err) {
       //   console.log(err);
       // }
@@ -307,16 +318,16 @@ const SignupForm = () => {
         </p>
       </label>
       <label htmlFor="file">
-      <input
-        // required
-        type="file"
-        id="file"
-        onChange={(e) => setImage(e.target.files[0])}
-      />
-      {/* <img src={add_img} alt="add" id="img-form" /> */}
-      {/* {(e) => console.log(e.target)} */}
+        <input
+          // required
+          type="file"
+          id="file"
+          onChange={(e) => setImage(e.target.files[0])}
+        />
+        {/* <img src={add_img} alt="add" id="img-form" /> */}
+        {/* {(e) => console.log(e.target)} */}
 
-      <span>Add an avatar</span>
+        <span>Add an avatar</span>
       </label>
       <button onClick={(e) => submitForm(e)}>Sign Up</button>
       {/* <button >Sign Up</button> */}

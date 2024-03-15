@@ -4,11 +4,16 @@ import UserImageAndName from "./UserImageAndName";
 // import { useParams } from "react-router-dom";
 import UserAppointments from "./UserAppointments";
 import "./scss/sidebar.css";
-import { useContext } from "react";
+import { useContext, useRef } from "react";
 import AuthContext from "../../context/AuthContext";
+import { signOut } from "firebase/auth";
+import { auth } from "../login/firebase";
 const SideBar = ({ user }) => {
   const currentUser = useContext(AuthContext);
-  
+  const signoutRef = useRef(null)
+  const signOutHandler = async () => {
+    await signOut(auth)
+  }
   // const [user, setUser] = useState(undefined);
   // const { id } = useParams();
 
@@ -26,7 +31,7 @@ const SideBar = ({ user }) => {
   //   fetchData();
   // }, [id]);
   // console.log(user.FirstName);
-console.log(currentUser)
+  console.log(currentUser)
   return (
     <div className="sidebar-comp">
       <UserImageAndName
@@ -36,6 +41,7 @@ console.log(currentUser)
       />
       {/* <UserAppointments Appointments={user.Appointments} /> */}
       <UserAppointments />
+      <button ref={signoutRef} onClick={signOutHandler}>signout</button>
     </div>
   );
 };
