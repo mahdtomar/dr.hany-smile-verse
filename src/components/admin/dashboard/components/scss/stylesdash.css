@@ -358,7 +358,7 @@ td.home::-webkit-scrollbar-thumb:hover {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  gap: 20px;
+  /* gap: 20px; */
 }
 
 .msg-body .home-inbox hr {
