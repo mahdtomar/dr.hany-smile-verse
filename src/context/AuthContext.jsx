@@ -29,3 +29,57 @@ export const AuthProvider = ({ children }) => {
   );
 };
 export default AuthContext
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//import { createContext, useReducer } from "react";
+// import AuthReducer from "./AuthReducer";
+// const INITIAL_STATE = {
+//   currentUser: null
+// }
+// const AuthContext = createContext(INITIAL_STATE)
+// export const AuthContextProvider = ({ children }) => {
+//   const [state, dispatch] = useReducer(AuthReducer, INITIAL_STATE)
+//   return (<AuthContext.Provider value={{ currentUser: state.current, dispatch }} >{children}</AuthContext.Provider>)
+// }
+// export default AuthContext
