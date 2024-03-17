@@ -2,14 +2,12 @@
   display: flex;
   align-items: center;
   justify-content: left;
-  // border: 1px solid rgba($color: #3498DB, $alpha: 0.5);
   border-radius: 5px;
-  
   .image {
     padding: 20px;
   }
   .description {
-    border-left: 1px solid rgba($color: #3498DB, $alpha: 0.5);
+    border-left: 1px solid rgba($color: #3498db, $alpha: 0.5);
     padding: 5px;
     span {
       font-weight: bold;
@@ -19,4 +17,5 @@
       font-size: medium;
     }
   }
+
 }

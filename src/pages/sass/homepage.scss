@@ -34,6 +34,11 @@
 .why-us {
   .container {
     .flex-2 {
+      > .image {
+        img {
+          width: 450px;
+        }
+      }
       gap: 30px;
       article {
         display: grid;
@@ -71,9 +76,15 @@
       * {
         color: var(--main-color);
       }
-      border: 2px solid var(--main-color);
-      border-radius: 2px;
       align-items: flex-start;
+      border: 2px solid var(--main-color);
+      transition: border-radius 0.3s linear, box-shadow 0.5s;
+      box-shadow: 0px 0px 5px 0px transparent;
+      &:hover {
+        border-radius: 15px;
+        border-color: var(--secondary-color);
+        box-shadow: 0px 0px 5px 0px var(--secondary-color);
+      }
       .description {
         border: none;
         span {

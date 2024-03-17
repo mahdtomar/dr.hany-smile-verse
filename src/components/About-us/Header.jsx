@@ -1,5 +1,6 @@
 import React from "react";
-import staffImage from "../../images/staff.jpeg";
+// import staffImage from "../../images/Doctors-bro.svg";
+import staffImage from "../../images/Doctors (1).gif";
 import "./scss/header.css";
 const Header = () => {
   return (

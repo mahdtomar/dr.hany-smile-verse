@@ -5,19 +5,26 @@ import { auth } from "../components/login/firebase";
 export const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
-  const [currentuser, setCurrentUser] = useState({});
+  const [currentuser, setCurrentUser] = useState({
+    displayName: "omar mahdy",
+    email: "omarmahdy@gmail.com",
+    phoneNumber: "01029949333",
+    address: "Tanta Elgharbia",
+    Postcode: "000000",
+    roles: [1, 2, 3]
+  });
 
-  useEffect(() => {
-    setTimeout(() => {
-      const unsub = onAuthStateChanged(auth, (user) => {
-        setCurrentUser(user);
-      });
-      return () => {
-        unsub();
-      };
-    }, 3000);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     const unsub = onAuthStateChanged(auth, (user) => {
+  //       setCurrentUser(user);
+  //     });
+  //     return () => {
+  //       unsub();
+  //     };
+  //   }, 3000);
 
-  }, []);
+  // }, []);
 
   const contextValue = {
     currentuser,

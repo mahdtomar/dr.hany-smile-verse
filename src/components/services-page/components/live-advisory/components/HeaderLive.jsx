@@ -1,4 +1,5 @@
-import header_live from "../assets/imgs/header-live.png";
+// import header_live from "../assets/imgs/header-live.png";
+import header_live from "../../../../../images/Online Doctor.gif";
 import "../advisory.css";
 import { Link } from "react-scroll";
 function HeaderLive() {

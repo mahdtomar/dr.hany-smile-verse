@@ -5,12 +5,15 @@ import Header from "../components/About-us/Header";
 import Achievement from "../components/About-us/Achievement";
 import "./sass/aboutus.css";
 // importing images and icons
-import ToothInHeart from "../icons/teeth in a heart.jpeg";
-import hostpital from "../icons/hospital.jpeg";
-import doctor from "../icons/dentist.jpeg";
+import ToothInHeart from "../icons/tooth-svgrepo-com.svg";
+import hostpital from "../icons/hospitalOutline.svg";
+import doctor from "../icons/doctor-svgrepo-com.svg";
 import FeatureTile from "../components/FeatureTile";
 import Testmonial from "../components/About-us/Testmonial";
 import FeedbackForm from "../components/faq/FeedbackForm";
+import guyAvatar from '../images/users avatar male.jpg'
+import girlAvatar from '../images/user avatar girl.jpg'
+import oldmanAvatar from '../images/user avatar old man.jpg'
 const AboutUs = () => {
   return (
     <div className="about-us-comp">
@@ -70,18 +73,21 @@ const AboutUs = () => {
         <h2>what our patients are saying</h2>
         <div className="container flex-2">
           <Testmonial
+            img={guyAvatar}
             msg={
               "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam nulla alias doloribus sunt molestias eveniet sint"
             }
             person={"Omar Mahdy"}
           />
           <Testmonial
+            img={oldmanAvatar}
             msg={
               "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam nulla alias doloribus sunt molestias eveniet sint"
             }
             person={"Omar Mahdy"}
           />
           <Testmonial
+            img={girlAvatar}
             msg={
               "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam nulla alias doloribus sunt molestias eveniet sint"
             }

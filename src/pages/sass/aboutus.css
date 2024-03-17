@@ -64,6 +64,10 @@
   color: var(--main-color);
   font-family: "Agbalumo";
 }
+.about-us-comp .testmonials img {
+  width: 70px;
+  border-radius: 50%;
+}
 .about-us-comp .testmonials h2 {
   width: 100%;
   font-weight: bold;
@@ -73,12 +77,19 @@
   margin: 30px 0px;
 }
 .about-us-comp .testmonials .container {
-  text-align: center;
+  text-align: left;
   gap: 100px;
+}
+.about-us-comp .testmonials .container .testmonial {
+  align-items: flex-start;
+  padding: 10px 5px;
+  box-shadow: 0px 0px 10px 10px lightgray;
+  border-radius: 10px;
+  gap: 10px;
 }
 .about-us-comp .testmonials .container .testmonial p {
   color: rgba(0, 0, 0, 0.8);
-  margin: 20px 0px;
+  margin: 0px 0px 20px;
 }
 .about-us-comp .testmonials .container .testmonial span {
   font-weight: bold;

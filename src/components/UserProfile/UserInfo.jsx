@@ -8,7 +8,7 @@ const UserInfo = ({ user }) => {
   const [displayName, setUserName] = useState(user.displayName);
   const [phoneNumber, setPhoneNumber] = useState(user.phoneNumber);
   const [email, setEmail] = useState(user.email);
-  const [city, setCity] = useState(user.address);
+  const [address, setAddress] = useState(user.address);
   const [state, setState] = useState(user.State_Country);
   const [postcode, setPostcode] = useState(user.Postcode);
   const [editable, setEditable] = useState("");
@@ -40,7 +40,7 @@ const UserInfo = ({ user }) => {
     displayName: user.displayName,
     PhoneNumber: user.phoneNumber,
     email: user.email,
-    
+
     // State_Country: state,
     // City: city,
     // Postcode: postcode,
@@ -101,16 +101,16 @@ const UserInfo = ({ user }) => {
           disabled={true}
         />
       </label>
-      <label htmlFor="city">
-        <span>City</span>
+      <label htmlFor="address">
+        <span>Address</span>
         <input
           type="text"
-          name="city"
+          name="address"
           required
-          placeholder={city}
-          value={city}
+          placeholder={address}
+          value={address}
           onChange={(e) => {
-            setCity(e.target.value);
+            setAddress(e.target.value);
           }}
           disabled={true}
         />

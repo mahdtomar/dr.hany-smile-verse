@@ -34,6 +34,9 @@
 .why-us .container .flex-2 {
   gap: 30px;
 }
+.why-us .container .flex-2 > .image img {
+  width: 450px;
+}
 .why-us .container .flex-2 article {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -64,12 +67,18 @@
 }
 .services .container .FeatureTile-comp {
   padding: 12px;
-  border: 2px solid var(--main-color);
-  border-radius: 2px;
   align-items: flex-start;
+  border: 2px solid var(--main-color);
+  transition: border-radius 0.3s linear, box-shadow 0.5s;
+  box-shadow: 0px 0px 5px 0px transparent;
 }
 .services .container .FeatureTile-comp * {
   color: var(--main-color);
+}
+.services .container .FeatureTile-comp:hover {
+  border-radius: 15px;
+  border-color: var(--secondary-color);
+  box-shadow: 0px 0px 5px 0px var(--secondary-color);
 }
 .services .container .FeatureTile-comp .description {
   border: none;

@@ -1,4 +1,4 @@
-import { Route, Routes,Navigate } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 import "./App.css";
 import Logo from "./components/Logo";
 import HomePage from "./pages/HomePage";
@@ -30,68 +30,59 @@ import AuthContext from "./context/AuthContext";
 // ionic
 
 function App() {
-  const {currentuser} = useContext(AuthContext);
-  console.log(currentuser)
-  const Protectedroute = ({children})=>{
-    if(!currentuser){
-      return <Navigate to ="/signup"/>
+  const { currentuser } = useContext(AuthContext);
+  console.log(currentuser);
+  const Protectedroute = ({ children }) => {
+    if (!currentuser) {
+      return <Navigate to="/signup" />;
     }
-return children
-  }
+    return children;
+  };
   return (
     <div className="App">
       <Routes>
-        <Route element={
-          <HomePage />
-        } path="/" />
+        <Route element={<HomePage />} path="/" />
         <Route element={<Logo />} path="/logo" />
         <Route element={<Services />} path="/services" />
         <Route element={<AlignmentTeeth />} path="/services/Alignment-teeth" />
-        <Route element= {<RootCanel/>} path="/services/root-canal"></Route>
-        <Route element = {<CosmeticTeeth/>} path="/services/cosmetic-teeth"></Route>
-        <Route element ={<OralHygiene/>} path="/services/oral-hygiene"></Route>
-        <Route element={<LiveAdvisory/>} path="/services/live-advisory"></Route>
-        {/* <Route element={<ProtectedRoutes allowedRoles={[1, 2, 3]} />}> */}
+        <Route element={<RootCanel />} path="/services/root-canal"></Route>
+        <Route
+          element={<CosmeticTeeth />}
+          path="/services/cosmetic-teeth"
+        ></Route>
+        <Route element={<OralHygiene />} path="/services/oral-hygiene"></Route>
+        <Route
+          element={<LiveAdvisory />}
+          path="/services/live-advisory"
+        ></Route>
+        <Route element={<ProtectedRoutes allowedRoles={[1, 2, 3]} />}>
           <Route
-            element={
-        <Protectedroute>
-        <BookingAppointment content={<PatientType />} />
-        </Protectedroute>
-        }
+            element={<BookingAppointment content={<PatientType />} />}
             path="/Appointment"
           />
-        {/* </Route> */}
+        </Route>
         <Route
-          element={
-        <BookingAppointment content={<NewPatient />} 
-        />
-        }
+          element={<BookingAppointment content={<NewPatient />} />}
           path="/Appointment/New"
         />
-        <Route element={
-        <Protectedroute>
-        <UserProfile content={"info"} />
-        </Protectedroute>
-        } path="/profile" />
+        <Route element={<UserProfile content={"info"} />} path="/profile" />
         <Route
           element={<ConfortAndTechnology />}
           path="/comfort-and-technology"
         />
         <Route
-          element={
-        <UserProfile content={"insurance"} />  
-      }
+          element={<UserProfile content={"insurance"} />}
           path="/profile/insurance"
         />
         <Route element={<AboutUs />} path="/about-us" />
         <Route element={<LoginPage child={<LoginForm />} />} path="/login" />
         <Route element={<LoginPage child={<SignupForm />} />} path="/signup" />
         <Route element={<Admin />} path="/admin" />
-        <Route element ={<BodyDash/>} path="/admin/appointment"></Route>
-        <Route element={<Message/>} path="/admin/messages"></Route>
-        <Route element={<Patient/>} path="/admin/patient"></Route>
-        <Route element ={<Settings/>}path="/admin/settings"></Route>
-        
+        <Route element={<BodyDash />} path="/admin/appointment"></Route>
+        <Route element={<Message />} path="/admin/messages"></Route>
+        <Route element={<Patient />} path="/admin/patient"></Route>
+        <Route element={<Settings />} path="/admin/settings"></Route>
+
         <Route element={<UnAuthorized />} path="/unAuthorized" />
         <Route element={<Faq />} path="/faq"></Route>
       </Routes>

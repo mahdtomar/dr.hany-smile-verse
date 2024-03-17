@@ -4,10 +4,12 @@ import Navbar from "../components/Navbar";
 import image1 from "../images/wecare-dental_dentist-looks-into-mouth-.jpg";
 import image2 from "../images/smily patient.jpg";
 import whyusImg from "../images/dentist-kl.jpg";
+import officeImage from '../images/Laboratory-amico.svg'
+import officeImageAnimated from '../images/Laboratory.gif'
 import Card from "../components/Card";
 import FeatureTile from "../components/FeatureTile";
 import syring from "../icons/Syringe.svg";
-import serviceImg from "../images/dentists-treating-patients-teeth-in-the-clinic-free-vector.jpg";
+import serviceImg from "../images/Medical prescription.gif";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import TestmonialCard from "../components/TestmonialCard";
@@ -130,7 +132,7 @@ const HomePage = () => {
               />
             </article>
             <div className="image">
-              <img src={whyusImg} alt="" />
+              <img src={officeImageAnimated} alt="" />
             </div>
           </div>
         </div>

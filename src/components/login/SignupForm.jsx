@@ -122,20 +122,22 @@ const SignupForm = () => {
         phoneNumber: phoneNumber,
         age: age,
         address: address,
+        roles: [1, 2, 3]
       };
-      try {
-        const res = await createUserWithEmailAndPassword(auth, email, password)
-        await updateProfile(res.user, data)
-        const imageRef = ref(storage, displayName);
-        await uploadBytes(imageRef, image).then(alert("done"));
-        await setDoc(doc(db, "users", res.user.uid), data);
-        await updatePhoneNumber(res.user, phoneNumber).then(() => { console.log(res.user) });
-        setCurrentUser(currentuser);
-        console.log(res.user)
-        navigate("/profile")
-      } catch (error) {
-        console.error(error)
-      }
+      setCurrentUser(data);
+      // try {
+      //   const res = await createUserWithEmailAndPassword(auth, email, password)
+      //   await updateProfile(res.user, data)
+      //   const imageRef = ref(storage, displayName);
+      //   await uploadBytes(imageRef, image).then(alert("done"));
+      //   await setDoc(doc(db, "users", res.user.uid), data);
+      //   await updatePhoneNumber(res.user, phoneNumber).then(() => { console.log(res.user) });
+      //   setCurrentUser(currentuser);
+      //   console.log(res.user)
+      //   navigate("/profile")
+      // } catch (error) {
+      //   console.error(error)
+      // }
       console.log(data);
     }
   };
