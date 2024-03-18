@@ -1,6 +1,6 @@
 import { atom } from "recoil";
 const cosmeticinfo = atom({
-  key: "cosmetic",
+  key: "cosmeticinfo",
   default: [
     {
       id: 0,
