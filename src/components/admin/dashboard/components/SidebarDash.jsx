@@ -25,7 +25,7 @@ function SidebarDash() {
       <div className="d-flex">
         <img src={bar_icon} alt="bar" className="bar" />
         <Link to={"/"} style={{ textDecoration: "none" }}>
-          <h1 style={{ color: "#047bcb" }}>Dr Hany</h1>
+          <h1 >Dr Hany</h1>
         </Link>
       </div>
       <ul className="sidebar-content">

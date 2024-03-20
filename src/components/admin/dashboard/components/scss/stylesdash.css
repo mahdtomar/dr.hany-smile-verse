@@ -1,13 +1,22 @@
 /* themes */
+:root {
+  --sidebar-color-font: black;
+  --sidebar-back-color: white;
+  --bodydash-back-color: white;
+  --bodydash-color-font: black;
+  --bodydash-content-back: white;
+}
+
 .dark-color {
   background-color: var(--dark-color) !important;
   color: white !important;
 }
 
-.contrast-p{
+.contrast-p {
   /* filter: contrast(0); */
-  color:gray;
+  color: gray;
 }
+
 /* themes */
 ul {
   list-style: none;
@@ -77,8 +86,13 @@ tr.active {
   left: 0;
   height: 100vh;
   box-sizing: border-box;
+  background-color: var(--sidebar-back-color);
   /* box-shadow: 1px 5px 13px 1px #ddd; */
-  box-shadow:1px 3px 1px 1px gray;
+  box-shadow: 1px 3px 1px 1px gray;
+}
+
+.parent-sidebardash h1 {
+  color: var(--sidebar-color-font);
 }
 
 .sidebar-content {
@@ -109,12 +123,13 @@ tr.active {
 .sidebar-content .link p {
   font-size: 18px !important;
   /* filter: contrast(0.1); */
+  color: var(--sidebar-color-font);
 }
 
 .sidebar-content .link img {
   width: 20px;
   height: 20px;
-  filter:contrast(0.5);
+  filter: contrast(0.5);
 }
 
 .sidebar-content .link:hover {
@@ -136,12 +151,14 @@ tr.active {
   overflow-y: scroll;
   max-height: 100vh;
   flex-direction: column;
+  background-color: var(--bodydash-back-color);
 }
 
 .heading-dash {
   position: relative;
   padding: 20px;
   margin-bottom: 30px;
+  color: var(--bodydash-color-font);
 }
 
 .heading-dash::before {
@@ -151,7 +168,7 @@ tr.active {
   left: 45px;
   width: 150px;
   height: 2px;
-  background-color: black;
+  background-color: var(--bodydash-color-font);
 }
 
 .parent-bodydash {
@@ -169,7 +186,7 @@ tr.active {
 .parent-bodydash div {
   min-width: 350px;
   padding: 10px;
-  box-shadow: 1px 5px 13px 1px #ddd;
+  box-shadow: 1px 0px 8px 1px #6f6d6d;
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -186,6 +203,7 @@ tr.active {
   padding: 10px 0;
   color: rgb(0, 81, 255);
   font-family: "Arial", sans-serif;
+
 }
 
 .parent-bodydash div:hover {
@@ -199,6 +217,7 @@ tr.active {
 .parent-bodydash div p {
   font-size: 35px;
   font-weight: bold;
+  /* color:red; */
 }
 
 .parent-bodydash div span {
@@ -248,7 +267,7 @@ tr.active {
   }
 
   .bodydash {
-    height: 100%;
+    /* height: 100%; */
     text-align: center;
   }
 
@@ -303,6 +322,7 @@ body:has(.settings) {
   /* height: 300px; */
   margin: 20px auto;
   border-radius: 10px;
+  background: var(--bodydash-content-back);
   box-shadow: -2px 3px 5px -1px rgb(75 71 71 / 20%), 2px 1px 3px 0 rgb(88 82 82 / 14%), 0px -4px 5px 0 rgb(115 106 106 / 12%);
 }
 
@@ -354,9 +374,10 @@ body:has(.settings) {
 }
 
 .settings .content-settings .content p {
+  color: var(--bodydash-color-font);
   font-size: 20px;
   width: fit-content;
-  border-bottom: 1px solid var(--dark-color);
+  border-bottom: 1px solid var(--bodydash-color-font);
   font-weight: bold;
 }
 

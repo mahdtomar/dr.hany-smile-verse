@@ -1,24 +1,76 @@
 import Logo from "../../../Logo";
 import SidebarDash from "./SidebarDash";
+import { useEffect } from "react";
+
 function Settings() {
-  const handleDark = ()=>{
-    // document.querySelectorAll("div").forEach(e=>{
-    //   e.classList.toggle("dark-color")
-    // })
-    document.querySelector(".parent-sidebardash h1").classList.toggle("dark-color")
-    document.querySelector(".parent-sidebardash").classList.toggle("dark-color")
-    document.querySelectorAll(".sidebar-content .link:not(.active) p").forEach(e=>{
-      e.classList.toggle("contrast-p")
-    }) 
-    
-  }
-  const handleLight =()=>{
-    document.querySelector(".parent-sidebardash h1").classList.remove("dark-color")
-    document.querySelector(".parent-sidebardash").classList.remove("dark-color")
-    document.querySelectorAll(".sidebar-content .link:not(.active) p").forEach(e=>{
-      e.classList.remove("contrast-p")
-    }) 
-  }
+  useEffect(() => {
+    // Get color options from localStorage
+    const fontColor = localStorage.getItem("color_font");
+    const backColor = localStorage.getItem("back_color");
+    const dashBody = localStorage.getItem("back_body-color");
+    const dashBodyColor = localStorage.getItem("back-color-font");
+    const dashContentBack = localStorage.getItem("back-content-color")
+
+    // Apply styles based on localStorage values
+
+    if ((fontColor && backColor) || (dashBody && dashBodyColor)) {
+      document.documentElement.style.setProperty("--sidebar-color-font", fontColor);
+      document.documentElement.style.setProperty("--sidebar-back-color", backColor);
+      document.documentElement.style.setProperty(" --bodydash-back-color", dashBody);
+      document.documentElement.style.setProperty("--bodydash-color-font", dashBodyColor);
+      document.documentElement.style.setProperty("--bodydash-content-back", dashContentBack);
+    }
+    // Uncomment and implement your logic for looping over elements if needed
+
+  }, []);
+
+  const handleDefault = () => {
+    // Apply dark theme styles
+    document.documentElement.style.setProperty("--sidebar-color-font", "#fff");
+    document.documentElement.style.setProperty("--sidebar-back-color", "#000");
+    document.documentElement.style.setProperty("--bodydash-back-color","#fff")
+    document.documentElement.style.setProperty("--bodydash-color-font","#000")
+    document.documentElement.style.setProperty("--bodydash-content-back","#fff")
+  
+    // Set color in localStorage
+    localStorage.setItem("color_font", "#fff");
+    localStorage.setItem("back_color", "#000");
+    localStorage.setItem("back_body-color", "#fff");
+    localStorage.setItem("back-color-font", "#000");
+    localStorage.setItem("back-content-color", "#fff");
+  
+  };
+
+  const handleLight = () => {
+    // Apply light theme styles
+    document.documentElement.style.setProperty("--sidebar-color-font", "#000");
+    document.documentElement.style.setProperty("--sidebar-back-color", "#fff");
+    document.documentElement.style.setProperty("--bodydash-back-color","#fff")
+    document.documentElement.style.setProperty("--bodydash-color-font","#000")
+    document.documentElement.style.setProperty("--bodydash-content-back","#fff")
+
+
+    // Set color in localStorage
+    localStorage.setItem("color_font", "#000");
+    localStorage.setItem("back_color", "#fff");
+    localStorage.setItem("back_body-color", "#fff");
+    localStorage.setItem("back-color-font", "#000");
+    localStorage.setItem("back-content-color", "#fff");
+  
+  };
+const handleDark =()=>{
+  document.documentElement.style.setProperty("--sidebar-color-font", "#fff");
+  document.documentElement.style.setProperty("--sidebar-back-color", "#000");
+  document.documentElement.style.setProperty("--bodydash-back-color","#1b1b1b")
+  document.documentElement.style.setProperty("--bodydash-color-font","#fff")
+  document.documentElement.style.setProperty("--bodydash-content-back","repeating-linear-gradient(45deg, black, transparent 100px)")
+
+  // Set color in localStorage
+  localStorage.setItem("color_font", "#fff");
+  localStorage.setItem("back_color", "#000");
+  localStorage.setItem("back_body-color", "#1b1b1b");
+  localStorage.setItem("back-color-font", "repeating-linear-gradient(45deg, black, transparent 100px)");
+}
   return (
     <div style={{ display: "flex", flex: 1 }}>
       <SidebarDash />
@@ -26,15 +78,13 @@ function Settings() {
         <h1 className="heading-dash">Settings</h1>
         <div className="content-settings">
           <div className="content">
-            
-          <p>Theme</p>
+            <p>Theme</p>
             <br />
             <ul>
               <div className="theme">
-              {/* <li className="dark-blue">Dark blue theme</li> */}
-              <li className="dark" >Dark theme</li>
-              <li className="default"onClick={handleDark}>Default theme</li>
-              <li className="light" onClick={handleLight}>light theme</li>
+                <li className="dark" onClick={handleDark} >Dark theme</li>
+                <li className="default" onClick={handleDefault}>Default theme</li>
+                <li className="light" onClick={handleLight}>Light theme</li>
               </div>
             </ul>
           </div>
@@ -61,4 +111,5 @@ function Settings() {
     </div>
   );
 }
+
 export default Settings;
