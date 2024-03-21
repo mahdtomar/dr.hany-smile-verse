@@ -9,6 +9,7 @@
   flex-direction: row;
   align-items: flex-start;
   gap: 2%;
+  justify-content: space-between;
 }
 .footer-comp .container > div {
   width: 23.5%;
@@ -23,6 +24,7 @@
   display: flex;
   flex-direction: column;
   gap: 15px;
+  max-width: 20%;
 }
 .footer-comp .container .about-us .logo {
   font-size: 40px;
@@ -48,10 +50,14 @@
   flex-direction: column;
   gap: 10px;
 }
+.footer-comp .container .other-links {
+  width: -moz-fit-content;
+  width: fit-content;
+}
 .footer-comp .container .other-links ul {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   gap: 20px;
   list-style-type: none;
 }
@@ -65,10 +71,14 @@
 .footer-comp .container .other-links ul a img {
   width: 20px;
 }
+.footer-comp .container .our-services {
+  width: -moz-fit-content;
+  width: fit-content;
+}
 .footer-comp .container .our-services ul {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   gap: 20px;
 }
 .footer-comp .container .our-services ul a {

@@ -9,6 +9,7 @@ import serviceIcon from "../icons/Plus.svg";
 import addressIcon from "../icons/MapPinLine.svg";
 import phoneIcon from "../icons/PhoneCall.svg";
 import emailIcon from "../icons/message.svg";
+import { links, services } from "../Data";
 const Footer = () => {
   const workingHours = (
     <>
@@ -30,59 +31,24 @@ const Footer = () => {
           <FeatureTile img={clock} description={workingHours} />
         </div>
         <div className="other-links">
-          <p className="title">Other Links</p>
+          <p className="title">Main Pages</p>
           <ul>
-            <Link to={""}>
-              <img src={linkIcon} alt="" />
-              link
-            </Link>
-            <Link to={""}>
-              <img src={linkIcon} alt="" />
-              link
-            </Link>
-            <Link to={""}>
-              <img src={linkIcon} alt="" />
-              link
-            </Link>
-            <Link to={""}>
-              <img src={linkIcon} alt="" />
-              link
-            </Link>
-            <Link to={""}>
-              <img src={linkIcon} alt="" />
-              link
-            </Link>
+            {links.map((link) => {
+              return <Link to={link.mainLink} key={link.id}><img src={linkIcon} alt="" />{link.menuName}</Link>
+            })}
           </ul>
         </div>
         <div className="our-services">
           <p className="title">Our Services</p>
           <ul>
-            <Link to={""}>
-              <img src={serviceIcon} alt="" />
-              service
-            </Link>
-            <Link to={""}>
-              <img src={serviceIcon} alt="" />
-              service
-            </Link>
-            <Link to={""}>
-              <img src={serviceIcon} alt="" />
-              service
-            </Link>
-            <Link to={""}>
-              <img src={serviceIcon} alt="" />
-              service
-            </Link>
-            <Link to={""}>
-              <img src={serviceIcon} alt="" />
-              service
-            </Link>
+            {services.map(service => {
+              return <Link to={service.link} key={service.id} ><img src={serviceIcon} alt="" />{service.Name}</Link>
+            })}
           </ul>
         </div>
         <div className="contact-us">
           <p className="title">Contact Us</p>
           <div className="flex-2">
-            {" "}
             <div className="address">
               <FeatureTile
                 img={addressIcon}

@@ -1,5 +1,6 @@
 .container-faq {
   padding: 3rem 2rem;
+  margin: auto;
 }
 
 .d-flex {
@@ -24,14 +25,14 @@
 
 /* Faq header */
 .faq-header {
-  background:white;
+  background: white;
   /* background-image: url(./assets/imgs/colorful_back.jpg); */
   padding: 4rem 2rem;
 }
 
 .faq-header h1 {
   font-size: 4rem;
-  color:black;
+  color: black;
   letter-spacing: 2px;
   font-family: "Roboto";
   font-weight: 500;

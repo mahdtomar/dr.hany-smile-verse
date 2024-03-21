@@ -8,8 +8,8 @@ function EndLive() {
   };
   return (
     <div
-      className="d-flex container-faq end-live"
-      style={{ flexDirection: "column", margin: "20px", textAlign: "center" }}
+      className="d-flex container-faq end-live container"
+      style={{ flexDirection: "column", margin: "20px auto", textAlign: "center" }}
     >
       <h1>Here are a few important reminders for your Live Advisory:</h1>
       <div className="parent-accord" style={{ width: "100%" }}>

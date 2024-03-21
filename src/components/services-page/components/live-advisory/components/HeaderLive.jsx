@@ -4,7 +4,7 @@ import "../advisory.css";
 import { Link } from "react-scroll";
 function HeaderLive() {
   return (
-    <div className="container-faq header-live d-flex justify-between">
+    <div className="container-faq header-live d-flex justify-between container">
       <div className="content">
         <h1>Live Advisory</h1>
         <p>

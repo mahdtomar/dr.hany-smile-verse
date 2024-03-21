@@ -93,7 +93,7 @@ function BookLive() {
   return (
     <div className="container-faq book-live" id="book">
       <h1>Book Live Advisory</h1>
-      <form>
+      <form className="container">
         <div className="main-info d-flex">
           <div className="input-group">
             <label>Name:</label>
