@@ -28,14 +28,14 @@ function Settings() {
     // Apply dark theme styles
     document.documentElement.style.setProperty("--sidebar-color-font", "#fff");
     document.documentElement.style.setProperty("--sidebar-back-color", "#000");
-    document.documentElement.style.setProperty("--bodydash-back-color","#fff")
+    document.documentElement.style.setProperty("--bodydash-back-color","#f8f8f8")
     document.documentElement.style.setProperty("--bodydash-color-font","#000")
     document.documentElement.style.setProperty("--bodydash-content-back","#fff")
   
     // Set color in localStorage
     localStorage.setItem("color_font", "#fff");
     localStorage.setItem("back_color", "#000");
-    localStorage.setItem("back_body-color", "#fff");
+    localStorage.setItem("back_body-color", "#f8f8f8");
     localStorage.setItem("back-color-font", "#000");
     localStorage.setItem("back-content-color", "#fff");
   
@@ -45,7 +45,7 @@ function Settings() {
     // Apply light theme styles
     document.documentElement.style.setProperty("--sidebar-color-font", "#000");
     document.documentElement.style.setProperty("--sidebar-back-color", "#fff");
-    document.documentElement.style.setProperty("--bodydash-back-color","#fff")
+    document.documentElement.style.setProperty("--bodydash-back-color","#f8f8f8")
     document.documentElement.style.setProperty("--bodydash-color-font","#000")
     document.documentElement.style.setProperty("--bodydash-content-back","#fff")
 
@@ -53,7 +53,7 @@ function Settings() {
     // Set color in localStorage
     localStorage.setItem("color_font", "#000");
     localStorage.setItem("back_color", "#fff");
-    localStorage.setItem("back_body-color", "#fff");
+    localStorage.setItem("back_body-color", "#f8f8f8");
     localStorage.setItem("back-color-font", "#000");
     localStorage.setItem("back-content-color", "#fff");
   

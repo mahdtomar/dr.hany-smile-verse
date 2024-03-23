@@ -27,6 +27,7 @@ import Settings from "./components/admin/dashboard/components/Settings";
 import { useContext } from "react";
 import AuthContext from "./context/AuthContext";
 import ServicesDash from "./components/admin/dashboard/components/ServicesDash";
+import ListCosmetic from "./components/admin/dashboard/components/components/ListCosmetic";
 // ionic
 
 function App() {
@@ -82,6 +83,7 @@ function App() {
         <Route element={<Patient />} path="/admin/patient"></Route>
         <Route element={<Settings />} path="/admin/settings"></Route>
 <Route element={<ServicesDash/>}path="/admin/services"></Route>
+    <Route element={<ListCosmetic/>} path="/admin/services/cosmeticTeeth"></Route>
         <Route element={<UnAuthorized />} path="/unAuthorized" />
         <Route element={<Faq />} path="/faq"></Route>
       </Routes>
