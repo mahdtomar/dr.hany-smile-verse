@@ -3,6 +3,13 @@ import rootCanalIcon from "./icons/rootcanal.svg";
 import oralHygiene from "./icons/hygiene.svg";
 import cosmiticTeethIcon from "./icons/teeth-solid.svg";
 import liveAdvisoryIcon from "./icons/LiveAdvisory.svg";
+// alginment teeth content
+import pdf1 from "./files/file.pdf";
+import headingImage from "./images/complementary-consultant.jpg";
+import downloadIcon from "./icons/ArrowLineDown.svg";
+import serviceDisplay from "./images/alignmentTeethImage.jpg";
+import syring from "./icons/Syringe.svg";
+// end of alginment teeth content
 export const appointments = [
   {
     id: 321,
@@ -275,7 +282,6 @@ export const appointments = [
     location_id: 1,
   },
 ];
-
 export const services = [
   {
     id: 423,
@@ -425,7 +431,6 @@ export const users = [
     },
   },
 ];
-
 export const Doctors = [
   {
     id: 243,
@@ -608,7 +613,6 @@ export const Doctors = [
     },
   },
 ];
-
 export const Locations = [
   {
     id: 1,
@@ -737,3 +741,62 @@ export const links = [
     dropMenu: false,
   },
 ];
+export const AlignmentTeethControllerData = {
+  sections: [
+    {
+      id: 1,
+      title: "Free Smile Verse Consultation",
+      description: [
+        `At our clinic, we understand the importance of your smile. That's why we're offering a complimentary initial oral health consultation.`,
+        `Our dental experts will create a personalized plan for restoring your teeth, utilizing a digital CT scan and a thorough dental examination. Once you're entirely content with the proposed solutions, we'll commence with the treatment. Let us help you achieve the smile of your dreams at Smile Verse!`,
+      ],
+      img: headingImage,
+      subTitle: "WELCOME GIFT FOR NEW PATIENTS",
+    },
+    {
+      id: 2,
+      img: serviceDisplay,
+      features: [
+        {
+          icon: syring,
+          title: "title",
+          description: "this is a brief description",
+        },
+        {
+          icon: syring,
+          title: "title",
+          description: "this is a brief description",
+        },
+        {
+          icon: syring,
+          title: "title",
+          description: "this is a brief description",
+        },
+        {
+          icon: syring,
+          title: "title",
+          description: "this is a brief description",
+        },
+      ],
+    },
+    {
+      title: "PATIENTS FORMS",
+      id: 3,
+      files: [
+        { title: "Patient Welcome Form", file: pdf1, icon: downloadIcon },
+        { title: "Office Policy", file: pdf1, icon: downloadIcon },
+        { title: "Hippa Notice Form", file: pdf1, icon: downloadIcon },
+      ],
+      insurance: {
+        title: "INSURANCE",
+        description:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum ducimus enim harum tempore, odio vitae accusantium adipisci molestias dicta asperiores, corporis iste quod totam expedita laboriosam explicabo. Rerum, enim voluptate.",
+      },
+      paymentOptions: {
+        title: "PAYMENT OPTIONS",
+        description:
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum ducimus enim harum tempore, odio vitae accusantium adipisci molestias dicta asperiores, corporis iste quod totam expedita laboriosam explicabo. Rerum, enim voluptate.",
+      },
+    },
+  ],
+};

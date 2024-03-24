@@ -6,32 +6,29 @@ import routesSer from "./Routes-ser_dash";
 
 function List() {
     const [ser] = useRecoilState(service);
-    const [routes]= useRecoilState(routesSer)
-    const servicesWithoutLast = ser.services.slice(0,-1); // Remove the last element
-console.log(servicesWithoutLast)
+    const [routes] = useRecoilState(routesSer)
+    const servicesWithoutLast = ser.services.slice(0, -1); // Remove the last element
+    console.log(servicesWithoutLast)
     return (
         <ul className="list-body">
             <div className="content">
-            {servicesWithoutLast.map((e) =>
-            <li className="list-child d-flex" key={e.id}>
-                <div key={e.id}>{e.Name}</div>
-       
-            </li>
-            )}
+                {servicesWithoutLast.map((e) =>
+                    <li className="list-child d-flex" key={e.id}>
+                        <div key={e.id}>{e.Name}</div>
+                    </li>
+                )}
             </div>
             <div className="btns">
+                {routes.map((e) =>
+                    <div className="btn" >
+                        <button key={e.id} className="edit">
+                            <Link to={e.route}>
+                                Edit
+                            </Link></button>
+                        <button className="del">Delete</button>
+                    </div>
 
-            {routes.map((e)=>
-<div className="btn" >
-<button key={e.id} className="edit">
-            
-            <Link to={e.route}>
-            Edit
-            </Link></button>
-            <button className="del">Delete</button>
-            </div>
-            
-)}
+                )}
             </div>
 
         </ul>

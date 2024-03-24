@@ -7,18 +7,14 @@ import backward from '../../../../icons/CaretCircleLeft.svg'
 const AppointmentsTable = ({ list, count, headerList }) => {
     const [currentPage, setCurrentPage] = useState(1);
     const currentPageRef = useRef(null);
-
     const tableRowsCount = count
     console.log(list.length)
     const decrementPage = () => {
         setCurrentPage(currentPage => Math.max(1, currentPage - 1));
     };
-
     const incrementPage = () => {
         setCurrentPage(currentPage => Math.min(Math.ceil(list.length / tableRowsCount), currentPage + 1));
     };
-
-
     const startingIndex = currentPage - 1
     const endingIndex = Math.min(startingIndex + tableRowsCount, list.length);
     return (
@@ -26,7 +22,7 @@ const AppointmentsTable = ({ list, count, headerList }) => {
             <table>
                 <thead>
                     <tr>
-                        {headerList.map((item,i)=>{return <th key={i}>{item}</th>})}
+                        {headerList.map((item, i) => { return <th key={i}>{item}</th> })}
                     </tr>
                 </thead>
                 <tbody>

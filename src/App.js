@@ -28,6 +28,10 @@ import { useContext } from "react";
 import AuthContext from "./context/AuthContext";
 import ServicesDash from "./components/admin/dashboard/components/ServicesDash";
 import ListCosmetic from "./components/admin/dashboard/components/components/ListCosmetic";
+import AlignmentTeethController from "./components/admin/dashboard/components/services/AlignmentTeethController";
+import RootCanalController from "./components/admin/dashboard/components/services/RootCanalController";
+import OralHygieneController from "./components/admin/dashboard/components/services/OralHygieneController";
+import CosmeticTeethController from "./components/admin/dashboard/components/services/CosmeticTeethController";
 // ionic
 
 function App() {
@@ -82,10 +86,29 @@ function App() {
         <Route element={<BodyDash />} path="/admin/appointment"></Route>
         <Route element={<Patient />} path="/admin/patient"></Route>
         <Route element={<Settings />} path="/admin/settings"></Route>
-<Route element={<ServicesDash/>}path="/admin/services"></Route>
-    <Route element={<ListCosmetic/>} path="/admin/services/cosmeticTeeth"></Route>
+        <Route element={<ServicesDash />} path="/admin/services"></Route>
+        <Route
+          element={<ListCosmetic />}
+          path="/admin/services/cosmeticTeeth"
+        ></Route>
         <Route element={<UnAuthorized />} path="/unAuthorized" />
         <Route element={<Faq />} path="/faq"></Route>
+        <Route
+          element={<AlignmentTeethController />}
+          path="/admin/services/alignmentTeeth"
+        />
+        <Route
+          element={<RootCanalController />}
+          path="/admin/services/rootCanal"
+        />
+        <Route
+          element={<OralHygieneController />}
+          path="/admin/services/OralHygiene"
+        />
+        <Route
+          element={<CosmeticTeethController />}
+          path="/admin/services/cosmeticTeeth"
+        />
       </Routes>
     </div>
   );

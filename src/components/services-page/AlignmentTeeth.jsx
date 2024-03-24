@@ -4,15 +4,20 @@ import ServiceHeader from "./ServiceHeader";
 import ServicesDisplay from "./ServicesDisplay";
 import AppointmentBtn from "../AppointmentBtn";
 // images & pdf
-import pdf1 from "../../files/file.pdf";
-import headingImage from "../../images/complementary-consultant.jpg";
-import downloadIcon from "../../icons/ArrowLineDown.svg";
-import serviceDisplay from "../../images/dentalia-demo-consultation-3-1.jpg";
-import syring from "../../icons/Syringe.svg";
+// import pdf1 from "../../files/file.pdf";
+// import headingImage from "../../images/complementary-consultant.jpg";
+// import downloadIcon from "../../icons/ArrowLineDown.svg";
+// import serviceDisplay from "../../images/alignmentTeethImage.jpg";
+// import syring from "../../icons/Syringe.svg";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
 import ServicesSideBar from "./ServicesSideBar";
 import Callus from "./Callus";
+import { AlignmentTeethControllerData } from '../../Data'
+const sections = AlignmentTeethControllerData.sections
+const section1 = sections.filter((section) => { return section.id === 1 })[0]
+const section2 = sections.filter((section) => { return section.id === 2 })[0]
+const section3 = sections.filter((section) => { return section.id === 3 })[0]
 const AlignmentTeeth = () => {
   return (
     <>
@@ -23,100 +28,62 @@ const AlignmentTeeth = () => {
           <main>
             <ServiceHeader servicename={"Alignment Teeth"} />
             <ServicesSideBar />
-
             <section className="header">
               <div className="container flex-2">
                 <article>
-                  <span>WELCOME GIFT FOR NEW PATIENTS</span>
-                  <h1>Free Smile Verse Consultation</h1>
+                  <span>{section1.subTitle}</span>
+                  <h1>{section1.title}</h1>
                   <p>
-                    At our clinic, we understand the importance of your smile.
-                    That's why we're offering a complimentary initial oral
-                    health consultation.
+                    {section1.description[0]}
                   </p>
                   <p>
-                    Our dental experts will create a personalized plan for
-                    restoring your teeth, utilizing a digital CT scan and a
-                    thorough dental examination. Once you're entirely content
-                    with the proposed solutions, we'll commence with the
-                    treatment. Let us help you achieve the smile of your dreams
-                    at Smile Verse!
+                    {section1.description[1]}
                   </p>
                 </article>
-                <img src={headingImage} alt="" />
+                <img src={section1.img} alt="" />
               </div>
             </section>
             <section className="service-display">
               <div className="container flex-2">
                 <div className="img">
-                  <img src={serviceDisplay} alt="" />
+                  <img src={section2.img} alt="" />
                 </div>
                 <div className="services">
-                  <ServicesDisplay
-                    img={syring}
-                    title={"this is title"}
-                    description={"this is a brief description"}
-                  />
-                  <ServicesDisplay
-                    img={syring}
-                    title={"this is title"}
-                    description={"this is a brief description"}
-                  />
-                  <ServicesDisplay
-                    img={syring}
-                    title={"this is title"}
-                    description={"this is a brief description"}
-                  />
-                  <ServicesDisplay
-                    img={syring}
-                    title={"this is title"}
-                    description={"this is a brief description"}
-                  />
+                  {section2.features.map(({ icon, title, description }) => {
+                    return <ServicesDisplay
+                      img={icon}
+                      title={title}
+                      description={description}
+                    />
+                  })}
                 </div>
               </div>
             </section>
             <section className="further-details">
               <div className="container">
                 <div className="forms">
-                  <span>patients Forms</span>
+                  <span>{section3.title}</span>
                   <div className="files">
-                    <div className="file">
-                      <a href={pdf1} download={"file.pdf"}>
-                        <span>patient welcome form</span>
-                        <img src={downloadIcon} alt="" />
-                      </a>
-                    </div>
-                    <div className="file">
-                      <a href={pdf1} download={"file.pdf"}>
-                        <span>Office Policy</span>
-                        <img src={downloadIcon} alt="" />
-                      </a>
-                    </div>
-
-                    <div className="file">
-                      <a href={pdf1} download={"file.pdf"}>
-                        <span>HIPPA Notice Form</span>
-                        <img src={downloadIcon} alt="" />
-                      </a>
-                    </div>
+                    {section3.files.map((file) => {
+                      return <div className="file">
+                        <a href={file.file} download={"file.pdf"}>
+                          <span>{file.title}</span>
+                          <img src={file.icon} alt="" />
+                        </a>
+                      </div>
+                    })}
                   </div>
                 </div>
                 <div className="insurance-details">
-                  <span>INSURANCE</span>
+                  <span>{section3.insurance.title}</span>
                   <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Laborum ducimus enim harum tempore, odio vitae accusantium
-                    adipisci molestias dicta asperiores, corporis iste quod
-                    totam expedita laboriosam explicabo. Rerum, enim voluptate.
+                    {section3.insurance.description}
                   </p>
                 </div>
                 <div className="payment-method">
-                  <span>PAYMENT OPTIONS</span>
+                  <span>{section3.paymentOptions.title}</span>
                   <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Neque delectus sit laudantium consequatur et ipsa voluptates
-                    eos magni tempora sint, molestias soluta repudiandae nemo
-                    qui enim necessitatibus in doloribus porro.
+                    {section3.paymentOptions.description}
                   </p>
                 </div>
               </div>
