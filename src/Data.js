@@ -288,24 +288,28 @@ export const services = [
     Name: "Alignment Teeth",
     icon: teethAlignmentIcon,
     link: "/services/Alignment-teeth",
+    dash_link:"/admin/services/alignmentTeeth"
   },
   {
     id: 453,
     Name: "Root Canal",
     icon: rootCanalIcon,
     link: "/services/root-canal",
+    dash_link:"/admin/services/rootCanal"
   },
   {
     id: 58,
     Name: "Cosmetic teeth",
     icon: cosmiticTeethIcon,
     link: "/services/cosmetic-teeth",
+    dash_link:"/admin/services/cosmeticTeeth"
   },
   {
     id: 35,
     Name: "Oral Hygiene",
     icon: oralHygiene,
     link: "/services/oral-hygiene",
+    dash_link:"/admin/services/OralHygiene"
   },
   {
     id: 55,

@@ -1,12 +1,13 @@
 import "./cosmetic.css";
 import cosmetic_image from "./assets/imgs/cosmitic.jpeg";
+import { useState } from "react";
 function HeaderCosmetic() {
   return (
     <div className="container-faq">
       <div className="d-flex justify-between cosmetic-parent">
         <div className="cosmetichead-content">
-          <h1>Cosmetic Teeth</h1>
-          <p>
+          <h1 className="heading-one" >Cosmetic Teeth</h1>
+          <p >
             Cosmetic dentistry aims to create a more balanced, symmetrical and
             aesthetically pleasing smile. Common cosmetic dental services
             include teeth whitening, dental bonding, veneers, and tooth and gum
