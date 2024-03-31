@@ -261,3 +261,8 @@
     margin-bottom: -2px;
   }
 }
+
+.error-booklive {
+  color: red;
+  padding: 5px;
+}

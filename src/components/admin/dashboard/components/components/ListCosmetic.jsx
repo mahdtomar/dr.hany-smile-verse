@@ -1,32 +1,27 @@
-import React, { useState, useEffect } from 'react';
 import SidebarDash from '../SidebarDash';
 import HeaderCosmetic from '../../../../services-page/components/cosmetic-teeth/HeaderCosmetic';
 
 function ListCosmetic() {
-    const [heading, setHeading] = useState('');
-    const [paragraph, setParagraph] = useState('');
 
-    useEffect(() => {
-        // Access DOM elements inside useEffect to ensure they exist after component is rendered
-        const headingOne = document.querySelector('.list-cosmetic .heading-one');
-        const paragraphElement = document.querySelector('.list-cosmetic p');
-    }, []); // Empty dependency array ensures this effect runs only once after initial render
-
+   
     const handleEdit = () => {
-        const headingOne = document.querySelector('.list-cosmetic .heading-one');
-        const paragraphElement = document.querySelector('.list-cosmetic p');
+        const headingOne = document.getElementById("headingCosmetic");
+        const paragraphElement = document.getElementById("paragraphCosmetic");
         headingOne.setAttribute('contenteditable', 'true');
         paragraphElement.setAttribute('contenteditable', 'true');
+          
+
     };
 
     const handleSave = () => {
-        const headingOne = document.querySelector('.list-cosmetic .heading-one');
-        const paragraphElement = document.querySelector('.list-cosmetic p');
-        setHeading(headingOne.innerHTML);
-        setParagraph(paragraphElement.innerHTML);
+        const headingOne = document.getElementById("headingCosmetic");
+        const paragraphElement = document.getElementById("paragraphCosmetic");
+        headingOne.setAttribute('contenteditable', 'false');
+        paragraphElement.setAttribute('contenteditable', 'false');
+
         const data = {
-            heading: heading,
-            paragraph: paragraph
+            heading: headingOne.innerText,
+            paragraph: paragraphElement.innerText
         };
         console.log('Saved:', data);
         // Here you can send the data to your backend or perform any other actions
@@ -42,7 +37,7 @@ function ListCosmetic() {
                     <div className="btn">
                         <button className="edit" onClick={handleEdit}>Edit</button>
                         <button className="save" onClick={handleSave}>Save</button>
-                        <button className="del">Delete</button>
+                        {/* <button className="del">Delete</button> */}
                     </div>
                 </div>
             </div>

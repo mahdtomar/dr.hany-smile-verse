@@ -4,9 +4,11 @@ import cosmeticinfo from "./cosmetic-atom";
 function CosmeticInfo() {
   const [cosmentinfo] = useRecoilState(cosmeticinfo);
   return (
-    <div>
+    <div className="d-flex flex-wrap ">
       {cosmentinfo.map((e) => (
-        <div key={e.id}>
+        <div className={e.class} key={e.id}>
+          <img className="img-fluid" src={e.src} alt="" />
+          {e.src_two ?<img src={e.src_two} alt=""/>:""}
           <h1 key={e.id}>{e.question}</h1>
           <p key={e.id}>{e.answer}</p>
         </div>

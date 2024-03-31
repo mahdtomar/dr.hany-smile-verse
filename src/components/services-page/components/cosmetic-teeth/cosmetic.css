@@ -1,3 +1,9 @@
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.img-fluid {
+  max-width: 100%;
+}
 .container-faq:has(.cosmetichead-content) {
   /* padding-top: 4.5rem !important; */
   padding: 0px; /* omar edit */
@@ -64,6 +70,17 @@
 }
 
 /* Header */
+
+/* Cosmetic Info */
+.cards-parent {
+  flex-direction: row;
+  justify-content: center;
+  align-items: self-start;
+}
+.card-cosmetic {
+  width: 400px;
+}
+/* Cosmetic Info */
 
 /* Cosmetic Gallery */
 .cosmeticgall-parent {

@@ -21,7 +21,7 @@ function List() {
                             <Link to={e.dash_link}>
                                 Edit
                             </Link></button>
-                        <button className="del">Delete</button>
+                        {/* <button className="del">Delete</button> */}
                     </div>
                     </li>
                 )}

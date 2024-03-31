@@ -73,7 +73,7 @@ function BookLive() {
   };
 
   const validateEmail = (value) => {
-    const regexEmail = /^\+?[0-9\s()-]{7,20}$/;
+    const regexEmail = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/;
     return regexEmail.test(value);
   };
 
@@ -82,7 +82,7 @@ function BookLive() {
   };
 
   const validateNumber = (value) => {
-    const regexNumber = /^(\+0?1\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$/;
+    const regexNumber = /^[+]?[(]?[0-9]{3}[)]?[-\s.]?[0-9]{3}[-\s.]?[0-9]{4,6}$/;
     return regexNumber.test(value);
   };
 
@@ -98,24 +98,24 @@ function BookLive() {
           <div className="input-group">
             <label>Name:</label>
             <input type="text" onChange={(e) => setName(e.target.value)} />
-            {nameError && <span>{nameError}</span>}
+            {nameError && <span className="error-booklive">{nameError}</span>}
           </div>
           <div className="input-group">
             <label>Email:</label>
             <input type="email" onChange={(e) => setEmail(e.target.value)} />
-            {emailError && <span>{emailError}</span>}
+            {emailError && <span className="error-booklive">{emailError}</span>}
           </div>
         </div>
         <div className="main-info d-flex ">
           <div className="input-group ">
             <label>Phone Number</label>
             <input type="tel" onChange={(e) => setNumber(e.target.value)} />
-            {numberError && <span>{numberError}</span>}
+            {numberError && <span className="error-booklive">{numberError}</span>}
           </div>
           <div className="input-group ">
             <label>Age:</label>
             <input type="number" onChange={(e) => setAge(e.target.value)} />
-            {ageError && <span>{ageError}</span>}
+            {ageError && <span className="error-booklive">{ageError}</span>}
           </div>
         </div>
         <div className="input-group">
@@ -132,7 +132,7 @@ function BookLive() {
           rows="10"
           onChange={(e) => setProblem(e.target.value)}
         ></textarea>
-        {problemError && <span>{problemError}</span>}
+        {problemError && <span className="error-booklive">{problemError}</span>}
         <button onClick={handleSubmitLive}>Book Now!</button>
       </form>
     </div>
