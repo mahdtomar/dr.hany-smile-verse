@@ -5,7 +5,7 @@ const cosmeticinfo = atom({
   default: [
     {
       id: 0,
-      class:"card-one",
+      class:"card-one d-flex sm:flex-column",
       src:cosmetic_dentistry,
       question: "What is cosmetic dentistry?",
       answer:
@@ -13,7 +13,7 @@ const cosmeticinfo = atom({
     },
     {
       id: 1,
-      class:"card-two",
+      class:"card-two d-flex flex-column",
       src:cosmetic_dentistry,
       src_two:cosmetic_dentistry,
       question:

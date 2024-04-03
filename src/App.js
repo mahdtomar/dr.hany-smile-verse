@@ -23,15 +23,18 @@ import OralHygiene from "./components/services-page/OralHygiene";
 import LiveAdvisory from "./components/services-page/LiveAdvisory";
 import BodyDash from "./components/admin/dashboard/components/BodyDash";
 import Patient from "./components/admin/dashboard/components/Patient";
-import Settings from "./components/admin/dashboard/components/Settings";
+import Settings from "./components/admin/dashboard/components/settings/Settings";
 import { useContext } from "react";
 import AuthContext from "./context/AuthContext";
-import ServicesDash from "./components/admin/dashboard/components/ServicesDash";
-import ListCosmetic from "./components/admin/dashboard/components/components/ListCosmetic";
-import AlignmentTeethController from "./components/admin/dashboard/components/services/AlignmentTeethController";
-import RootCanalController from "./components/admin/dashboard/components/services/RootCanalController";
-import OralHygieneController from "./components/admin/dashboard/components/services/OralHygieneController";
-import CosmeticTeethController from "./components/admin/dashboard/components/services/CosmeticTeethController";
+import ServicesDash from "./components/admin/dashboard/components/services/ServicesDash";
+import ListCosmetic from "./components/admin/dashboard/components/services/components/service/ListCosmetic";
+import ListRoot from "./components/admin/dashboard/components/services/components/service/ListRoot"
+import ListAlign from "./components/admin/dashboard/components/services/components/service/ListAlign"
+import ListOral from "./components/admin/dashboard/components/services/components/service/ListOral";
+// import AlignmentTeethController from "./components/admin/dashboard/components/service/AlignmentTeethController";
+// import RootCanalController from "./components/admin/dashboard/components/service/RootCanalController";
+// import OralHygieneController from "./components/admin/dashboard/components/service/OralHygieneController";
+// import CosmeticTeethController from "./components/admin/dashboard/components/service/CosmeticTeethController";
 // ionic
 
 function App() {
@@ -94,21 +97,21 @@ function App() {
         <Route element={<UnAuthorized />} path="/unAuthorized" />
         <Route element={<Faq />} path="/faq"></Route>
         <Route
-          element={<AlignmentTeethController />}
+          element={<ListAlign/>}
           path="/admin/services/alignmentTeeth"
         />
         <Route
-          element={<RootCanalController />}
+          element={<ListRoot />}
           path="/admin/services/rootCanal"
         />
         <Route
-          element={<OralHygieneController />}
+          element={<ListOral/>}
           path="/admin/services/OralHygiene"
         />
-        <Route
+        {/* <Route
           element={<CosmeticTeethController />}
           path="/admin/services/cosmeticTeeth"
-        />
+        /> */}
       </Routes>
     </div>
   );

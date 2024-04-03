@@ -1,9 +1,4 @@
-import SidebarDash from '../SidebarDash';
-import HeaderCosmetic from '../../../../services-page/components/cosmetic-teeth/HeaderCosmetic';
-
-function ListCosmetic() {
-
-   
+function EditButton (props){
     const handleEdit = () => {
         const headingOne = document.getElementById("headingCosmetic");
         const paragraphElement = document.getElementById("paragraphCosmetic");
@@ -27,22 +22,16 @@ function ListCosmetic() {
         // Here you can send the data to your backend or perform any other actions
     };
 
-    return (
-        <div style={{ display: 'flex', flex: 1 }}>
-            <SidebarDash />
-            <div className="bodydash flex-1 list-cosmetic">
-                <h1 className="heading-dash">Cosmetic Teeth</h1>
-                <HeaderCosmetic />
-                <div className="btns">
-                    <div className="btn">
-                        <button className="edit" onClick={handleEdit}>Edit</button>
-                        <button className="save" onClick={handleSave}>Save</button>
-                        {/* <button className="del">Delete</button> */}
-                    </div>
-                </div>
-            </div>
-        </div>
-    );
-}
 
-export default ListCosmetic;
+    return(
+        <div className="btns">
+        <div className="btn">
+            <button className="edit" onClick={handleEdit}>Edit</button>
+            <button className="save" onClick={handleSave}>Save</button>
+            {/* <button className="del">Delete</button> */}
+        </div>
+    </div>
+
+    )
+}
+export default EditButton

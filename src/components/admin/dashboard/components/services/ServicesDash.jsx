@@ -1,5 +1,5 @@
-import List from "./List"
-import SidebarDash from "./SidebarDash"
+import List from "./components/List"
+import SidebarDash from "../../components/SidebarDash"
 
 function ServicesDash() {
   return (

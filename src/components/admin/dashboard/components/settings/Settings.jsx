@@ -1,5 +1,5 @@
-import Logo from "../../../Logo";
-import SidebarDash from "./SidebarDash";
+import Logo from "../../../../Logo";
+import SidebarDash from "../SidebarDash";
 import { useEffect } from "react";
 
 function Settings() {

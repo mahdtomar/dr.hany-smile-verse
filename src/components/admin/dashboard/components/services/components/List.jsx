@@ -1,12 +1,12 @@
 import { useRecoilState } from "recoil";
 import { Link } from "react-router-dom";
 import "./list.css";
-import { service } from "../../../services-page/components/live-advisory/components/service-atom";
-import routesSer from "./Routes-ser_dash";
+import { service } from "../../../../../services-page/components/live-advisory/components/service-atom";
+// import routesSer from "./Routes-ser_dash";
 
 function List() {
     const [ser] = useRecoilState(service);
-    const [routes] = useRecoilState(routesSer)
+    // const [routes] = useRecoilState(routesSer)
     const servicesWithoutLast = ser.services.slice(0, -1); // Remove the last element
     console.log(servicesWithoutLast)
     return (
