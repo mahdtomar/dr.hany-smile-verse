@@ -103,21 +103,21 @@
 }
 .testmonials {
   padding: 50px;
-  .container {
-    header {
-      margin-bottom: 150px;
-      text-align: center;
-      span {
-        color: var(--secondary-color);
-        font-weight: bold;
-        font-size: 20px;
-      }
-      p {
-        font-size: 45px;
-        font-weight: bold;
-        color: var(--main-color);
-      }
+  header {
+    margin-bottom: 150px;
+    text-align: center;
+    span {
+      color: var(--secondary-color);
+      font-weight: bold;
+      font-size: 20px;
     }
+    p {
+      font-size: 45px;
+      font-weight: bold;
+      color: var(--main-color);
+    }
+  }
+  .container {
     .slider {
       display: flex;
       gap: 80px;
@@ -156,7 +156,164 @@
     }
   }
 }
+@media (max-width: 1100px) {
+  .combined-squares {
+    .flex-2 {
+      height: 600px;
+      align-items: flex-start;
 
+      h2 {
+        font-size: 30px;
+      }
+      article {
+        padding: 10px;
+      }
+    }
+  }
+  .services {
+    .container {
+      padding: 30px 0px;
+      grid-template-rows: 1fr;
+      grid-template-columns: none;
+      > div {
+        gap: 20px;
+      }
+      > img {
+        display: block;
+        margin: 0px auto;
+      }
+    }
+  }
+  .why-us {
+    .container {
+      .flex-2 {
+        flex-direction: column;
+        > .image {
+          img {
+            width: 450px;
+          }
+        }
+        gap: 30px;
+        article {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 50px;
+          > p {
+            font-family: "Agbalumo", sans-serif;
+            text-align: center;
+            grid-column-start: 1;
+            grid-column-end: 3;
+            font-size: 30px;
+          }
+        }
+      }
+    }
+  }
+  .testmonials {
+    padding: 50px;
+    .container {
+      header {
+        margin-bottom: 150px;
+        text-align: center;
+        span {
+          color: var(--secondary-color);
+          font-weight: bold;
+          font-size: 20px;
+        }
+        p {
+          font-size: 45px;
+          font-weight: bold;
+          color: var(--main-color);
+        }
+      }
+      .slider {
+        display: flex;
+        gap: 20px;
+        .testmonialCard-comp {
+          position: relative;
+          box-shadow: 0px 0px 20px 5px lightgray;
+          padding: 100px 20px 20px;
+          > img {
+            position: absolute;
+            top: 0px;
+            left: 20px;
+            transform: translateY(-50%);
+            width: 150px;
+            border: 2px solid gray;
+          }
+          .hash {
+            position: absolute;
+            right: -5%;
+            top: -45%;
+            font-size: 200px;
+            font-weight: bold;
+            color: rgba($color: #3498db, $alpha: 0.5);
+            transform: rotate(10deg);
+          }
+          .content {
+            p {
+              color: var(--main-color);
+            }
+            .doctor-name {
+              color: var(--secondary-color);
+              font-weight: bold;
+              font-size: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 950px) {
+  .testmonials {
+    padding: 50px;
+    overflow: hidden;
+    .container {
+      width: max-content;
+      overflow-x: scroll;
+      .slider {
+        display: flex;
+        gap: 20px;
+        width: max-content;
+        .testmonialCard-comp {
+          position: relative;
+          box-shadow: 0px 0px 20px 5px lightgray;
+          padding: 100px 20px 20px;
+          max-width: 350px;
+          margin: 80px 0px 0px;
+          > img {
+            position: absolute;
+            top: 0px;
+            left: 20px;
+            transform: translateY(-50%);
+            width: 150px;
+            border: 2px solid gray;
+          }
+          .hash {
+            position: absolute;
+            right: 0%;
+            top: -45%;
+            font-size: 200px;
+            font-weight: bold;
+            color: rgba($color: #3498db, $alpha: 0.5);
+            transform: rotate(10deg);
+          }
+          .content {
+            p {
+              color: var(--main-color);
+            }
+            .doctor-name {
+              color: var(--secondary-color);
+              font-weight: bold;
+              font-size: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
 @media (max-width: 450px) {
   .services {
     > p {

@@ -138,11 +138,12 @@ const HomePage = () => {
         </div>
       </section>
       <section className="testmonials">
+        <header>
+          <span>TESTIMONIAL</span>
+          <p>What Our Clients Says</p>
+        </header>
         <div className="container">
-          <header>
-            <span>TESTIMONIAL</span>
-            <p>What Our Clients Says</p>
-          </header>
+
           <div className="slider">
             <TestmonialCard
               doctorImage={doctorImage3}

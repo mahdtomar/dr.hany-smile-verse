@@ -97,16 +97,16 @@
 .testmonials {
   padding: 50px;
 }
-.testmonials .container header {
+.testmonials header {
   margin-bottom: 150px;
   text-align: center;
 }
-.testmonials .container header span {
+.testmonials header span {
   color: var(--secondary-color);
   font-weight: bold;
   font-size: 20px;
 }
-.testmonials .container header p {
+.testmonials header p {
   font-size: 45px;
   font-weight: bold;
   color: var(--main-color);
@@ -146,6 +146,149 @@
   font-size: 30px;
 }
 
+@media (max-width: 1100px) {
+  .combined-squares .flex-2 {
+    height: 600px;
+    align-items: flex-start;
+  }
+  .combined-squares .flex-2 h2 {
+    font-size: 30px;
+  }
+  .combined-squares .flex-2 article {
+    padding: 10px;
+  }
+  .services .container {
+    padding: 30px 0px;
+    grid-template-rows: 1fr;
+    grid-template-columns: none;
+  }
+  .services .container > div {
+    gap: 20px;
+  }
+  .services .container > img {
+    display: block;
+    margin: 0px auto;
+  }
+  .why-us .container .flex-2 {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .why-us .container .flex-2 > .image img {
+    width: 450px;
+  }
+  .why-us .container .flex-2 article {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+  }
+  .why-us .container .flex-2 article > p {
+    font-family: "Agbalumo", sans-serif;
+    text-align: center;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    font-size: 30px;
+  }
+  .testmonials {
+    padding: 50px;
+  }
+  .testmonials .container header {
+    margin-bottom: 150px;
+    text-align: center;
+  }
+  .testmonials .container header span {
+    color: var(--secondary-color);
+    font-weight: bold;
+    font-size: 20px;
+  }
+  .testmonials .container header p {
+    font-size: 45px;
+    font-weight: bold;
+    color: var(--main-color);
+  }
+  .testmonials .container .slider {
+    display: flex;
+    gap: 20px;
+  }
+  .testmonials .container .slider .testmonialCard-comp {
+    position: relative;
+    box-shadow: 0px 0px 20px 5px lightgray;
+    padding: 100px 20px 20px;
+  }
+  .testmonials .container .slider .testmonialCard-comp > img {
+    position: absolute;
+    top: 0px;
+    left: 20px;
+    transform: translateY(-50%);
+    width: 150px;
+    border: 2px solid gray;
+  }
+  .testmonials .container .slider .testmonialCard-comp .hash {
+    position: absolute;
+    right: -5%;
+    top: -45%;
+    font-size: 200px;
+    font-weight: bold;
+    color: rgba(52, 152, 219, 0.5);
+    transform: rotate(10deg);
+  }
+  .testmonials .container .slider .testmonialCard-comp .content p {
+    color: var(--main-color);
+  }
+  .testmonials .container .slider .testmonialCard-comp .content .doctor-name {
+    color: var(--secondary-color);
+    font-weight: bold;
+    font-size: 30px;
+  }
+}
+@media (max-width: 950px) {
+  .testmonials {
+    padding: 50px;
+    overflow: hidden;
+  }
+  .testmonials .container {
+    width: -moz-max-content;
+    width: max-content;
+    overflow-x: scroll;
+  }
+  .testmonials .container .slider {
+    display: flex;
+    gap: 20px;
+    width: -moz-max-content;
+    width: max-content;
+  }
+  .testmonials .container .slider .testmonialCard-comp {
+    position: relative;
+    box-shadow: 0px 0px 20px 5px lightgray;
+    padding: 100px 20px 20px;
+    max-width: 350px;
+    margin: 80px 0px 0px;
+  }
+  .testmonials .container .slider .testmonialCard-comp > img {
+    position: absolute;
+    top: 0px;
+    left: 20px;
+    transform: translateY(-50%);
+    width: 150px;
+    border: 2px solid gray;
+  }
+  .testmonials .container .slider .testmonialCard-comp .hash {
+    position: absolute;
+    right: 0%;
+    top: -45%;
+    font-size: 200px;
+    font-weight: bold;
+    color: rgba(52, 152, 219, 0.5);
+    transform: rotate(10deg);
+  }
+  .testmonials .container .slider .testmonialCard-comp .content p {
+    color: var(--main-color);
+  }
+  .testmonials .container .slider .testmonialCard-comp .content .doctor-name {
+    color: var(--secondary-color);
+    font-weight: bold;
+    font-size: 30px;
+  }
+}
 @media (max-width: 450px) {
   .services > p {
     text-align: center;

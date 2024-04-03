@@ -121,6 +121,73 @@
   gap: 10px;
 }
 
+@media (max-width: 950px) {
+  .footer-comp {
+    padding: 30px;
+    background-color: var(--main-color);
+  }
+  .footer-comp * {
+    color: var(--background-color);
+  }
+  .footer-comp .container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2%;
+  }
+  .footer-comp .container > div {
+    width: 23.5%;
+  }
+  .footer-comp .container > div .title {
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .footer-comp .container .about-us {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    width: 100%;
+  }
+  .footer-comp .container .about-us .FeatureTile-comp {
+    flex-direction: column;
+  }
+  .footer-comp .container .other-links {
+    width: 100%;
+  }
+  .footer-comp .container .other-links ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .footer-comp .container .our-services {
+    width: 100%;
+  }
+  .footer-comp .container .our-services ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .footer-comp .container .contact-us {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .footer-comp .container .contact-us p {
+    width: 100%;
+  }
+  .footer-comp .container .contact-us .flex-2 {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer-comp .container .contact-us .flex-2 > div {
+    margin-bottom: 15px;
+  }
+  .footer-comp .container .contact-us .flex-2 .FeatureTile-comp {
+    flex-direction: column;
+  }
+}
 @media (max-width: 450px) {
   .footer-comp {
     padding: 30px;
