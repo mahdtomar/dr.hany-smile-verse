@@ -1,7 +1,7 @@
 .feedback-form {
   margin: 60px 0px;
 }
-.feedback-form .container {
+.feedback-form .container.aboutus-page {
   width: 50%;
   max-width: 1400px;
   min-width: 600px;

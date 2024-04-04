@@ -3,7 +3,7 @@ import "./scss/feedbackfrom.css";
 const FeedbackForm = () => {
   return (
     <form className="feedback-form" id={"feedbackForm"}>
-      <div className="container">
+      <div className="container aboutus-page">
         <div>
           <p>have a question for us ?</p>
           <span>let's hear it</span>

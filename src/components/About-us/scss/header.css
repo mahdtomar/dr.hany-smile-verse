@@ -23,4 +23,16 @@
 }
 .about-us-header .container figure figcaption p {
   font-size: 16px;
+}
+
+@media (max-width: 950px) {
+  .about-us-header {
+    margin-top: 100px;
+  }
+  .about-us-header .container figure {
+    justify-content: space-between;
+  }
+  .about-us-header .container figure img {
+    width: 50%;
+  }
 }/*# sourceMappingURL=header.css.map */

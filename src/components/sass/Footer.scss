@@ -130,7 +130,7 @@
       align-items: flex-start;
       gap: 2%;
       > div {
-        width: 23.5%;
+        margin: 20px auto;
         .title {
           font-weight: bold;
           font-size: 30px;
@@ -143,8 +143,14 @@
         flex-direction: row;
         gap: 15px;
         width: 100%;
+        max-width: none;
+        align-items: baseline;
+        > p {
+          width: 50%;
+        }
         .FeatureTile-comp {
           flex-direction: column;
+          text-align: center;
         }
       }
       .other-links {
@@ -171,11 +177,13 @@
           width: 100%;
         }
         .flex-2 {
-          flex-direction: column;
+          flex-direction: row;
           justify-content: space-between;
           align-items: center;
+          width: 100%;
           > div {
             margin-bottom: 15px;
+            width: 30%;
           }
           .FeatureTile-comp {
             flex-direction: column;
@@ -198,7 +206,6 @@
       align-items: flex-start;
       gap: 2%;
       > div {
-        width: 23.5%;
         .title {
           font-weight: bold;
           font-size: 30px;
@@ -210,9 +217,12 @@
         display: flex;
         flex-direction: column;
         gap: 15px;
+        text-align: center;
         width: 100%;
+        align-items: center;
         .FeatureTile-comp {
           flex-direction: column;
+          text-align: center;
         }
       }
       .other-links {
@@ -220,6 +230,9 @@
         ul {
           flex-direction: row;
           flex-wrap: wrap;
+          gap: 5px 5px;
+          align-items: center;
+          justify-content: space-evenly;
         }
       }
       .our-services {
@@ -227,6 +240,9 @@
         ul {
           flex-direction: row;
           flex-wrap: wrap;
+          gap: 5px 5px;
+          align-items: center;
+          justify-content: space-evenly;
         }
       }
       .contact-us {
@@ -239,11 +255,13 @@
           width: 100%;
         }
         .flex-2 {
-          flex-direction: column;
+          flex-direction: row;
           justify-content: space-between;
-          align-items: center;
+          align-items: flex-start;
           > div {
             margin-bottom: 15px;
+            height: 100%;
+            width: 30%;
           }
           .FeatureTile-comp {
             flex-direction: column;

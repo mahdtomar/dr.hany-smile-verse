@@ -67,9 +67,7 @@
 
 /* Faq Feedback */
 .feedback-form .container {
-  width: 80% !important;
-  max-width: 100%;
-  min-width: auto;
+  width: 80%;
 }
 
 .feedback-form .container p {
@@ -118,7 +116,7 @@
 
 .faq-content span {
   /* color: #2c3e50; */
-  color: #05ffff;
+  color: var(--main-color);
   font-weight: 700;
   font-size: 15px;
 }

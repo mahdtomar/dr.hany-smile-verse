@@ -1,12 +1,14 @@
 .feedback-form {
   margin: 60px 0px;
   .container {
-    width: 50%;
-    max-width: 1400px;
-    min-width: 600px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    &.aboutus-page {
+      width: 50%;
+      max-width: 1400px;
+      min-width: 600px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
     p,
     span {
       display: block;

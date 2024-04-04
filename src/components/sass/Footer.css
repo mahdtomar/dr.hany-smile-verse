@@ -135,7 +135,7 @@
     gap: 2%;
   }
   .footer-comp .container > div {
-    width: 23.5%;
+    margin: 20px auto;
   }
   .footer-comp .container > div .title {
     font-weight: bold;
@@ -148,9 +148,15 @@
     flex-direction: row;
     gap: 15px;
     width: 100%;
+    max-width: none;
+    align-items: baseline;
+  }
+  .footer-comp .container .about-us > p {
+    width: 50%;
   }
   .footer-comp .container .about-us .FeatureTile-comp {
     flex-direction: column;
+    text-align: center;
   }
   .footer-comp .container .other-links {
     width: 100%;
@@ -177,12 +183,14 @@
     width: 100%;
   }
   .footer-comp .container .contact-us .flex-2 {
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
   }
   .footer-comp .container .contact-us .flex-2 > div {
     margin-bottom: 15px;
+    width: 30%;
   }
   .footer-comp .container .contact-us .flex-2 .FeatureTile-comp {
     flex-direction: column;
@@ -201,9 +209,6 @@
     align-items: flex-start;
     gap: 2%;
   }
-  .footer-comp .container > div {
-    width: 23.5%;
-  }
   .footer-comp .container > div .title {
     font-weight: bold;
     font-size: 30px;
@@ -214,10 +219,13 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
+    text-align: center;
     width: 100%;
+    align-items: center;
   }
   .footer-comp .container .about-us .FeatureTile-comp {
     flex-direction: column;
+    text-align: center;
   }
   .footer-comp .container .other-links {
     width: 100%;
@@ -225,6 +233,9 @@
   .footer-comp .container .other-links ul {
     flex-direction: row;
     flex-wrap: wrap;
+    gap: 5px 5px;
+    align-items: center;
+    justify-content: space-evenly;
   }
   .footer-comp .container .our-services {
     width: 100%;
@@ -232,6 +243,9 @@
   .footer-comp .container .our-services ul {
     flex-direction: row;
     flex-wrap: wrap;
+    gap: 5px 5px;
+    align-items: center;
+    justify-content: space-evenly;
   }
   .footer-comp .container .contact-us {
     width: 100%;
@@ -244,12 +258,14 @@
     width: 100%;
   }
   .footer-comp .container .contact-us .flex-2 {
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
   }
   .footer-comp .container .contact-us .flex-2 > div {
     margin-bottom: 15px;
+    height: 100%;
+    width: 30%;
   }
   .footer-comp .container .contact-us .flex-2 .FeatureTile-comp {
     flex-direction: column;

@@ -26,3 +26,16 @@
     }
   }
 }
+@media (max-width: 950px) {
+  .about-us-header {
+    margin-top: 100px;
+    .container {
+      figure {
+        justify-content: space-between;
+        img {
+          width: 50%;
+        }
+      }
+    }
+  }
+}

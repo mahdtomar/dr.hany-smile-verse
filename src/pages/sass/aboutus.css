@@ -41,6 +41,7 @@
 }
 .about-us-comp .our-vision .container {
   padding: 20px;
+  align-items: flex-start;
 }
 .about-us-comp .our-vision .container .FeatureTile-comp {
   width: 30%;
@@ -53,6 +54,7 @@
   display: none;
 }
 .about-us-comp .our-vision .container .FeatureTile-comp .description {
+  border: none;
   text-align: center;
   line-height: 150%;
   font-weight: bold;
@@ -97,4 +99,13 @@
 }
 .about-us-comp .testmonials .container .testmonial::before {
   display: none;
+}
+
+@media (max-width: 950px) {
+  .about-us-comp .testmonials .container {
+    padding: 25px;
+  }
+  .about-us-comp .testmonials .container .testmonial {
+    min-width: 400px;
+  }
 }/*# sourceMappingURL=aboutus.css.map */

@@ -270,7 +270,6 @@
     padding: 50px;
     overflow: hidden;
     .container {
-      width: max-content;
       overflow-x: scroll;
       .slider {
         display: flex;
@@ -356,31 +355,21 @@
     }
   }
   .testmonials {
-    padding: 0px;
+    padding: 50px;
+    overflow: hidden;
     .container {
-      header {
-        margin-bottom: 75px;
-        text-align: center;
-        span {
-          color: var(--secondary-color);
-          font-weight: bold;
-          font-size: 20px;
-        }
-        p {
-          font-size: 45px;
-          font-weight: bold;
-          color: var(--main-color);
-        }
-      }
+      overflow-x: scroll;
       .slider {
         display: flex;
-        gap: 80px;
-        flex-direction: column;
+        gap: 20px;
+        width: max-content;
+        padding: 20px 0px;
         .testmonialCard-comp {
-          margin: 20px 0px;
           position: relative;
           box-shadow: 0px 0px 20px 5px lightgray;
           padding: 100px 20px 20px;
+          max-width: 300px;
+          margin: 80px 0px 0px;
           > img {
             position: absolute;
             top: 0px;
@@ -391,7 +380,7 @@
           }
           .hash {
             position: absolute;
-            right: 5%;
+            right: 0%;
             top: -45%;
             font-size: 200px;
             font-weight: bold;
@@ -415,6 +404,18 @@
   .why-us {
     .container {
       .flex-2 {
+        article {
+          display: flex;
+          flex-direction: column;
+          .FeatureTile-comp {
+            .image {
+              padding: 10px;
+              img {
+                width: 40px;
+              }
+            }
+          }
+        }
         .image {
           img {
             display: block;

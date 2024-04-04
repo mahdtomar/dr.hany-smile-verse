@@ -47,6 +47,7 @@
     background-color: #73b9ff;
     .container {
       padding: 20px;
+      align-items: flex-start;
       .FeatureTile-comp {
         width: 30%;
         display: flex;
@@ -57,6 +58,7 @@
           display: none;
         }
         .description {
+          border: none;
           text-align: center;
           line-height: 150%;
           font-weight: bold;
@@ -103,6 +105,18 @@
         }
         &::before {
           display: none;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 950px) {
+  .about-us-comp {
+    .testmonials {
+      .container {
+        padding: 25px;
+        .testmonial {
+          min-width: 400px;
         }
       }
     }

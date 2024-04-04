@@ -8,9 +8,11 @@ function Faq() {
   return (
     <div>
       <Navbar />
-      <Faqheader />
-      <Faqquestions />
-      <FeedbackForm />
+      <div className="container">
+        <Faqheader />
+        <Faqquestions />
+        <FeedbackForm />
+      </div>
       <Footer />
     </div>
   );
