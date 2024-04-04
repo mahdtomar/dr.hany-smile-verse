@@ -11,24 +11,24 @@ import AppointmentBtn from '../../../../../../AppointmentBtn';
 
 function ListAlign() {
 
-   
     const handleEdit = () => {
-        const headingOne = document.getElementById("headingCosmetic");
-        const paragraphElement = document.getElementById("paragraphCosmetic");
-        headingOne.setAttribute('contenteditable', 'true');
-        paragraphElement.setAttribute('contenteditable', 'true');
-          
-
+        const headingOne = document.querySelectorAll("#one");
+        const paragraphElement = document.querySelectorAll("#one");
+        console.log(headingOne, paragraphElement)
+        Array.from(headingOne).map((e) => { e.setAttribute('contenteditable', 'true'); return '' })
+        Array.from(paragraphElement).map((e) => { e.setAttribute('contenteditable', 'true'); return '' })
     };
 
     const handleSave = () => {
-        const headingOne = document.getElementById("headingCosmetic");
-        const paragraphElement = document.getElementById("paragraphCosmetic");
-        headingOne.setAttribute('contenteditable', 'false');
-        paragraphElement.setAttribute('contenteditable', 'false');
-
+        const headingOne = document.querySelectorAll("#one");
+        const paragraphElement = document.querySelectorAll("#one");
+        console.log(headingOne, paragraphElement)
+        Array.from(headingOne).map((e) => { e.setAttribute('contenteditable', 'false'); return '' })
+        Array.from(paragraphElement).map((e) => { e.setAttribute('contenteditable', 'false'); return '' })
+        const headingData = []
+        Array.from(headingOne).map(e => { headingData.push(e.innerText); return '' });
         const data = {
-            heading: headingOne.innerText,
+            heading: headingData,
             paragraph: paragraphElement.innerText
         };
         console.log('Saved:', data);
@@ -36,59 +36,59 @@ function ListAlign() {
     };
 
     return (
-        <div style={{ display: 'flex', flex: 1 }}  className='list-root '>
+        <div style={{ display: 'flex', flex: 1 }} className='list-root '>
             <SidebarDash />
             <div className="bodydash flex-1">
                 <h1 className="heading-dash">Alignment Teeth</h1>
                 <div className="AlignmentTeeth-comp">
-        {/* <div className="container"> */}
-        <div className="container">
-          <main>
-           
-            <section className="header">
-              
-              <HeaderAlignment/>
-            </section>
-            <div className="btns">
-                    <div className="btn">
-                        <button className="edit" onClick={handleEdit}>Edit</button>
-                        <button className="save" onClick={handleSave}>Save</button>
-                        {/* <button className="del">Delete</button> */}
+                    {/* <div className="container"> */}
+                    <div className="container">
+                        <main>
+
+                            <section className="header">
+
+                                <HeaderAlignment />
+                            </section>
+                            <div className="btns">
+                                <div className="btn">
+                                    <button className="edit" onClick={handleEdit}>Edit</button>
+                                    <button className="save" onClick={handleSave}>Save</button>
+                                    {/* <button className="del">Delete</button> */}
+                                </div>
+                            </div>
+                            <section className="service-display">
+                                <DisplayAlignment />
+                            </section>
+                            <div className="btns">
+                                <div className="btn">
+                                    <button className="edit" onClick={handleEdit}>Edit</button>
+                                    <button className="save" onClick={handleSave}>Save</button>
+                                    {/* <button className="del">Delete</button> */}
+                                </div>
+                            </div>
+                            <section className="further-details">
+                                <FurtherAlignment />
+                            </section>
+                            <div className="btns">
+                                <div className="btn">
+                                    <button className="edit" onClick={handleEdit}>Edit</button>
+                                    <button className="save" onClick={handleSave}>Save</button>
+                                    {/* <button className="del">Delete</button> */}
+                                </div>
+                            </div>
+                            <section className="why-us">
+                                <WhyUsAlignment />
+                            </section>
+                            <div className="btns">
+                                <div className="btn">
+                                    <button className="edit" onClick={handleEdit}>Edit</button>
+                                    <button className="save" onClick={handleSave}>Save</button>
+                                    {/* <button className="del">Delete</button> */}
+                                </div>
+                            </div>
+                        </main>
                     </div>
                 </div>
-            <section className="service-display">
-<DisplayAlignment/>              
-            </section>
-            <div className="btns">
-                    <div className="btn">
-                        <button className="edit" onClick={handleEdit}>Edit</button>
-                        <button className="save" onClick={handleSave}>Save</button>
-                        {/* <button className="del">Delete</button> */}
-                    </div>
-                </div>
-            <section className="further-details">
-         <FurtherAlignment/>
-            </section>
-            <div className="btns">
-                    <div className="btn">
-                        <button className="edit" onClick={handleEdit}>Edit</button>
-                        <button className="save" onClick={handleSave}>Save</button>
-                        {/* <button className="del">Delete</button> */}
-                    </div>
-                </div>
-            <section className="why-us">
-              <WhyUsAlignment/>
-            </section>
-            <div className="btns">
-                    <div className="btn">
-                        <button className="edit" onClick={handleEdit}>Edit</button>
-                        <button className="save" onClick={handleSave}>Save</button>
-                        {/* <button className="del">Delete</button> */}
-                    </div>
-                </div>
-          </main>
-        </div>
-      </div>
             </div>
         </div>
     );
