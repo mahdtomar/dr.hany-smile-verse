@@ -40,6 +40,8 @@ import ListOral from "./components/admin/dashboard/components/services/component
 function App() {
   const { currentuser } = useContext(AuthContext);
   console.log(currentuser);
+  const api = process.env.POSTMAN_QUERY;
+  console.log(api)
   const Protectedroute = ({ children }) => {
     if (!currentuser) {
       return <Navigate to="/signup" />;
